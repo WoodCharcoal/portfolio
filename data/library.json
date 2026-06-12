@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "title": "awesome-low-level-design",
+    "url": "https://github.com/ashishps1/awesome-low-level-design",
+    "description": "Learn Low Level Design (LLD) and prepare for interviews using free resources.",
+    "category": "curated list",
+    "tags": ["low-level-design","interview","lld","resources"],
+    "language": "Java",
+    "stars": 24563,
+    "last_updated": "2026-02-26T05:15:01Z",
+    "notes": "High-star curated collection focused on low-level design and interview prep; active and well-maintained."
+  },
+  {
+    "title": "low-level-design-primer",
+    "url": "https://github.com/prasadgujar/low-level-design-primer",
+    "description": "Dedicated Resources for the Low-Level System Design. Learn how to design and implement large-scale systems. Prep for the system design interview.",
+    "category": "curated list",
+    "tags": ["system-design","low-level-design","interview","resources"],
+    "language": null,
+    "stars": 7775,
+    "last_updated": "2024-01-01T20:34:02Z",
+    "notes": "Comprehensive primer for system/low-level design; useful for interviews and architecture learning."
+  },
+  {
+    "title": "Bolts-ObjC",
+    "url": "https://github.com/BoltsFramework/Bolts-ObjC",
+    "description": "Bolts is a collection of low-level libraries designed to make developing mobile apps easier.",
+    "category": "library",
+    "tags": ["mobile","library","objc","low-level"],
+    "language": "Objective-C",
+    "stars": 5622,
+    "last_updated": "2021-08-30T21:25:19Z",
+    "notes": "Mature low-level mobile helper libraries; lower recent activity but still referenced."
+  },
+  {
+    "title": "Bolts-Android",
+    "url": "https://github.com/BoltsFramework/Bolts-Android",
+    "description": "Bolts is a collection of low-level libraries designed to make developing mobile apps easier.",
+    "category": "library",
+    "tags": ["mobile","library","android","low-level"],
+    "language": "Java",
+    "stars": 4005,
+    "last_updated": "2019-03-11T14:59:13Z",
+    "notes": "Archived Android version of Bolts; still useful historically but not actively maintained."
+  },
+  {
+    "title": "DeepResearchAgent",
+    "url": "https://github.com/SkyworkAI/DeepResearchAgent",
+    "description": "A hierarchical multi-agent system for task decomposition and research automation.",
+    "category": "framework",
+    "tags": ["multi-agent","research","automation","python"],
+    "language": "Python",
+    "stars": 3450,
+    "last_updated": "2026-05-04T09:15:39Z",
+    "notes": "Active framework implementing hierarchical multi-agent coordination; relevant if collecting AI/automation tools."
+  },
+  {
+    "title": "Eureka",
+    "url": "https://github.com/eureka-research/Eureka",
+    "description": "Official repository for research 'Eureka: Human-Level Reward Design via Coding Large Language Models' (ICLR 2024).",
+    "category": "research",
+    "tags": ["research","rl","lms","reward-design"],
+    "language": "Jupyter Notebook",
+    "stars": 3162,
+    "last_updated": "2024-05-03T07:31:13Z",
+    "notes": "Research codebase tied to a paper; useful for academic/research references."
+  },
+  {
+    "title": "Data-Structure-Algorithms-LLD-HLD",
+    "url": "https://github.com/arpit20adlakha/Data-Structure-Algorithms-LLD-HLD",
+    "description": "A Data Structure Algorithms Low Level Design and High Level Design collection of resources.",
+    "category": "curated list",
+    "tags": ["algorithms","lld","hld","data-structures"],
+    "language": null,
+    "stars": 2635,
+    "last_updated": "2024-12-24T17:39:21Z",
+    "notes": "Good collection for algorithm design and interview prep; maintained."
+  },
+  {
+    "title": "python-coding-interview",
+    "url": "https://github.com/liyin2015/python-coding-interview",
+    "description": "A middle-to-high level open source algorithm book designed with coding interview at heart.",
+    "category": "book",
+    "tags": ["algorithms","book","interview","python"],
+    "language": "TeX",
+    "stars": 2312,
+    "last_updated": "2024-02-27T18:14:39Z",
+    "notes": "Open-source algorithm book in TeX; good for study and reference."
+  },
+  {
+    "title": "Claude-Red",
+    "url": "https://github.com/SnailSploit/Claude-Red",
+    "description": "Curated library of offensive security skills for the Claude skills system.",
+    "category": "tool",
+    "tags": ["security","redteam","skills","claude-ai"],
+    "language": "Python",
+    "stars": 2266,
+    "last_updated": "2026-05-08T16:05:21Z",
+    "notes": "Security-focused collection of 'skills'; include with caution and awareness of intent."
+  },
+  {
+    "title": "System-Design",
+    "url": "https://github.com/codersguild/System-Design",
+    "description": "Design-level considerations for scalability, maintainability, availability and reliability; interview prep.",
+    "category": "curated list",
+    "tags": ["system-design","scalability","reliability","interview"],
+    "language": null,
+    "stars": 2171,
+    "last_updated": "2024-02-21T16:57:06Z",
+    "notes": "Broad system design resource; good for architecture study."
+  }
+]
