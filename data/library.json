@@ -108,5 +108,115 @@
     "stars": 2171,
     "last_updated": "2024-02-21T16:57:06Z",
     "notes": "Broad system design resource; good for architecture study."
+  },
+  {
+    "title": "awesome",
+    "url": "https://github.com/sindresorhus/awesome",
+    "description": "Awesome lists about all kinds of interesting topics.",
+    "category": "curated list",
+    "tags": ["awesome","lists","resources"],
+    "language": null,
+    "stars": 474922,
+    "last_updated": "2026-06-02T12:50:13Z",
+    "notes": "General curated collection of 'awesome' lists; high-level resource hub. Limited direct relevance to level design but useful for finding curated resources."
+  },
+  {
+    "title": "freeCodeCamp",
+    "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+    "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+    "category": "curriculum/tutorial",
+    "tags": ["education","curriculum","tutorial"],
+    "language": "TypeScript",
+    "stars": 446630,
+    "last_updated": "2026-06-11T21:23:48Z",
+    "notes": "Comprehensive learning platform; useful background material but not specific to level design. Good for learning programming skills useful in game dev."
+  },
+  {
+    "title": "public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "description": "A collective list of free APIs.",
+    "category": "curated list",
+    "tags": ["apis","resources","list"],
+    "language": "Python",
+    "stars": 440888,
+    "last_updated": "2026-06-07T07:41:36Z",
+    "notes": "Large directory of public APIs. Can be used to find tools/services relevant to game design (maps, analytics, etc.) but not level-design-specific."
+  },
+  {
+    "title": "system-design-primer",
+    "url": "https://github.com/donnemartin/system-design-primer",
+    "description": "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
+    "category": "tutorial",
+    "tags": ["system design","architecture","education"],
+    "language": "Python",
+    "stars": 352678,
+    "last_updated": "2026-03-20T01:52:19Z",
+    "notes": "Great resource for software/system design principles; indirectly useful for game backend/architecture but not level design."
+  },
+  {
+    "title": "coding-interview-university",
+    "url": "https://github.com/jwasham/coding-interview-university",
+    "description": "A complete computer science study plan to become a software engineer.",
+    "category": "curriculum/tutorial",
+    "tags": ["study-plan","cs","education"],
+    "language": null,
+    "stars": 351158,
+    "last_updated": "2025-08-28T14:42:47Z",
+    "notes": "CS study plan — useful for strengthening foundational skills used in game development, not level-design-specific."
+  },
+  {
+    "title": "awesome-python",
+    "url": "https://github.com/vinta/awesome-python",
+    "description": "An opinionated list of Python frameworks, libraries, tools, and resources.",
+    "category": "curated list",
+    "tags": ["python","awesome","libraries"],
+    "language": "Python",
+    "stars": 302426,
+    "last_updated": "2026-06-09T05:31:52Z",
+    "notes": "Language-specific resource collection — useful when Python tools or scripts are needed in a level-design pipeline."
+  },
+  {
+    "title": "awesome-selfhosted",
+    "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "description": "A list of Free Software network services and web applications which can be hosted on your own servers.",
+    "category": "curated list",
+    "tags": ["self-hosted","services","infrastructure"],
+    "language": null,
+    "stars": 298604,
+    "last_updated": "2026-06-09T12:50:43Z",
+    "notes": "Infrastructure-focused list — useful for hosting tools (asset servers, analytics) that could support level design workflows."
+  },
+  {
+    "title": "the-book-of-secret-knowledge",
+    "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+    "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+    "category": "curated list",
+    "tags": ["cheatsheets","tools","resources"],
+    "language": null,
+    "stars": 227857,
+    "last_updated": "2024-11-19T14:00:38Z",
+    "notes": "Large grab-bag of practical resources; may contain useful utilities for tooling around level design."
+  },
+  {
+    "title": "ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "category": "tool",
+    "tags": ["agent","ai","developer-tools"],
+    "language": "JavaScript",
+    "stars": 213552,
+    "last_updated": "2026-06-11T20:24:32Z",
+    "notes": "Developer tooling for agent/AI workflows — could be useful for procedurally-assisted level design or automation."
+  },
+  {
+    "title": "computer-science",
+    "url": "https://github.com/ossu/computer-science",
+    "description": "Path to a free self-taught education in Computer Science!",
+    "category": "curriculum",
+    "tags": ["cs","curriculum","education"],
+    "language": "HTML",
+    "stars": 204818,
+    "last_updated": "2026-04-21T04:43:27Z",
+    "notes": "Full CS curriculum useful for foundational knowledge; not specific to level design but helpful for broader skill-building."
   }
 ]
