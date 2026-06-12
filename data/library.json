@@ -185,38 +185,5 @@
     "stars": 298604,
     "last_updated": "2026-06-09T12:50:43Z",
     "notes": "Infrastructure-focused list — useful for hosting tools (asset servers, analytics) that could support level design workflows."
-  },
-  {
-    "title": "the-book-of-secret-knowledge",
-    "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
-    "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
-    "category": "curated list",
-    "tags": ["cheatsheets","tools","resources"],
-    "language": null,
-    "stars": 227857,
-    "last_updated": "2024-11-19T14:00:38Z",
-    "notes": "Large grab-bag of practical resources; may contain useful utilities for tooling around level design."
-  },
-  {
-    "title": "ECC",
-    "url": "https://github.com/affaan-m/ECC",
-    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-    "category": "tool",
-    "tags": ["agent","ai","developer-tools"],
-    "language": "JavaScript",
-    "stars": 213552,
-    "last_updated": "2026-06-11T20:24:32Z",
-    "notes": "Developer tooling for agent/AI workflows — could be useful for procedurally-assisted level design or automation."
-  },
-  {
-    "title": "computer-science",
-    "url": "https://github.com/ossu/computer-science",
-    "description": "Path to a free self-taught education in Computer Science!",
-    "category": "curriculum",
-    "tags": ["cs","curriculum","education"],
-    "language": "HTML",
-    "stars": 204818,
-    "last_updated": "2026-04-21T04:43:27Z",
-    "notes": "Full CS curriculum useful for foundational knowledge; not specific to level design but helpful for broader skill-building."
   }
 ]
