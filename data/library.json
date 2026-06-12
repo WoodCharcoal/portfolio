@@ -185,5 +185,148 @@
     "stars": 298604,
     "last_updated": "2026-06-09T12:50:43Z",
     "notes": "Infrastructure-focused list — useful for hosting tools (asset servers, analytics) that could support level design workflows."
+  },
+  {
+    "title": "the-book-of-secret-knowledge",
+    "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+    "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+    "category": "curated list",
+    "tags": ["cheatsheets","tools","resources"],
+    "language": null,
+    "stars": 227857,
+    "last_updated": "2024-11-19T14:00:38Z",
+    "notes": "Large grab-bag of practical resources; may contain useful utilities for tooling around level design."
+  },
+  {
+    "title": "ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "category": "tool",
+    "tags": ["agent","ai","developer-tools"],
+    "language": "JavaScript",
+    "stars": 213552,
+    "last_updated": "2026-06-11T20:24:32Z",
+    "notes": "Developer tooling for agent/AI workflows — could be useful for procedurally-assisted level design or automation."
+  },
+  {
+    "title": "computer-science",
+    "url": "https://github.com/ossu/computer-science",
+    "description": "Path to a free self-taught education in Computer Science!",
+    "category": "curriculum",
+    "tags": ["cs","curriculum","education"],
+    "language": "HTML",
+    "stars": 204818,
+    "last_updated": "2026-04-21T04:43:27Z",
+    "notes": "Full CS curriculum useful for foundational knowledge; not specific to level design but helpful for broader skill-building."
+  },
+  {
+    "title": "awesome-mac",
+    "url": "https://github.com/jaywcjlove/awesome-mac",
+    "description": "This project is dedicated to collecting high-quality macOS software and organizing them systematically by different categories for easy search and use.",
+    "category": "curated list",
+    "tags": ["awesome","macos","app","software"],
+    "language": "Swift",
+    "stars": 105593,
+    "last_updated": "2026-06-10T12:34:45Z",
+    "notes": "macOS software collection — useful if searching for level design/game dev tools available on Mac."
+  },
+  {
+    "title": "nodebestpractices",
+    "url": "https://github.com/goldbergyoni/nodebestpractices",
+    "description": "The Node.js best practices list (July 2024)",
+    "category": "guide/tutorial",
+    "tags": ["nodejs","best-practices","javascript"],
+    "language": "Dockerfile",
+    "stars": 105302,
+    "last_updated": "2025-04-15T21:52:42Z",
+    "notes": "Node.js best practices — useful for backend/tool development around level design pipelines."
+  },
+  {
+    "title": "DeepSeek-V3",
+    "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+    "description": "DeepSeek V3 LLM model.",
+    "category": "model",
+    "tags": ["llm","ai","model"],
+    "language": "Python",
+    "stars": 103740,
+    "last_updated": "2025-08-28T03:24:37Z",
+    "notes": "Open-source LLM model; could be useful for research on AI-assisted level design or procedural content."
+  },
+  {
+    "title": "pytorch",
+    "url": "https://github.com/pytorch/pytorch",
+    "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+    "category": "framework",
+    "tags": ["deep-learning","machine-learning","neural-network","python"],
+    "language": "Python",
+    "stars": 100663,
+    "last_updated": "2026-06-12T04:22:57Z",
+    "notes": "PyTorch deep learning framework — essential for ML research; useful for procedural generation / AI-assisted level design."
+  },
+  {
+    "title": "every-programmer-should-know",
+    "url": "https://github.com/mtdvio/every-programmer-should-know",
+    "description": "A collection of (mostly) technical things every software developer should know about",
+    "category": "curated list",
+    "tags": ["computer-science","educational","knowledge"],
+    "language": null,
+    "stars": 99514,
+    "last_updated": "2025-12-29T19:37:02Z",
+    "notes": "General developer knowledge collection; useful for broadening technical foundations applicable to game dev."
+  },
+  {
+    "title": "cc-switch",
+    "url": "https://github.com/farion1231/cc-switch",
+    "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent.",
+    "category": "tool",
+    "tags": ["ai-tools","claude-code","desktop-app","agent"],
+    "language": "Rust",
+    "stars": 98746,
+    "last_updated": "2026-06-11T18:37:28Z",
+    "notes": "Cross-platform desktop assistant for AI code tools — could streamline level design workflows using AI."
+  },
+  {
+    "title": "browser-use",
+    "url": "https://github.com/browser-use/browser-use",
+    "description": "Make websites accessible for AI agents. Automate tasks online with ease.",
+    "category": "tool/framework",
+    "tags": ["ai-agents","automation","browser"],
+    "language": "Python",
+    "stars": 98364,
+    "last_updated": "2026-06-12T03:08:21Z",
+    "notes": "Browser automation with AI agents — useful for automating repetitive level design tasks or data gathering."
+  },
+  {
+    "title": "clean-code-javascript",
+    "url": "https://github.com/ryanmcdermott/clean-code-javascript",
+    "description": "Clean Code concepts adapted for JavaScript",
+    "category": "guide/tutorial",
+    "tags": ["javascript","best-practices","clean-code"],
+    "language": "JavaScript",
+    "stars": 94434,
+    "last_updated": "2024-07-29T07:24:37Z",
+    "notes": "JavaScript clean code practices — useful for writing maintainable level design tools/scripts."
+  },
+  {
+    "title": "java-design-patterns",
+    "url": "https://github.com/iluwatar/java-design-patterns",
+    "description": "Design patterns implemented in Java",
+    "category": "guide/tutorial",
+    "tags": ["java","design-patterns","programming"],
+    "language": "Java",
+    "stars": 94122,
+    "last_updated": "2026-06-10T16:09:13Z",
+    "notes": "Design patterns in Java — useful for understanding architectural patterns applicable to game/level design systems."
+  },
+  {
+    "title": "playwright",
+    "url": "https://github.com/microsoft/playwright",
+    "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.",
+    "category": "framework/tool",
+    "tags": ["testing","automation","browser"],
+    "language": "TypeScript",
+    "stars": 90771,
+    "last_updated": "2026-06-12T01:03:31Z",
+    "notes": "Browser automation/testing framework — useful for testing web-based level editors or game portals."
   }
 ]
