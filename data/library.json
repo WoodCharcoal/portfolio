@@ -328,5 +328,115 @@
     "stars": 90771,
     "last_updated": "2026-06-12T01:03:31Z",
     "notes": "Browser automation/testing framework — useful for testing web-based level editors or game portals."
+  },
+  {
+    "title": "PaddleOCR",
+    "url": "https://github.com/PaddlePaddle/PaddleOCR",
+    "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs.",
+    "category": "framework/tool",
+    "tags": ["ocr","document-parsing","ai","python"],
+    "language": "Python",
+    "stars": 81913,
+    "last_updated": "2026-06-12T06:22:32Z",
+    "notes": "OCR toolkit for document extraction; useful for parsing level design specifications or diagrams from images/PDFs."
+  },
+  {
+    "title": "cs-video-courses",
+    "url": "https://github.com/Developer-Y/cs-video-courses",
+    "description": "List of Computer Science courses with video lectures.",
+    "category": "curated list",
+    "tags": ["education","cs","courses","video-lectures"],
+    "language": null,
+    "stars": 81768,
+    "last_updated": "2026-06-10T19:30:01Z",
+    "notes": "Curated list of CS courses covering fundamentals — useful for structured learning in game development foundations."
+  },
+  {
+    "title": "llm-course",
+    "url": "https://github.com/mlabonne/llm-course",
+    "description": "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.",
+    "category": "course/tutorial",
+    "tags": ["llm","machine-learning","education","roadmap"],
+    "language": null,
+    "stars": 80041,
+    "last_updated": "2026-02-05T13:09:26Z",
+    "notes": "LLM course roadmap with hands-on notebooks; useful for understanding AI models for procedural level generation."
+  },
+  {
+    "title": "github-readme-stats",
+    "url": "https://github.com/anuraghazra/github-readme-stats",
+    "description": "Dynamically generated stats for your github readmes.",
+    "category": "tool",
+    "tags": ["github","readme","stats","profile"],
+    "language": "JavaScript",
+    "stars": 79633,
+    "last_updated": "2026-05-31T01:16:17Z",
+    "notes": "GitHub stats card generator for README files; useful for personalizing your game portfolio GitHub profile."
+  },
+  {
+    "title": "netdata",
+    "url": "https://github.com/netdata/netdata",
+    "description": "The fastest path to AI-powered full stack observability, even for lean teams.",
+    "category": "tool",
+    "tags": ["monitoring","observability","devops","ai"],
+    "language": "C",
+    "stars": 79122,
+    "last_updated": "2026-06-12T07:23:20Z",
+    "notes": "Real-time system monitoring and AI observability; useful for monitoring level editor performance or game servers."
+  },
+  {
+    "title": "lobehub",
+    "url": "https://github.com/lobehub/lobehub",
+    "description": "LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+    "category": "platform/tool",
+    "tags": ["agent","ai","orchestration","mcp"],
+    "language": "TypeScript",
+    "stars": 78538,
+    "last_updated": "2026-06-12T07:27:43Z",
+    "notes": "AI agent orchestration platform with multi-agent coordination; useful framework reference for agent-driven level design automation."
+  },
+  {
+    "title": "Best-websites-a-programmer-should-visit",
+    "url": "https://github.com/sdmg15/Best-websites-a-programmer-should-visit",
+    "description": "Some useful websites for programmers.",
+    "category": "curated list",
+    "tags": ["resources","websites","programming"],
+    "language": null,
+    "stars": 76135,
+    "last_updated": "2025-09-16T18:34:24Z",
+    "notes": "Curated list of programmer resources and websites (archived); good reference for various development tools and services."
+  },
+  {
+    "title": "redis",
+    "url": "https://github.com/redis/redis",
+    "description": "For developers, who are building real-time data-driven applications, Redis is the preferred, fastest, and most feature-rich cache, data structure server.",
+    "category": "framework/database",
+    "tags": ["cache","database","nosql","real-time"],
+    "language": "C",
+    "stars": 74837,
+    "last_updated": "2026-06-09T11:13:57Z",
+    "notes": "Redis in-memory data store; useful for real-time collaboration features or caching in level design tools/servers."
+  },
+  {
+    "title": "imgui",
+    "url": "https://github.com/ocornut/imgui",
+    "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
+    "category": "library/framework",
+    "tags": ["gui","immediate-mode","c++","game-development"],
+    "language": "C++",
+    "stars": 73786,
+    "last_updated": "2026-06-11T17:16:25Z",
+    "notes": "Immediate-mode GUI library; excellent for building lightweight level editor UIs or in-game debug tools."
+  },
+  {
+    "title": "awesome-vue",
+    "url": "https://github.com/vuejs/awesome-vue",
+    "description": "A curated list of awesome things related to Vue.js",
+    "category": "curated list",
+    "tags": ["vue","javascript","framework","frontend"],
+    "language": null,
+    "stars": 73562,
+    "last_updated": "2026-05-12T06:08:05Z",
+    "notes": "Vue.js ecosystem resources; useful if building web-based level design tools or game dashboards."
   }
 ]
