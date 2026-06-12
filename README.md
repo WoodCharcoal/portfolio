@@ -66,7 +66,7 @@ https://www.taptap.cn/app/834934 (欢迎试玩)
 assets/images/
 ├── 机制说明图/
 │   ├── temporal_attribute.png          [占位符] 时间属性二元对立
-│   ├── rewind_types.png                [占位符] 三种回溯卡牌
+│   ├── rewind_types.png                [占位符] 三种回溯类型
 │   └── combination_strategies.png      [占位符] 组合策略矩阵
 │
 ├── 关卡地图/
