@@ -1,0 +1,38 @@
+[
+  {
+    "title": "playwright",
+    "url": "https://github.com/microsoft/playwright",
+    "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.",
+    "tags": ["testing", "automation", "browser"],
+    "language": "TypeScript",
+    "stars": 90771,
+    "notes": "浏览器自动化/测试框架，可用于测试 Web 端关卡编辑器或游戏门户"
+  },
+  {
+    "title": "github-readme-stats",
+    "url": "https://github.com/anuraghazra/github-readme-stats",
+    "description": "Dynamically generated stats for your github readmes.",
+    "tags": ["github", "readme", "stats", "profile"],
+    "language": "JavaScript",
+    "stars": 79633,
+    "notes": "GitHub README 统计卡片生成器，美化个人游戏作品集 GitHub 主页"
+  },
+  {
+    "title": "netdata",
+    "url": "https://github.com/netdata/netdata",
+    "description": "The fastest path to AI-powered full stack observability, even for lean teams.",
+    "tags": ["monitoring", "observability", "devops", "ai"],
+    "language": "C",
+    "stars": 79122,
+    "notes": "实时系统监控与 AI 可观测性，可用于监控关卡编辑器性能或游戏服务器"
+  },
+  {
+    "title": "redis",
+    "url": "https://github.com/redis/redis",
+    "description": "For developers, who are building real-time data-driven applications, Redis is the preferred, fastest, and most feature-rich cache, data structure server.",
+    "tags": ["cache", "database", "nosql", "real-time"],
+    "language": "C",
+    "stars": 74837,
+    "notes": "Redis 内存数据库，可用于关卡设计工具/服务器的实时协作和缓存"
+  }
+]

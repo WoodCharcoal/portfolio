@@ -1,0 +1,83 @@
+[
+  {
+    "title": "awesome",
+    "url": "https://github.com/sindresorhus/awesome",
+    "description": "Awesome lists about all kinds of interesting topics.",
+    "tags": ["awesome", "lists", "resources"],
+    "language": null,
+    "stars": 474922,
+    "notes": "Awesome 列表总入口，发现各类精选资源的高层导航"
+  },
+  {
+    "title": "public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "description": "A collective list of free APIs.",
+    "tags": ["apis", "resources", "list"],
+    "language": "Python",
+    "stars": 440888,
+    "notes": "免费 API 大全，可找到游戏设计相关的地图、分析等服务"
+  },
+  {
+    "title": "awesome-python",
+    "url": "https://github.com/vinta/awesome-python",
+    "description": "An opinionated list of Python frameworks, libraries, tools, and resources.",
+    "tags": ["python", "awesome", "libraries"],
+    "language": "Python",
+    "stars": 302426,
+    "notes": "Python 资源精选，需要 Python 工具/脚本时可快速查找"
+  },
+  {
+    "title": "awesome-selfhosted",
+    "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "description": "A list of Free Software network services and web applications which can be hosted on your own servers.",
+    "tags": ["self-hosted", "services", "infrastructure"],
+    "language": null,
+    "stars": 298604,
+    "notes": "自托管服务列表，可用于搭建资产服务器、分析工具等"
+  },
+  {
+    "title": "the-book-of-secret-knowledge",
+    "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+    "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+    "tags": ["cheatsheets", "tools", "resources"],
+    "language": null,
+    "stars": 227857,
+    "notes": "实用资源大合集，包含手册、速查表、CLI/Web 工具等"
+  },
+  {
+    "title": "awesome-mac",
+    "url": "https://github.com/jaywcjlove/awesome-mac",
+    "description": "This project is dedicated to collecting high-quality macOS software and organizing them systematically by different categories for easy search and use.",
+    "tags": ["awesome", "macos", "app", "software"],
+    "language": "Swift",
+    "stars": 105593,
+    "notes": "macOS 软件精选，可查找游戏开发/关卡设计相关 Mac 工具"
+  },
+  {
+    "title": "awesome-vue",
+    "url": "https://github.com/vuejs/awesome-vue",
+    "description": "A curated list of awesome things related to Vue.js",
+    "tags": ["vue", "javascript", "framework", "frontend"],
+    "language": null,
+    "stars": 73562,
+    "notes": "Vue.js 生态资源，构建 Web 端关卡设计工具或游戏仪表盘参考"
+  },
+  {
+    "title": "every-programmer-should-know",
+    "url": "https://github.com/mtdvio/every-programmer-should-know",
+    "description": "A collection of (mostly) technical things every software developer should know about",
+    "tags": ["computer-science", "educational", "knowledge"],
+    "language": null,
+    "stars": 99514,
+    "notes": "开发者必备技术知识合集，拓宽游戏开发技术视野"
+  },
+  {
+    "title": "Best-websites-a-programmer-should-visit",
+    "url": "https://github.com/sdmg15/Best-websites-a-programmer-should-visit",
+    "description": "Some useful websites for programmers.",
+    "tags": ["resources", "websites", "programming"],
+    "language": null,
+    "stars": 76135,
+    "notes": "程序员实用网站列表（已归档），仍有参考价值"
+  }
+]

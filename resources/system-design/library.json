@@ -1,0 +1,47 @@
+[
+  {
+    "title": "awesome-low-level-design",
+    "url": "https://github.com/ashishps1/awesome-low-level-design",
+    "description": "Learn Low Level Design (LLD) and prepare for interviews using free resources.",
+    "tags": ["low-level-design", "interview", "lld", "resources", "oop", "design-patterns"],
+    "language": null,
+    "stars": 24563,
+    "notes": "高星精选合集，专注低层设计与面试准备，涵盖 OOP、设计原则、设计模式、并发编程等"
+  },
+  {
+    "title": "low-level-design-primer",
+    "url": "https://github.com/prasadgujar/low-level-design-primer",
+    "description": "Dedicated Resources for the Low-Level System Design. Learn how to design and implement large-scale systems. Prep for the system design interview.",
+    "tags": ["system-design", "low-level-design", "interview", "resources"],
+    "language": null,
+    "stars": 7775,
+    "notes": "系统/低层设计综合入门，适合面试和架构学习"
+  },
+  {
+    "title": "system-design-primer",
+    "url": "https://github.com/donnemartin/system-design-primer",
+    "description": "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
+    "tags": ["system-design", "architecture", "education"],
+    "language": "Python",
+    "stars": 352678,
+    "notes": "大规模系统设计经典教程，含 Anki 卡片，间接适用于游戏后端/架构设计"
+  },
+  {
+    "title": "System-Design",
+    "url": "https://github.com/codersguild/System-Design",
+    "description": "Design-level considerations for scalability, maintainability, availability and reliability; interview prep.",
+    "tags": ["system-design", "scalability", "reliability", "interview"],
+    "language": null,
+    "stars": 2171,
+    "notes": "系统设计广度资源，适合架构学习"
+  },
+  {
+    "title": "java-design-patterns",
+    "url": "https://github.com/iluwatar/java-design-patterns",
+    "description": "Design patterns implemented in Java",
+    "tags": ["java", "design-patterns", "programming"],
+    "language": "Java",
+    "stars": 94122,
+    "notes": "Java 设计模式实现，理解架构模式经典参考，也适用于游戏/关卡设计系统的模式思考"
+  }
+]
