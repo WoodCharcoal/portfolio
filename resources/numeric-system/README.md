@@ -20,4 +20,4 @@
 | 12 | [Awesome Harness Engineering](https://github.com/walkinglabs/awesome-harness-engineering) | 仓库 | AI Agent 可靠性工程资源列表，评估/约束/可观测性 |
 | 13 | [Games, Design & Play](http://www.gamesdesignandplay.com/) | 书籍 | Colleen Macklin & John Sharp：游戏设计与游玩实践 |
 | 14 | [Design 101 系列](https://www.gamasutra.com/blogs/DanFelder/20150413/240853/Design_101_Design_Goals.php) | 文章 | Dan Felder：设计目标、约束与迭代系列教程 |
-| 15 | [玩家心理学与行为经济学](https://zsc.github.io/numeric_planner_tutorial/chapter15.html) | 教程 | 数值策划教程第15章：心流、前景理论、FOMO 机制设计 |
+| 15 | [玩家心理学与行为经济学](https://zsc.github.io/numeric_planner_tutorial) | 教程 | 数值策划教程 |
