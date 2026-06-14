@@ -1,0 +1,135 @@
+[
+  {
+    "id": 1,
+    "title": "Godogen",
+    "url": "https://github.com/htdt/godogen",
+    "type": "repo",
+    "tags": ["AI游戏开发", "自主生成", "Godot", "Bevy", "Babylon.js"],
+    "author": "htdt",
+    "stars": 3400,
+    "note": "AI自主游戏开发生成器，描述→规划→编码→资源→运行→自修复"
+  },
+  {
+    "id": 2,
+    "title": "Sprite Pipeline",
+    "url": "https://github.com/LayrKits/Sprite-Pipeline",
+    "type": "repo",
+    "tags": ["精灵图", "AI动画", "工作流", "2D美术"],
+    "author": "LayrKits",
+    "note": "AI动画→精灵图工作流：帧提取→背景抠除→打包→审批"
+  },
+  {
+    "id": 3,
+    "title": "Spine Animation AI",
+    "url": "https://github.com/GenielabsOpenSource/spine-animation-ai",
+    "type": "repo",
+    "tags": ["Spine", "骨骼动画", "AI驱动", "自动绑骨"],
+    "author": "GenielabsOpenSource",
+    "note": "AI驱动Spine骨骼动画：自动定位→绑骨→生成动画→预览"
+  },
+  {
+    "id": 4,
+    "title": "Kenney Assets",
+    "url": "https://www.kenney.nl/assets",
+    "type": "assets",
+    "tags": ["免费素材", "2D", "3D", "UI", "CC0"],
+    "author": "Kenney",
+    "note": "免费游戏美术素材库，2D/3D/UI/音效，CC0协议"
+  },
+  {
+    "id": 5,
+    "title": "OpenGameArt",
+    "url": "https://opengameart.org",
+    "type": "assets",
+    "tags": ["开源素材", "美术", "音效", "社区"],
+    "note": "开源游戏美术与音效资源社区"
+  },
+  {
+    "id": 6,
+    "title": "Itch.io Game Assets",
+    "url": "https://itch.io/game-assets",
+    "type": "assets",
+    "tags": ["素材市场", "2D", "3D", "独立开发"],
+    "note": "独立游戏素材市场，大量免费/付费2D3D资源"
+  },
+  {
+    "id": 7,
+    "title": "Freesound",
+    "url": "https://freesound.org",
+    "type": "assets",
+    "tags": ["音效", "采样", "CC协议", "免费"],
+    "note": "免费音效与采样数据库，CC协议"
+  },
+  {
+    "id": 8,
+    "title": "Godot Engine",
+    "url": "https://godotengine.org",
+    "type": "engine",
+    "tags": ["游戏引擎", "开源", "2D/3D", "GDScript", "C#"],
+    "note": "免费开源游戏引擎，2D/3D，GDScript+C#"
+  },
+  {
+    "id": 9,
+    "title": "Bevy Engine",
+    "url": "https://bevyengine.org",
+    "type": "engine",
+    "tags": ["Rust", "ECS", "数据驱动", "开源"],
+    "note": "Rust数据驱动游戏引擎，ECS架构"
+  },
+  {
+    "id": 10,
+    "title": "Defold",
+    "url": "https://defold.com",
+    "type": "engine",
+    "tags": ["2D引擎", "Lua", "跨平台", "免费"],
+    "note": "免费2D游戏引擎，Lua脚本，跨平台"
+  },
+  {
+    "id": 11,
+    "title": "Aseprite",
+    "url": "https://www.aseprite.org",
+    "type": "tool",
+    "tags": ["像素画", "动画", "精灵图", "编辑器"],
+    "note": "像素画编辑器，动画制作与精灵图导出"
+  },
+  {
+    "id": 12,
+    "title": "Spine",
+    "url": "http://esotericsoftware.com",
+    "type": "tool",
+    "tags": ["骨骼动画", "2D", "行业标准"],
+    "note": "2D骨骼动画编辑器，行业标准"
+  },
+  {
+    "id": 13,
+    "title": "FMOD",
+    "url": "https://www.fmod.com",
+    "type": "tool",
+    "tags": ["音频中间件", "自适应音乐", "音效系统"],
+    "note": "游戏音频中间件，自适应音乐与音效系统"
+  },
+  {
+    "id": 14,
+    "title": "Wwise",
+    "url": "https://www.audiokinetic.com",
+    "type": "tool",
+    "tags": ["音频引擎", "交互式音乐", "音频中间件"],
+    "note": "游戏音频引擎与交互式音乐系统"
+  },
+  {
+    "id": 15,
+    "title": "TexturePacker",
+    "url": "https://www.codeandweb.com/texturepacker",
+    "type": "tool",
+    "tags": ["精灵图", "打包工具", "多引擎支持"],
+    "note": "TexturePacker精灵图打包工具"
+  },
+  {
+    "id": 16,
+    "title": "Babylon.js",
+    "url": "https://www.babylonjs.com",
+    "type": "engine",
+    "tags": ["Web3D", "TypeScript", "浏览器游戏"],
+    "note": "Web 3D游戏引擎，TypeScript"
+  }
+]

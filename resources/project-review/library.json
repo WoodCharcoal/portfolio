@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "title": "GDC Vault",
+    "url": "https://gdcvault.com",
+    "type": "platform",
+    "tags": ["GDC", "演讲存档", "视频", "幻灯片"],
+    "note": "GDC官方演讲存档，20+年游戏开发者大会视频与幻灯片"
+  },
+  {
+    "id": 2,
+    "title": "GDC-Index",
+    "url": "https://github.com/Jamiras/gdc-index",
+    "type": "repo",
+    "tags": ["GDC", "结构化索引", "快速检索"],
+    "author": "Jamiras",
+    "note": "GDC演讲结构化索引，按主题/年份/演讲者快速检索"
+  },
+  {
+    "id": 3,
+    "title": "Game Developer Postmortems",
+    "url": "https://www.gamedeveloper.com/postmortem",
+    "type": "collection",
+    "tags": ["Postmortem", "项目复盘", "开发经验"],
+    "note": "Game Developer网站的Postmortem专栏"
+  },
+  {
+    "id": 4,
+    "title": "Game Maker's Toolkit",
+    "url": "https://www.youtube.com/c/GameMakersToolkit",
+    "type": "channel",
+    "tags": ["游戏设计", "深度分析", "YouTube"],
+    "author": "Mark Brown",
+    "note": "Mark Brown的游戏设计深度分析YouTube频道"
+  },
+  {
+    "id": 5,
+    "title": "Design Delve",
+    "url": "https://www.youtube.com/@DesignDelve",
+    "type": "channel",
+    "tags": ["系统拆解", "机制分析", "YouTube"],
+    "note": "游戏系统与机制深度拆解频道"
+  },
+  {
+    "id": 6,
+    "title": "Game Wisdom",
+    "url": "https://www.youtube.com/c/GameWisdom",
+    "type": "channel",
+    "tags": ["设计分析", "开发深度", "YouTube"],
+    "author": "Josh Bycer",
+    "note": "游戏设计与开发深度分析频道"
+  },
+  {
+    "id": 7,
+    "title": "Noclip — Game Documentaries",
+    "url": "https://www.youtube.com/c/NoclipVideo",
+    "type": "channel",
+    "tags": ["纪录片", "工作室", "开发幕后"],
+    "note": "高质量游戏开发纪录片，深入工作室内部"
+  },
+  {
+    "id": 8,
+    "title": "Game Studies",
+    "url": "https://gamestudies.org",
+    "type": "journal",
+    "tags": ["学术期刊", "游戏研究", "理论批评"],
+    "note": "游戏研究学术期刊，理论与批评"
+  },
+  {
+    "id": 9,
+    "title": "Retro Game Mechanics Explained",
+    "url": "https://www.youtube.com/c/RetroGameMechanicsExplained",
+    "type": "channel",
+    "tags": ["经典游戏", "底层机制", "技术解析"],
+    "note": "经典游戏的底层机制与Bug技术深度解析"
+  },
+  {
+    "id": 10,
+    "title": "Awesome-Game-Analysis：游戏开发技术汇总",
+    "url": "https://zhuanlan.zhihu.com/p/645861657",
+    "type": "article",
+    "tags": ["技术汇总", "Awesome系列", "游戏分析"],
+    "note": "Awesome-Game-Analysis：游戏开发技术汇总"
+  },
+  {
+    "id": 11,
+    "title": "GDC 2025 — 游戏开发分享",
+    "url": "https://www.gdcvault.com/",
+    "type": "talk",
+    "tags": ["GDC", "2025", "开发经验"],
+    "note": "GDC 2025游戏开发经验分享"
+  },
+  {
+    "id": 12,
+    "title": "55个游戏开发者资源：打造卓越游戏的终极指南",
+    "url": "https://juejin.cn/post/7542045803582947354",
+    "type": "article",
+    "tags": ["资源指南", "全流程", "开发工具"],
+    "note": "从GDD到上线，55个游戏开发全流程资源指南"
+  },
+  {
+    "id": 13,
+    "title": "Beyond the Engine: 10 Open Source Projects Shaping How Games Get Made",
+    "url": "https://github.blog/open-source/gaming/beyond-the-engine-10-open-source-projects-shaping-how-games-actually-get-made/",
+    "type": "article",
+    "tags": ["开源项目", "游戏制作", "GitHub官方"],
+    "note": "GitHub官方：10个影响游戏制作流程的开源项目"
+  }
+]

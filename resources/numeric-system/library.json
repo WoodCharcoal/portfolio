@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "游戏数值策划完全教程",
+    "url": "https://zsc.github.io/numeric_planner_tutorial/",
+    "type": "tutorial",
+    "tags": ["数值策划", "战斗数值", "经济系统", "抽卡概率"],
+    "note": "17章系统教程：战斗数值、成长曲线、经济系统、抽卡概率"
+  },
+  {
+    "id": 2,
+    "title": "Game Balance Concepts",
+    "url": "https://gamebalanceconcepts.wordpress.com",
+    "type": "course",
+    "tags": ["游戏平衡", "数值设计", "免费课程"],
+    "author": "Ian Schreiber",
+    "note": "免费游戏平衡设计在线课程"
+  },
+  {
+    "id": 3,
+    "title": "Practical Creativity",
+    "url": "https://www.youtube.com/watch?v=zyVTxGpEO30",
+    "type": "talk",
+    "tags": ["GDC", "创意系统化", "设计方法论"],
+    "author": "Raph Koster",
+    "note": "GDC演讲：如何在游戏设计中系统化地激发创意"
+  },
+  {
+    "id": 4,
+    "title": "Cursed Problems in Game Design",
+    "url": "https://youtu.be/8uE6-vIi1rQ",
+    "type": "talk",
+    "tags": ["GDC", "权衡策略", "设计难题"],
+    "author": "Alex Jaffe",
+    "note": "游戏设计中被诅咒的问题与权衡策略"
+  },
+  {
+    "id": 5,
+    "title": "Game Design Theory I Wish I Had Known When I Started",
+    "url": "https://youtu.be/qwPe3OHR04c",
+    "type": "talk",
+    "tags": ["GDC", "设计理论", "入门反思"],
+    "author": "Daniel Cook",
+    "note": "入行后才理解的游戏设计理论"
+  },
+  {
+    "id": 6,
+    "title": "Magic: The Gathering: Twenty Years, Twenty Lessons Learned",
+    "url": "https://youtu.be/QHHg99hwQGY",
+    "type": "talk",
+    "tags": ["GDC", "卡牌设计", "长期运营"],
+    "author": "Mark Rosewater",
+    "note": "万智牌首席设计师的20年设计教训"
+  },
+  {
+    "id": 7,
+    "title": "游戏经济系统设计",
+    "url": "https://zhuanlan.zhihu.com/p/535487809",
+    "type": "article",
+    "tags": ["经济系统", "模块化设计", "货币体系"],
+    "note": "模块化游戏经济系统设计思路"
+  },
+  {
+    "id": 8,
+    "title": "Game Balance Concepts",
+    "url": "https://gamebalanceconcepts.wordpress.com",
+    "type": "course",
+    "tags": ["平衡设计", "数值进阶", "概率统计"],
+    "author": "Ian Schreiber",
+    "note": "从数值基础到高级平衡的完整课程"
+  },
+  {
+    "id": 9,
+    "title": "RPG游戏关卡与战斗设计秘籍",
+    "url": "https://www.gameres.com/889917.html",
+    "type": "article",
+    "tags": ["RPG", "战斗数值", "关卡设计"],
+    "note": "RPG关卡与战斗设计的数值系统实战解析"
+  },
+  {
+    "id": 10,
+    "title": "Game Design Concepts",
+    "url": "https://gamedesignconcepts.wordpress.com",
+    "type": "course",
+    "tags": ["设计入门", "免费课程", "系统设计"],
+    "author": "Ian Schreiber",
+    "note": "游戏设计概念入门免费课程"
+  },
+  {
+    "id": 11,
+    "title": "The Spire Agent",
+    "url": "https://github.com/HZhangM/The-Spire-Agent",
+    "type": "repo",
+    "tags": ["AI游戏", "策略学习", "杀戮尖塔", "LLM"],
+    "author": "HZhangM",
+    "note": "AI自动游玩杀戮尖塔2，含三层记忆与策略学习系统"
+  },
+  {
+    "id": 12,
+    "title": "Awesome Harness Engineering",
+    "url": "https://github.com/walkinglabs/awesome-harness-engineering",
+    "type": "repo",
+    "tags": ["AI Agent", "可靠性工程", "评估框架"],
+    "author": "walkinglabs",
+    "stars": 3200,
+    "note": "AI Agent可靠性工程资源列表，评估/约束/可观测性"
+  },
+  {
+    "id": 13,
+    "title": "Games, Design & Play",
+    "url": "http://www.gamesdesignandplay.com/",
+    "type": "book",
+    "tags": ["设计实践", "游玩体验", "系统思维"],
+    "authors": ["Colleen Macklin", "John Sharp"],
+    "note": "游戏设计与游玩实践方法"
+  },
+  {
+    "id": 14,
+    "title": "Design 101: Design Goals",
+    "url": "https://www.gamasutra.com/blogs/DanFelder/20150413/240853/Design_101_Design_Goals.php",
+    "type": "article",
+    "tags": ["设计目标", "约束", "迭代"],
+    "author": "Dan Felder",
+    "note": "设计目标、约束与迭代系列教程"
+  },
+  {
+    "id": 15,
+    "title": "玩家心理学与行为经济学",
+    "url": "https://zsc.github.io/numeric_planner_tutorial/chapter15.html",
+    "type": "tutorial",
+    "tags": ["心流理论", "前景理论", "FOMO", "行为经济学"],
+    "note": "数值策划教程第15章：心流、前景理论、FOMO机制设计"
+  }
+]

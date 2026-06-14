@@ -1,0 +1,133 @@
+[
+  {
+    "id": 1,
+    "title": "I Have No Words & I Must Design",
+    "url": "http://www.costik.com/nowords2002.pdf",
+    "type": "paper",
+    "tags": ["经典论文", "设计理论", "决策结构"],
+    "author": "Greg Costikyan",
+    "note": "游戏不是故事不是视觉，而是一种决策结构"
+  },
+  {
+    "id": 2,
+    "title": "MDA: A Formal Approach to Game Design and Game Research",
+    "url": "https://www.cs.northwestern.edu/~hunicke/MDA.pdf",
+    "type": "paper",
+    "tags": ["MDA框架", "机制-动态-美学", "形式化"],
+    "authors": ["Robin Hunicke", "Marc LeBlanc", "Robert Zubek"],
+    "note": "游戏设计三要素形式化框架，理解设计者与玩家视角差异"
+  },
+  {
+    "id": 3,
+    "title": "A Theory of Fun for Game Design",
+    "url": "https://www.theoryoffun.com",
+    "type": "book",
+    "tags": ["乐趣理论", "模式识别", "认知挑战"],
+    "author": "Raph Koster",
+    "note": "乐趣的本质是模式识别与认知挑战"
+  },
+  {
+    "id": 4,
+    "title": "Designing Games: A Guide to Engineering Experiences",
+    "url": "https://tynansylvester.com/book/",
+    "type": "book",
+    "tags": ["系统设计", "体验工程", "方法论"],
+    "author": "Tynan Sylvester",
+    "note": "RimWorld 作者的系统化游戏设计方法论"
+  },
+  {
+    "id": 5,
+    "title": "Game Feel: A Game Designer's Guide to Virtual Sensation",
+    "url": "http://www.game-feel.com",
+    "type": "book",
+    "tags": ["游戏手感", "操控反馈", "微交互"],
+    "author": "Steve Swink",
+    "note": "游戏手感、操控反馈与微交互设计的权威著作"
+  },
+  {
+    "id": 6,
+    "title": "Game Mechanics: Advanced Game Design",
+    "url": "https://www.goodreads.com/book/show/13705461-game-mechanics",
+    "type": "book",
+    "tags": ["游戏机制", "内部经济", "系统设计"],
+    "authors": ["Ernest Adams", "Joris Dormans"],
+    "note": "游戏机制与内部经济设计的进阶教程"
+  },
+  {
+    "id": 7,
+    "title": "The Art of Game Design: A Book of Lenses",
+    "url": "https://www.schellgames.com/art-of-game-design",
+    "type": "book",
+    "tags": ["设计透镜", "全流程设计", "经典教材"],
+    "author": "Jesse Schell",
+    "note": "100+ 设计透镜，游戏设计全能参考书"
+  },
+  {
+    "id": 8,
+    "title": "Rules of Play: Game Design Fundamentals",
+    "url": "https://mitpress.mit.edu/9780262204733/rules-of-play/",
+    "type": "book",
+    "tags": ["学术经典", "游戏理论", "设计基础"],
+    "authors": ["Katie Salen", "Eric Zimmerman"],
+    "note": "游戏设计学术领域经典教材"
+  },
+  {
+    "id": 9,
+    "title": "The Chemistry of Game Design",
+    "url": "https://www.gamasutra.com/view/feature/1524/the_chemistry_of_game_design.php",
+    "type": "article",
+    "tags": ["设计方法论", "化学反应模型", "可重复设计"],
+    "author": "Daniel Cook",
+    "note": "将游戏设计拆解为可重复的化学反应模型"
+  },
+  {
+    "id": 10,
+    "title": "Don't Be a Vidiot",
+    "url": "http://www.costik.com/vidiot.html",
+    "type": "article",
+    "tags": ["设计思维", "误区", "经典"],
+    "author": "Greg Costikyan",
+    "note": "游戏设计师如何避免视频白痴思维陷阱"
+  },
+  {
+    "id": 11,
+    "title": "Level Design Lobby Podcast",
+    "url": "https://www.leveldesignlobby.com/",
+    "type": "podcast",
+    "tags": ["关卡设计", "播客", "理论讨论"],
+    "note": "关卡设计与游戏设计理论深度讨论播客"
+  },
+  {
+    "id": 12,
+    "title": "Game Design Playlist",
+    "url": "https://github.com/kkga/gamedesign-playlist",
+    "type": "repo",
+    "tags": ["资源合集", "设计理论", "书籍演讲"],
+    "author": "kkga",
+    "note": "游戏设计精选资源合集：文章、书籍、演讲与课程"
+  },
+  {
+    "id": 13,
+    "title": "Ludism Game Design Wiki",
+    "url": "https://www.ludism.org/gamedesign/",
+    "type": "wiki",
+    "tags": ["设计模式", "反模式", "社区Wiki"],
+    "note": "游戏设计模式与反模式社区Wiki"
+  },
+  {
+    "id": 14,
+    "title": "Game Design Patterns: Complete Guide",
+    "url": "https://generalistprogrammer.com/game-design-patterns",
+    "type": "tutorial",
+    "tags": ["设计模式", "Game Loop", "ECS"],
+    "note": "游戏设计模式指南：Game Loop、ECS、状态机等"
+  },
+  {
+    "id": 15,
+    "title": "Game Development Wiki",
+    "url": "https://www.gamedevelopment.wiki/",
+    "type": "wiki",
+    "tags": ["百科", "术语", "概念速查"],
+    "note": "游戏开发术语百科全书，核心概念与术语速查"
+  }
+]

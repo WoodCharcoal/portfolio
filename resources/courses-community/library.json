@@ -1,0 +1,126 @@
+[
+  {
+    "id": 1,
+    "title": "Game Design Concepts",
+    "url": "https://gamedesignconcepts.wordpress.com",
+    "type": "course",
+    "tags": ["免费课程", "设计入门", "系统设计"],
+    "author": "Ian Schreiber",
+    "note": "免费游戏设计入门课程"
+  },
+  {
+    "id": 2,
+    "title": "CS50's Introduction to Game Development",
+    "url": "https://cs50.harvard.edu/games/",
+    "type": "course",
+    "tags": ["哈佛", "游戏开发", "入门"],
+    "author": "Harvard CS50",
+    "note": "哈佛CS50游戏开发入门课，涵盖多个经典游戏"
+  },
+  {
+    "id": 3,
+    "title": "Complete Unity Developer",
+    "url": "https://www.udemy.com/course/unitycourse/",
+    "type": "course",
+    "tags": ["Unity", "完整教程", "Udemy"],
+    "note": "Udemy热门Unity游戏开发完整教程"
+  },
+  {
+    "id": 4,
+    "title": "Game Design Skills",
+    "url": "https://gamedesignskills.com",
+    "type": "website",
+    "tags": ["设计技能", "YouTube推荐", "学习平台"],
+    "note": "游戏设计技能学习平台，含YouTube频道推荐"
+  },
+  {
+    "id": 5,
+    "title": "r/gamedesign",
+    "url": "https://www.reddit.com/r/gamedesign/",
+    "type": "community",
+    "tags": ["Reddit", "设计讨论", "社区"],
+    "note": "Reddit游戏设计讨论社区"
+  },
+  {
+    "id": 6,
+    "title": "r/indiegaming",
+    "url": "https://www.reddit.com/r/indiegaming/",
+    "type": "community",
+    "tags": ["Reddit", "独立开发", "社区"],
+    "note": "Reddit独立游戏开发者社区"
+  },
+  {
+    "id": 7,
+    "title": "GameDev Stack Exchange",
+    "url": "https://gamedev.stackexchange.com",
+    "type": "community",
+    "tags": ["问答社区", "技术问题", "Stack Exchange"],
+    "note": "游戏开发问答社区，技术问题精准解答"
+  },
+  {
+    "id": 8,
+    "title": "TIGSource Forums",
+    "url": "https://forums.tigsource.com",
+    "type": "community",
+    "tags": ["独立游戏", "老牌论坛", "开发者"],
+    "note": "独立游戏开发者老牌论坛"
+  },
+  {
+    "id": 9,
+    "title": "Game Developer (formerly Gamasutra)",
+    "url": "https://www.gamedeveloper.com",
+    "type": "media",
+    "tags": ["专业媒体", "文章", "教程", "行业分析"],
+    "note": "游戏开发者专业媒体，文章/教程/行业分析"
+  },
+  {
+    "id": 10,
+    "title": "IndieDB",
+    "url": "https://www.indiedb.com",
+    "type": "community",
+    "tags": ["独立游戏", "展示平台", "社区"],
+    "note": "独立游戏展示与社区平台"
+  },
+  {
+    "id": 11,
+    "title": "Extra Credits",
+    "url": "https://www.youtube.com/c/extracredits",
+    "type": "channel",
+    "tags": ["设计教育", "动画讲解", "YouTube"],
+    "note": "游戏设计教育频道，用动画讲解设计理念"
+  },
+  {
+    "id": 12,
+    "title": "Sebastian Lague",
+    "url": "https://www.youtube.com/c/SebastianLague",
+    "type": "channel",
+    "tags": ["编程", "创意编码", "游戏开发"],
+    "author": "Sebastian Lague",
+    "note": "编程与游戏开发创意编码频道"
+  },
+  {
+    "id": 13,
+    "title": "Brackeys",
+    "url": "https://www.youtube.com/c/Brackeys",
+    "type": "channel",
+    "tags": ["Unity", "教程", "经典"],
+    "note": "Unity游戏开发教程频道（已停更但内容经典）"
+  },
+  {
+    "id": 14,
+    "title": "GameDev.tv",
+    "url": "https://www.gamedev.tv",
+    "type": "platform",
+    "tags": ["在线课程", "专业平台", "Unity/Unreal"],
+    "note": "专业游戏开发在线课程平台"
+  },
+  {
+    "id": 15,
+    "title": "Game Design Workshop",
+    "url": "https://gamedesignworkshop.com",
+    "type": "book",
+    "tags": ["设计工坊", "实践方法", "迭代设计"],
+    "author": "Tracy Fullerton",
+    "note": "游戏设计工坊实践方法"
+  }
+]

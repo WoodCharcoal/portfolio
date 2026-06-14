@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1,
+    "title": "Game Design Document Template & Example",
+    "url": "https://www.gamedesigning.org/learn/gdd-template-example/",
+    "type": "template",
+    "tags": ["GDD模板", "填写示例", "策划文档"],
+    "note": "完整GDD模板与填写示例，涵盖所有策划文档要素"
+  },
+  {
+    "id": 2,
+    "title": "GDD Template (GitHub)",
+    "url": "https://github.com/klembot/GDD-Template",
+    "type": "template",
+    "tags": ["GDD", "Markdown", "开源模板"],
+    "author": "klembot",
+    "note": "GitHub上的开源GDD模板，Markdown格式可直接使用"
+  },
+  {
+    "id": 3,
+    "title": "Nuclino",
+    "url": "https://www.nuclino.com",
+    "type": "tool",
+    "tags": ["团队协作", "知识库", "GDD编写"],
+    "note": "团队协作知识库，适合编写和组织GDD与设计文档"
+  },
+  {
+    "id": 4,
+    "title": "Notion Game Design Template",
+    "url": "https://www.notion.so/templates/game-design",
+    "type": "template",
+    "tags": ["Notion", "游戏设计", "可视化"],
+    "note": "Notion游戏设计模板，可视化看板与数据库集成"
+  },
+  {
+    "id": 5,
+    "title": "Miro Game Design Board",
+    "url": "https://miro.com/templates/game-design/",
+    "type": "tool",
+    "tags": ["在线白板", "头脑风暴", "流程图"],
+    "note": "在线白板工具的游戏设计模板"
+  },
+  {
+    "id": 6,
+    "title": "Obsidian",
+    "url": "https://obsidian.md",
+    "type": "tool",
+    "tags": ["知识图谱", "笔记", "本地优先"],
+    "note": "本地知识图谱笔记工具，适合关联式GDD编写与维护"
+  },
+  {
+    "id": 7,
+    "title": "Game Design Tools on itch.io",
+    "url": "https://itch.io/tools/tag-game-design",
+    "type": "collection",
+    "tags": ["工具集", "itch.io", "独立开发"],
+    "note": "itch.io上的游戏设计工具合集"
+  },
+  {
+    "id": 8,
+    "title": "Indie Prototyping — Jonathan Blow",
+    "url": "https://youtu.be/ISutk1mauPM",
+    "type": "talk",
+    "tags": ["原型验证", "独立开发", "方法论"],
+    "author": "Jonathan Blow",
+    "note": "独立游戏原型验证方法论"
+  },
+  {
+    "id": 9,
+    "title": "Lost Garden",
+    "url": "https://lostgarden.com",
+    "type": "blog",
+    "tags": ["设计博客", "模板", "游戏设计思考"],
+    "author": "Daniel Cook",
+    "note": "Daniel Cook的游戏设计博客，大量设计模板与思考"
+  },
+  {
+    "id": 10,
+    "title": "Project Management for Game Dev",
+    "url": "https://www.gamedeveloper.com/production/",
+    "type": "collection",
+    "tags": ["项目管理", "文章合集", "开发流程"],
+    "note": "Game Developer网站的项目管理专题文章"
+  }
+]

@@ -1,21 +1,23 @@
 # Game Portfolio
 
-欢迎来到我的游戏作品集仓库。这里包含两大板块：我收集的游戏开发相关资源，以及我独立制作的游戏项目。
+欢迎来到我的游戏作品集仓库。这里包含两大板块：我收集的游戏策划相关资源，以及我独立制作的游戏项目。
 
 ## 板块导航
 
-### 📚 [Resources](resources/) — 游戏开发资源库
+### 📚 [Resources](resources/) — 游戏策划资源库
 
-收集整理的 TapTap、GitHub、各网站上与游戏策划、游戏开发相关的优质帖子、工具和资源列表。
+收集整理的游戏策划、游戏设计相关优质资源。涵盖理论、数值、关卡、叙事、GDD、复盘与工具。
 
 | 板块 | 说明 |
 |------|------|
-| [游戏开发](resources/game-dev/) | 游戏开发相关的工具、库和框架 |
-| [系统设计与架构](resources/system-design/) | 软件系统设计方法论、架构模式与面试准备 |
-| [AI 与智能体](resources/ai-ml/) | 大语言模型、机器学习框架、AI 智能体工具与自动化平台 |
-| [编程与面试](resources/coding-interview/) | 编程基础、算法、面试准备和代码质量学习资源 |
-| [精选资源列表](resources/curated-lists/) | 各类优质资源导航与精选合集 |
-| [开发工具与基础设施](resources/dev-tools/) | 开发辅助工具、测试框架、数据库和基础设施资源 |
+| [设计理论与经典](resources/design-theory/) | 游戏设计底层理论、经典著作、MDA 框架、乐趣理论 |
+| [数值与系统策划](resources/numeric-system/) | 战斗数值、经济系统、抽卡概率、平衡性设计 |
+| [关卡设计与世界构建](resources/level-design/) | 关卡设计方法论、场景叙事、地图编辑器 |
+| [叙事与文案策划](resources/narrative/) | 分支对话、环境叙事、对话工具、RPG 叙事系统 |
+| [GDD 与项目文档](resources/game-doc/) | 游戏设计文档模板、协作工具、原型验证 |
+| [复盘与案例分析](resources/project-review/) | GDC 演讲、Postmortem、开发纪录片 |
+| [工具与实用资源](resources/tools-assets/) | 游戏引擎、AI 辅助开发、美术素材、动画编辑器 |
+| [课程与社区](resources/courses-community/) | 在线课程、YouTube 频道、专业论坛 |
 
 ### 🎮 [Games](games/) — 我制作的游戏
 

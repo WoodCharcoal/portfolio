@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "title": "独立游戏叙事设计实战：分支对话、环境叙事与情感节奏设计",
+    "url": "https://plumephp.com/indie-game-narrative-design-branching-dialogue/",
+    "type": "article",
+    "tags": ["分支对话", "环境叙事", "情感节奏", "Twine"],
+    "note": "分支对话、环境叙事与情感节奏设计的完整实战指南"
+  },
+  {
+    "id": 2,
+    "title": "Twine",
+    "url": "https://twinery.org",
+    "type": "tool",
+    "tags": ["叙事编辑器", "分支对话", "开源", "可视化"],
+    "note": "开源交互式叙事/分支对话编辑器，非程序员也能用"
+  },
+  {
+    "id": 3,
+    "title": "Ink — inkle's narrative scripting language",
+    "url": "https://www.inklestudios.com/ink/",
+    "type": "tool",
+    "tags": ["叙事脚本", "分支逻辑", "inkle"],
+    "note": "inkle工作室的叙事脚本语言，支持分支与条件逻辑"
+  },
+  {
+    "id": 4,
+    "title": "Articy Draft",
+    "url": "https://www.nevigo.com/articy-draft/",
+    "type": "tool",
+    "tags": ["叙事设计", "可视化", "专业工具"],
+    "note": "专业叙事与内容设计工具，可视化对话与流程图"
+  },
+  {
+    "id": 5,
+    "title": "Dialogue System for Unity",
+    "url": "https://pixelcrushers.com/dialogue-system/",
+    "type": "tool",
+    "tags": ["Unity", "对话系统", "插件"],
+    "note": "Unity对话系统插件，分支对话、任务与Scene集成"
+  },
+  {
+    "id": 6,
+    "title": "让界面传递故事：游戏界面的叙事设计",
+    "url": "https://www.163.com/dy/article/H48US7GL0526DPBA.html",
+    "type": "article",
+    "tags": ["UI叙事", "界面设计", "网易雷火"],
+    "note": "网易雷火：让游戏界面本身传递故事的设计方法"
+  },
+  {
+    "id": 7,
+    "title": "Storytime — Jonathan Blow (PAX East 2016)",
+    "url": "https://youtu.be/UwBl7Rnkt78",
+    "type": "talk",
+    "tags": ["叙事哲学", "PAX", "独立游戏"],
+    "author": "Jonathan Blow",
+    "note": "Jonathan Blow在PAX East讲游戏叙事设计哲学"
+  },
+  {
+    "id": 8,
+    "title": "Voice Input (macOS)",
+    "url": "https://github.com/yetone/voice-input-src",
+    "type": "repo",
+    "tags": ["语音输入", "macOS", "AI生成代码"],
+    "author": "yetone",
+    "stars": 2200,
+    "note": "macOS语音输入工具，Fn键录音→文字注入，AI完全生成"
+  },
+  {
+    "id": 9,
+    "title": "OpenWord（字游世界）",
+    "url": "https://github.com/dinghuanghao/openword",
+    "type": "repo",
+    "tags": ["AI RPG", "生成式游戏", "多智能体", "对话驱动"],
+    "author": "dinghuanghao",
+    "note": "AI生成式RPG世界，一句话生成游戏，多智能体协作"
+  },
+  {
+    "id": 10,
+    "title": "RPG Maker",
+    "url": "https://www.rpgmakerweb.com",
+    "type": "tool",
+    "tags": ["RPG制作", "对话编辑", "事件系统"],
+    "note": "经典RPG制作工具，内置对话编辑与事件系统"
+  },
+  {
+    "id": 11,
+    "title": "Ren'Py Visual Novel Engine",
+    "url": "https://www.renpy.org",
+    "type": "engine",
+    "tags": ["视觉小说", "Python", "文字冒险"],
+    "note": "视觉小说引擎，Python脚本驱动，适合文字冒险"
+  },
+  {
+    "id": 12,
+    "title": "ChoiceScript Intro",
+    "url": "https://www.choiceofgames.com/make-your-own-games/choicescript-intro/",
+    "type": "tool",
+    "tags": ["分支选择", "脚本语言", "互动小说"],
+    "note": "Choice of Games的分支选择脚本语言"
+  },
+  {
+    "id": 13,
+    "title": "Yarn Spinner",
+    "url": "https://yarnspinner.dev",
+    "type": "tool",
+    "tags": ["对话编辑", "开源", "Unity", "Godot"],
+    "note": "开源对话编辑器，Unity/Godot均可集成"
+  },
+  {
+    "id": 14,
+    "title": "Game Design Library",
+    "url": "https://nightblade9.github.io/game-design-library/",
+    "type": "repo",
+    "tags": ["叙事设计", "链接集", "手工策展"],
+    "author": "nightblade9",
+    "note": "Game Design Library：手工策展的叙事设计链接集"
+  }
+]

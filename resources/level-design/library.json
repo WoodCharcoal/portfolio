@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "title": "The Level Design Book",
+    "url": "https://leveldesignbook.com",
+    "type": "book",
+    "tags": ["关卡设计", "在线书籍", "完整教程"],
+    "note": "关卡设计免费在线书籍，从基础到高级"
+  },
+  {
+    "id": 2,
+    "title": "关卡设计工具箱（基础篇）：关卡设计三要素",
+    "url": "https://www.gcores.com/articles/153431",
+    "type": "article",
+    "tags": ["ACT关卡", "动作冒险", "设计要素"],
+    "note": "机核：ACT/动作冒险类关卡设计三要素拆解"
+  },
+  {
+    "id": 3,
+    "title": "游戏策划总结：关卡流程、世界观架构与交互逻辑",
+    "url": "https://blog.csdn.net/chenby186119/article/details/157220613",
+    "type": "article",
+    "tags": ["关卡流程", "世界观", "交互逻辑"],
+    "note": "关卡流程、世界观架构与交互逻辑的系统化设计总结"
+  },
+  {
+    "id": 4,
+    "title": "Worldbuilding Stack Exchange",
+    "url": "https://worldbuilding.stackexchange.com",
+    "type": "community",
+    "tags": ["世界构建", "问答社区", "设定交流"],
+    "note": "世界构建问答社区，奇幻/科幻世界设定交流"
+  },
+  {
+    "id": 5,
+    "title": "Kishōtenketsu Narrative Structure",
+    "url": "https://en.wikipedia.org/wiki/Kish%C5%8Dtenketsu",
+    "type": "reference",
+    "tags": ["起承转合", "东方叙事", "关卡节奏"],
+    "note": "起承转合叙事结构——东方叙事与关卡节奏的底层逻辑"
+  },
+  {
+    "id": 6,
+    "title": "Environmental Storytelling (GDC)",
+    "url": "https://www.gdcvault.com/play/1016134/",
+    "type": "talk",
+    "tags": ["GDC", "环境叙事", "非对白叙事"],
+    "note": "GDC：环境叙事——不靠对白讲故事的设计技巧"
+  },
+  {
+    "id": 7,
+    "title": "Game Developer: Level Design Articles",
+    "url": "https://www.gamedeveloper.com/design/",
+    "type": "collection",
+    "tags": ["关卡设计", "文章合集", "专题"],
+    "note": "Game Developer 网站关卡设计专题文章合集"
+  },
+  {
+    "id": 8,
+    "title": "Half-Life 2: Raising the Bar",
+    "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Raising_the_Bar",
+    "type": "book",
+    "tags": ["Valve", "关卡设计哲学", "开发内幕"],
+    "note": "半条命2开发内幕：Valve关卡设计哲学与迭代实录"
+  },
+  {
+    "id": 9,
+    "title": "Procedural Content Generation Wiki",
+    "url": "http://pcg.wikidot.com",
+    "type": "wiki",
+    "tags": ["PCG", "程序化生成", "算法"],
+    "note": "程序化内容生成Wiki：算法驱动的关卡与内容自动生成"
+  },
+  {
+    "id": 10,
+    "title": "Game Design Map",
+    "url": "https://github.com/ozkr-gamemakers/game-design-map",
+    "type": "repo",
+    "tags": ["知识图谱", "设计要素", "可视化"],
+    "author": "ozkr-gamemakers",
+    "note": "游戏设计知识图谱：可视化设计要素之间的关系"
+  },
+  {
+    "id": 11,
+    "title": "Tiled Map Editor",
+    "url": "https://www.mapeditor.org",
+    "type": "tool",
+    "tags": ["地图编辑器", "开源", "多格式"],
+    "note": "免费开源关卡地图编辑器，支持正交/等距/六角格"
+  },
+  {
+    "id": 12,
+    "title": "LDtk — Level Designer Toolkit",
+    "url": "https://ldtk.io",
+    "type": "tool",
+    "tags": ["关卡设计", "现代化工具", "工作流"],
+    "note": "现代化关卡设计工具，专注效率与工作流集成"
+  },
+  {
+    "id": 13,
+    "title": "Godot Playtester MCP",
+    "url": "https://github.com/tigermkiiiddd/godot-playtester-mcp",
+    "type": "repo",
+    "tags": ["Godot", "MCP", "AI测试", "自动化Playtest"],
+    "author": "tigermkiiiddd",
+    "note": "AI驱动的Godot游戏测试MCP，零侵入自动化Playtest"
+  },
+  {
+    "id": 14,
+    "title": "GameMaker Level Design Tutorials",
+    "url": "https://gamemaker.io/en/tutorials",
+    "type": "tutorial",
+    "tags": ["GameMaker", "关卡设计", "官方教程"],
+    "note": "GameMaker官方关卡设计教程系列"
+  },
+  {
+    "id": 15,
+    "title": "Game Maker's Toolkit (GMTK)",
+    "url": "https://www.youtube.com/c/GameMakersToolkit",
+    "type": "video",
+    "tags": ["关卡设计", "深度分析", "YouTube频道"],
+    "author": "Mark Brown",
+    "note": "Game Maker's Toolkit频道：关卡设计深度分析系列"
+  }
+]
