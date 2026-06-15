@@ -1,6 +1,8 @@
 # Game Portfolio
 
 欢迎来到我的游戏作品集仓库。这里包含两大板块：我收集的游戏策划相关资源，以及我独立制作的游戏项目。
+- GitHub: [@WoodCharcoal](https://github.com/WoodCharcoal)
+- ART-Portfolio: [WoodCharcoal](https://55d36prfkk.coze.site)
 
 ## 板块导航
 
@@ -34,4 +36,4 @@
 独立游戏开发者，专注于机制创新与系统设计。
 
 - GitHub: [@WoodCharcoal](https://github.com/WoodCharcoal)
-- Portfolio: [WoodCharcoal](https://55d36prfkk.coze.site)
+- ART-Portfolio: [WoodCharcoal](https://55d36prfkk.coze.site)
