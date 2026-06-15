@@ -25,6 +25,7 @@
 |------|------|------|------|
 | [时空回溯 (Chronosphere)](games/chronosphere/) | 解谜 / 推箱子变体 | 已上线 | 引入时间操控机制的单人解谜游戏 |
 | [无尽迷宫 (Infinite Maze)](games/infinite-maze/) | Roguelike / 迷宫生存 | 已上线 | 程序化生成迷宫冒险，暗影追踪生存挑战 |
+| [光谱工坊 (Spectrum Workshop)](games/spectrum-workshop/) | 益智解谜 / 光学色彩 | 已上线 | 基于 CIEDE2000 色差公式的精准调色解谜游戏 |
 
 ---
 
