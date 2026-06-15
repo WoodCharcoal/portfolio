@@ -1,5 +1,7 @@
 # 无尽迷宫 (Infinite Maze)
 
+> 🎮 **在线试玩**：[TapTap 测试版](https://maker.taptap.cn/shares/8yqmgx)
+
 > 在无尽的黑暗迷宫中探索、收集、生存——一款融合 Roguelike 元素的程序化生成迷宫冒险游戏。
 
 <table>
