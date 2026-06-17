@@ -1,23 +1,27 @@
-# 图片占位目录
+# 时空回溯 截图目录
 
-本文件用于提醒：将游戏中的示意图、关卡图、UI 截图等放置于本目录下。你可以将图片按下列结构上传。
+## 新手引导 (Tutorial)
 
-assets/images/
-├── mechanism/
-│   ├── temporal_attribute.png          # 时间属性二元对立
-│   ├── rewind_types.png                # 三种回溯卡牌示意
-│   └── combination_strategies.png      # 组合策略矩阵
-├── levels/
-│   ├── level_03_tutorial.png
-│   ├── level_05_anchored.png
-│   └── level_14_masterpiece.png
-├── ui/
-│   ├── hub_world_layout.png
-│   ├── level_editor_ui.png
-│   └── community_system.png
-└── screenshots/
-    ├── gameplay_01.png
-    ├── gameplay_02.png
-    └── gameplay_03.png
+| 文件 | 说明 |
+|------|------|
+| tutorial-01-welcome.png | 首次进入 - 欢迎 |
+| tutorial-02-controls.png | 首次进入 - 操作指引 |
+| tutorial-03-hub.png | 首次进入 - Hub 导航 |
+| tutorial-04-community.png | 首次进入 - 社区功能 |
+| tutorial-05-create.png | 首次进入 - 创作功能 |
+| tutorial-06-mechanics.png | 首次进入 - 机制介绍 |
+| tutorial-07-rewind.png | 首次进入 - 回溯系统 |
 
-请把图片按命名上传到对应路径，README 中会自动显示（相对路径）。
+## 关卡内 (In-Game)
+
+| 文件 | 说明 |
+|------|------|
+| level-01-tutorial.png | 第1关 - 新手引导关 |
+| level-02-gameplay.png | 第2关 - 关卡实机 |
+
+## 主界面 (Menu)
+
+| 文件 | 说明 |
+|------|------|
+| menu-chapter-select.png | 章节/关卡选择 |
+| menu-hub.png | Hub 主界面 |

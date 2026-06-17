@@ -7,6 +7,43 @@
 - **状态**: 已上线 (v1.0.37)
 - **试玩**: https://www.taptap.cn/app/834934
 
+## 游戏截图
+
+### 新手引导
+
+<table>
+<tr>
+<td><img src="assets/images/tutorial-01-welcome.png" width="160"/></td>
+<td><img src="assets/images/tutorial-02-controls.png" width="160"/></td>
+<td><img src="assets/images/tutorial-03-hub.png" width="160"/></td>
+<td><img src="assets/images/tutorial-04-community.png" width="160"/></td>
+</tr>
+<tr>
+<td><img src="assets/images/tutorial-05-create.png" width="160"/></td>
+<td><img src="assets/images/tutorial-06-mechanics.png" width="160"/></td>
+<td><img src="assets/images/tutorial-07-rewind.png" width="160"/></td>
+<td></td>
+</tr>
+</table>
+
+### 关卡内
+
+<table>
+<tr>
+<td><img src="assets/images/level-01-tutorial.png" width="200"/></td>
+<td><img src="assets/images/level-02-gameplay.png" width="200"/></td>
+</tr>
+</table>
+
+### 主界面
+
+<table>
+<tr>
+<td><img src="assets/images/menu-chapter-select.png" width="200"/></td>
+<td><img src="assets/images/menu-hub.png" width="200"/></td>
+</tr>
+</table>
+
 ## 核心特色
 
 ### 机制创新
