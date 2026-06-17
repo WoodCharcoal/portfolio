@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WoodCharcoal — Showreel</title>
+<style>
+/* ===== RESET ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.1) transparent}
+body{font-family:'Helvetica Neue','PingFang SC','Noto Sans SC',sans-serif;background:#08080c;color:#e0ddd8;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* ===== ANTI-THEFT: disable right-click, drag, select on images ===== */
+img{user-select:none;-webkit-user-drag:none;pointer-events:none}
+.protected{position:relative;overflow:hidden}
+.protected::after{content:'';position:absolute;inset:0;z-index:2;background:transparent}
+
+/* ===== CUSTOM CURSOR ===== */
+.cursor-dot{position:fixed;width:8px;height:8px;background:#fff;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .15s ease}
+.cursor-ring{position:fixed;width:40px;height:40px;border:1px solid rgba(255,255,255,0.3);border-radius:50%;pointer-events:none;z-index:9998;transition:transform .3s ease,width .3s ease,height .3s ease;transform:translate(-50%,-50%)}
+@media(hover:none){.cursor-dot,.cursor-ring{display:none}}
+
+/* ===== PRELOADER ===== */
+.preloader{position:fixed;inset:0;z-index:10000;background:#08080c;display:flex;justify-content:center;align-items:center;transition:opacity .6s ease,visibility .6s ease}
+.preloader.done{opacity:0;visibility:hidden}
+.preloader-text{font-size:14px;letter-spacing:6px;text-transform:uppercase;color:rgba(255,255,255,0.4);animation:preloaderPulse 1.5s ease infinite}
+@keyframes preloaderPulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:9000;padding:28px 56px;display:flex;justify-content:space-between;align-items:center;transition:padding .4s ease,background .4s ease}
+.nav.scrolled{padding:16px 56px;background:rgba(8,8,12,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.04)}
+.nav-logo{font-size:16px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#fff}
+.nav-links{display:flex;gap:40px}
+.nav-links a{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);position:relative;transition:color .3s}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:#fff;transition:width .4s ease}
+.nav-links a:hover{color:#fff}
+.nav-links a:hover::after{width:100%}
+.nav-counter{font-size:11px;color:rgba(255,255,255,0.2);font-variant-numeric:tabular-nums;letter-spacing:1px}
+
+/* ===== HERO ===== */
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;opacity:.6}
+.hero-bg canvas{width:100%;height:100%}
+.hero-content{position:relative;z-index:2;text-align:center}
+.hero-line{overflow:hidden}
+.hero-name{font-size:clamp(56px,10vw,140px);font-weight:800;letter-spacing:-3px;line-height:1;display:block;transform:translateY(110%);animation:heroReveal 1s cubic-bezier(.16,1,.3,1) forwards}
+.hero-name-sub{font-size:clamp(56px,10vw,140px);font-weight:200;letter-spacing:-3px;line-height:1;display:block;transform:translateY(110%);animation:heroReveal 1s .15s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes heroReveal{to{transform:translateY(0)}}
+.hero-role{font-size:clamp(13px,1.5vw,18px);letter-spacing:6px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:40px;opacity:0;animation:fadeUp .8s .8s ease forwards}
+.hero-scroll{position:absolute;bottom:48px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;opacity:0;animation:fadeUp .8s 1.2s ease forwards}
+.hero-scroll span{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.2)}
+.scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,rgba(255,255,255,0.3),transparent);animation:scrollPulse 2.5s ease-in-out infinite}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.8)}50%{opacity:1;transform:scaleY(1.2)}}
+
+/* ===== SECTION COMMON ===== */
+.section{padding:160px 56px;position:relative}
+.section-label{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:20px}
+.section-title{font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-1px;line-height:1.1}
+.section-num{font-size:clamp(72px,8vw,120px);font-weight:800;color:rgba(255,255,255,0.03);position:absolute;top:80px;right:56px;line-height:1;pointer-events:none}
+
+/* ===== PROJECT LIST (wodniack.dev inspired) ===== */
+.project-list{max-width:1200px;margin:80px auto 0}
+.project-item{border-top:1px solid rgba(255,255,255,0.06);padding:48px 0;display:grid;grid-template-columns:1fr 200px 280px;gap:32px;align-items:center;cursor:pointer;transition:background .3s;position:relative}
+.project-item:last-child{border-bottom:1px solid rgba(255,255,255,0.06)}
+.project-item:hover{background:rgba(255,255,255,0.02)}
+.project-item-num{font-size:12px;color:rgba(255,255,255,0.15);font-variant-numeric:tabular-nums}
+.project-item-title{font-size:clamp(28px,3.5vw,48px);font-weight:700;letter-spacing:-1px;transition:color .3s}
+.project-item:hover .project-item-title{color:#fff}
+.project-item-type{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.project-item-preview{position:absolute;right:0;top:50%;transform:translateY(-50%);width:280px;height:180px;border-radius:12px;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .3s;z-index:10}
+.project-item:hover .project-item-preview{opacity:1}
+.project-item-preview img{width:100%;height:100%;object-fit:cover}
+.project-item-arrow{font-size:24px;color:rgba(255,255,255,0);transition:color .3s,transform .3s}
+.project-item:hover .project-item-arrow{color:rgba(255,255,255,0.5);transform:translateX(8px)}
+
+/* ===== PROJECT DETAIL (fullscreen overlay) ===== */
+.detail-overlay{position:fixed;inset:0;z-index:9500;background:#08080c;opacity:0;pointer-events:none;transition:opacity .5s ease;overflow-y:auto}
+.detail-overlay.active{opacity:1;pointer-events:all}
+.detail-inner{min-height:100vh;padding:120px 56px 80px;max-width:1100px;margin:0 auto}
+.detail-close{position:fixed;top:32px;right:56px;z-index:9600;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;justify-content:center;align-items:center;cursor:pointer;transition:background .3s,transform .3s;font-size:20px;color:rgba(255,255,255,0.5)}
+.detail-close:hover{background:rgba(255,255,255,0.1);transform:rotate(90deg);color:#fff}
+.detail-header{margin-bottom:64px}
+.detail-num{font-size:12px;letter-spacing:2px;color:rgba(255,255,255,0.2);margin-bottom:16px}
+.detail-title{font-size:clamp(40px,5vw,72px);font-weight:700;letter-spacing:-2px;line-height:1.05}
+.detail-type{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:16px}
+.detail-body{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.detail-desc{font-size:15px;color:rgba(255,255,255,0.5);line-height:2}
+.detail-desc strong{color:rgba(255,255,255,0.85);font-weight:600}
+.detail-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.detail-tag{font-size:11px;padding:6px 16px;border-radius:20px;background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.08)}
+.detail-link{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:12px 28px;border-radius:40px;background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;font-size:13px;font-weight:600;transition:transform .3s,box-shadow .3s}
+.detail-link:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(99,102,241,0.4)}
+.detail-screenshots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:64px}
+.detail-screenshots img{width:100%;border-radius:10px;border:1px solid rgba(255,255,255,0.06)}
+.detail-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;margin-top:48px}
+.detail-stat{text-align:center;padding:20px;background:rgba(255,255,255,0.02);border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+.detail-stat-val{font-size:28px;font-weight:700;color:#fff}
+.detail-stat-label{font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px;letter-spacing:1px;text-transform:uppercase}
+
+/* ===== ART SECTION ===== */
+.art-grid{max-width:1200px;margin:80px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.art-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;border:1px solid rgba(255,255,255,0.04);transition:transform .4s ease,box-shadow .4s ease}
+.art-card:hover{transform:scale(1.02);box-shadow:0 16px 64px rgba(0,0,0,0.5)}
+.art-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.art-card:hover img{transform:scale(1.05)}
+.art-card-label{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:13px;font-weight:600;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
+.art-card:hover .art-card-label{opacity:1;transform:translateY(0)}
+
+/* ===== SKILLS SECTION ===== */
+.skills-row{max-width:900px;margin:80px auto 0;display:flex;justify-content:space-between;gap:24px}
+.skill-item{text-align:center;flex:1;padding:40px 20px;border:1px solid rgba(255,255,255,0.04);border-radius:16px;transition:border-color .3s,background .3s}
+.skill-item:hover{border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.02)}
+.skill-icon{font-size:28px;margin-bottom:16px}
+.skill-name{font-size:14px;font-weight:600;margin-bottom:8px}
+.skill-desc{font-size:11px;color:rgba(255,255,255,0.3);line-height:1.6}
+
+/* ===== ABOUT ===== */
+.about-content{max-width:800px;margin:80px auto 0}
+.about-text{font-size:17px;color:rgba(255,255,255,0.45);line-height:2.2;margin-bottom:48px}
+.about-text em{font-style:normal;color:rgba(255,255,255,0.7)}
+.contact-row{display:flex;gap:16px;flex-wrap:wrap}
+.contact-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:40px;font-size:13px;font-weight:600;letter-spacing:.5px;transition:transform .3s,box-shadow .3s;cursor:pointer}
+.contact-btn:hover{transform:translateY(-2px)}
+.contact-btn-primary{background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;box-shadow:0 4px 24px rgba(99,102,241,0.3)}
+.contact-btn-ghost{background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.12)}
+
+/* ===== FOOTER ===== */
+.footer{padding:64px 56px;border-top:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(255,255,255,0.15);letter-spacing:2px;text-transform:uppercase}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal{opacity:0;transform:translateY(48px);transition:opacity 1s ease,transform 1s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .project-item{grid-template-columns:1fr 120px;gap:16px}
+  .project-item-preview{display:none}
+  .detail-body{grid-template-columns:1fr}
+  .art-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .nav{padding:16px 24px}
+  .nav.scrolled{padding:12px 24px}
+  .nav-links{gap:20px}
+  .section{padding:100px 24px}
+  .section-num{display:none}
+  .project-item{grid-template-columns:1fr 80px;padding:32px 0}
+  .project-item-title{font-size:24px}
+  .art-grid{grid-template-columns:1fr 1fr}
+  .skills-row{flex-direction:column}
+  .detail-inner{padding:80px 24px 60px}
+  .detail-close{right:24px;top:24px}
+  .detail-screenshots{grid-template-columns:1fr}
+  .detail-stats{grid-template-columns:1fr 1fr}
+  .footer{flex-direction:column;gap:16px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-text">WoodCharcoal</div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="nav-logo">WC</div>
+  <div class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#art">Art</a>
+    <a href="#about">About</a>
+  </div>
+  <div class="nav-counter" id="scrollCounter">000</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"><canvas id="heroCanvas"></canvas></div>
+  <div class="hero-content">
+    <div class="hero-line"><span class="hero-name">Wood</span></div>
+    <div class="hero-line"><span class="hero-name-sub">Charcoal</span></div>
+    <div class="hero-role">Game Designer · Creative Developer · Artist</div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="section">
+  <div class="section-num">01</div>
+  <div class="reveal">
+    <div class="section-label">Selected Work</div>
+    <div class="section-title">游戏作品</div>
+  </div>
+
+  <div class="project-list">
+    <!-- 01 Chronosphere -->
+    <div class="project-item reveal" onclick="openProject(0)">
+      <div>
+        <div class="project-item-num">01 / 03</div>
+        <div class="project-item-title">时空回溯</div>
+      </div>
+      <div class="project-item-type">Puzzle · Time Manipulation</div>
+      <div class="project-item-arrow">→</div>
+      <div class="project-item-preview">
+        <img src="assets/games/chronosphere/menu-hub.png" alt="Chronosphere">
+      </div>
+    </div>
+
+    <!-- 02 Infinite Maze -->
+    <div class="project-item reveal" onclick="openProject(1)">
+      <div>
+        <div class="project-item-num">02 / 03</div>
+        <div class="project-item-title">无尽迷宫</div>
+      </div>
+      <div class="project-item-type">Roguelike · Procedural Maze</div>
+      <div class="project-item-arrow">→</div>
+      <div class="project-item-preview">
+        <img src="assets/games/infinite-maze/screenshot-02-gameplay.png" alt="Infinite Maze">
+      </div>
+    </div>
+
+    <!-- 03 Spectrum Workshop -->
+    <div class="project-item reveal" onclick="openProject(2)">
+      <div>
+        <div class="project-item-num">03 / 03</div>
+        <div class="project-item-title">光谱工坊</div>
+      </div>
+      <div class="project-item-type">Puzzle · Color Science</div>
+      <div class="project-item-arrow">→</div>
+      <div class="project-item-preview">
+        <img src="assets/games/spectrum-workshop/promo-prism.jpg" alt="Spectrum Workshop">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ART -->
+<section id="art" class="section" style="background:#06060a">
+  <div class="section-num">02</div>
+  <div class="reveal">
+    <div class="section-label">Art Works</div>
+    <div class="section-title">艺术作品</div>
+  </div>
+
+  <div class="art-grid">
+    <div class="art-card protected reveal">
+      <img src="assets/art/page02_wanwujian.png" alt="万物鉴 I">
+      <div class="art-card-label">万物鉴 I</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art/page03_wanwujian.png" alt="万物鉴 II">
+      <div class="art-card-label">万物鉴 II</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art/page04_wanwujian.png" alt="万物鉴 III">
+      <div class="art-card-label">万物鉴 III</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art/page05_wanwujian.png" alt="万物鉴 IV">
+      <div class="art-card-label">万物鉴 IV</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art/page09_digital.png" alt="数字习作 I">
+      <div class="art-card-label">数字习作 I</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art/page10_digital.png" alt="数字习作 II">
+      <div class="art-card-label">数字习作 II</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art/page11_digital.png" alt="数字习作 III">
+      <div class="art-card-label">数字习作 III</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art/page12_digital.png" alt="数字习作 IV">
+      <div class="art-card-label">数字习作 IV</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:56px" class="reveal">
+    <a href="https://55d36prfkk.coze.site" target="_blank" style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:4px;transition:color .3s,border-color .3s">查看完整作品集 →</a>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+  <div class="section-num">03</div>
+  <div class="reveal">
+    <div class="section-label">Capabilities</div>
+    <div class="section-title">技能领域</div>
+  </div>
+  <div class="skills-row">
+    <div class="skill-item reveal">
+      <div class="skill-icon">🎮</div>
+      <div class="skill-name">游戏设计</div>
+      <div class="skill-desc">机制创新<br>关卡设计<br>数值平衡<br>叙事设计</div>
+    </div>
+    <div class="skill-item reveal">
+      <div class="skill-icon">⌨️</div>
+      <div class="skill-name">程序实现</div>
+      <div class="skill-desc">Lua · Python<br>UrhoX 引擎<br>NanoVG 渲染<br>算法实现</div>
+    </div>
+    <div class="skill-item reveal">
+      <div class="skill-icon">🎨</div>
+      <div class="skill-name">美术创作</div>
+      <div class="skill-desc">数字绘画<br>传统美术<br>UI 设计<br>视觉叙事</div>
+    </div>
+    <div class="skill-item reveal">
+      <div class="skill-icon">📐</div>
+      <div class="skill-name">系统设计</div>
+      <div class="skill-desc">GDD 撰写<br>架构设计<br>原型验证<br>数据分析</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section" style="background:#06060a">
+  <div class="section-num">04</div>
+  <div class="reveal">
+    <div class="section-label">About</div>
+    <div class="section-title">关于我</div>
+  </div>
+  <div class="about-content reveal">
+    <div class="about-text">
+      我是一名<em>独立游戏开发者</em>，热爱将抽象的游戏机制转化为具象的交互体验。<br><br>
+      从底层算法——<em>A* 寻路、程序化生成、色彩科学管线</em>——到上层设计——<em>关卡教学曲线、叙事触发器、玩家心理学</em>，我享受在技术与创意交汇处工作的过程。<br><br>
+      除了游戏开发，我也从事<em>视觉艺术创作</em>，探索数字与传统文化表达之间的边界。
+    </div>
+    <div class="contact-row">
+      <a class="contact-btn contact-btn-primary" href="https://github.com/WoodCharcoal" target="_blank">GitHub →</a>
+      <a class="contact-btn contact-btn-ghost" href="https://55d36prfkk.coze.site" target="_blank">艺术作品集 →</a>
+      <a class="contact-btn contact-btn-ghost" href="https://www.taptap.cn/app/834934" target="_blank">TapTap →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span>WoodCharcoal</span>
+  <span>2026</span>
+</footer>
+
+<!-- PROJECT DETAIL OVERLAY -->
+<div class="detail-overlay" id="detailOverlay">
+  <div class="detail-inner" id="detailInner"></div>
+</div>
+<button class="detail-close" id="detailClose" onclick="closeProject()" style="display:none">✕</button>
+
+<script>
+/* ===== PRELOADER ===== */
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('preloader').classList.add('done'), 800);
+});
+
+/* ===== ANTI-THEFT ===== */
+document.addEventListener('contextmenu', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
+document.addEventListener('dragstart', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
+
+/* ===== CUSTOM CURSOR ===== */
+const dot = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mx=0, my=0, cx=0, cy=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; });
+(function cursorLoop(){
+  cx+=(mx-cx)*.15; cy+=(my-cy)*.15;
+  dot.style.left=mx-4+'px'; dot.style.top=my-4+'px';
+  ring.style.left=cx+'px'; ring.style.top=cy+'px';
+  ring.style.transform='translate(-50%,-50%)';
+  requestAnimationFrame(cursorLoop);
+})();
+
+/* ===== NAV SCROLL ===== */
+const nav = document.getElementById('mainNav');
+const counter = document.getElementById('scrollCounter');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = h > 0 ? Math.round((window.scrollY/h)*100) : 0;
+  counter.textContent = String(pct).padStart(3,'0');
+});
+
+/* ===== SCROLL REVEAL ===== */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); revealObs.unobserve(e.target); }});
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ===== HERO CANVAS (subtle grain/noise) ===== */
+(function(){
+  const c = document.getElementById('heroCanvas');
+  const ctx = c.getContext('2d');
+  let w, h;
+  function resize(){ w=c.width=window.innerWidth; h=c.height=window.innerHeight; }
+  resize(); window.addEventListener('resize', resize);
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    /* Subtle radial glow */
+    const grd = ctx.createRadialGradient(w*.5, h*.4, 0, w*.5, h*.4, w*.6);
+    grd.addColorStop(0, 'rgba(99,102,241,0.06)');
+    grd.addColorStop(0.5, 'rgba(168,85,247,0.03)');
+    grd.addColorStop(1, 'transparent');
+    ctx.fillStyle = grd;
+    ctx.fillRect(0,0,w,h);
+    /* Floating particles */
+    const t = Date.now() * 0.001;
+    for(let i=0; i<40; i++){
+      const x = (Math.sin(t*0.3+i*1.7)*0.4+0.5)*w;
+      const y = (Math.cos(t*0.2+i*2.3)*0.4+0.5)*h;
+      const r = Math.sin(t+i)*1+1.5;
+      ctx.beginPath();
+      ctx.arc(x,y,r,0,Math.PI*2);
+      ctx.fillStyle = `rgba(255,255,255,${0.03+Math.sin(t*0.5+i)*0.02})`;
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ===== PROJECT DATA ===== */
+const projects = [
+  {
+    num: '01 / 03',
+    title: '时空回溯',
+    titleEn: 'Chronosphere',
+    type: '解谜 / 推箱子变体 · 已上线',
+    desc: `<p>在经典推箱子（Sokoban）玩法基础上，引入<strong>时间操控机制</strong>的单人解谜游戏。</p>
+    <p>核心设计围绕<strong>「时间属性二元对立」</strong>展开：可回溯 vs 锚定。三大类回溯系统——全局回溯 → 碎片回溯 → 信标回溯——从单一机制到多类型组合，构建递进式玩法深度。</p>
+    <p>20关教学曲线严格遵循「引入→练习→组合→挑战」节奏，通过地形设计迫使玩家发现机制（约束创造发现）。</p>
+    <p>Hub World 以核心玩法作为导航方式，关卡编辑器降低 UGC 创作门槛，社区系统实现完整的创作者→评价→反馈循环。</p>`,
+    tags: ['时间回溯','推箱子变体','UrhoX','Lua','Hub World','关卡编辑器','社区系统'],
+    link: { url: 'https://www.taptap.cn/app/834934', text: '▶ TapTap 试玩' },
+    stats: [
+      { val: '20', label: '关卡' },
+      { val: '3', label: '回溯类型' },
+      { val: '2', label: '时间属性' },
+      { val: 'v1.0', label: '版本' }
+    ],
+    shots: [
+      'assets/games/chronosphere/tutorial-01-welcome.png',
+      'assets/games/chronosphere/level-01-tutorial.png',
+      'assets/games/chronosphere/level-02-gameplay.png',
+      'assets/games/chronosphere/menu-hub.png',
+      'assets/games/chronosphere/menu-chapter-select.png',
+      'assets/games/chronosphere/tutorial-07-rewind.png'
+    ]
+  },
+  {
+    num: '02 / 03',
+    title: '无尽迷宫',
+    titleEn: 'Infinite Maze',
+    type: 'Roguelike / 迷宫生存 · 已上线',
+    desc: `<p>暗黑风格 2D 迷宫探索生存游戏。基于 <strong>Chunk 确定性程序化生成</strong>，迷宫无限延展，雾气遮盖未探索区域——每一步都充满未知。</p>
+    <p><strong>双模式设计：</strong>坠落模式提供 4 章 8 关叙事体验，解锁冲刺/破墙/穿墙能力；无尽模式剥离所有道具，考验纯粹操作与决策。</p>
+    <p><strong>技术亮点：</strong>xorshift 确定性 RNG 保证相同 Chunk 永远一致；A* 寻路（二叉堆优化，8000 节点上限）；5 层 BGM 交叉淡入淡出；伪随机保底系统借鉴抽卡机制。</p>`,
+    tags: ['程序化生成','A* 寻路','Roguelike','UrhoX','Lua','分层音频','保底系统'],
+    link: { url: 'https://maker.taptap.cn/shares/8yqmgx', text: '▶ TapTap 试玩' },
+    stats: [
+      { val: '13,208', label: '代码行' },
+      { val: '14', label: '模块' },
+      { val: '9', label: '道具类型' },
+      { val: '20', label: '记忆碎片' }
+    ],
+    shots: [
+      'assets/games/infinite-maze/screenshot-01-intro.png',
+      'assets/games/infinite-maze/screenshot-02-gameplay.png',
+      'assets/games/infinite-maze/screenshot-03-explore.png',
+      'assets/games/infinite-maze/screenshot-04-codex.png'
+    ]
+  },
+  {
+    num: '03 / 03',
+    title: '光谱工坊',
+    titleEn: 'Spectrum Workshop',
+    type: '益智解谜 / 光学色彩 · 已上线',
+    desc: `<p>以<strong>光学色彩科学</strong>为核心机制的益智解谜游戏。不是粗暴的 RGB 混合，而是符合人眼感知的精确色彩匹配。</p>
+    <p><strong>完整色彩科学管线：</strong>sRGB ↔ Linear RGB ↔ XYZ ↔ CIE L*a*b* 完整转换，CIEDE2000 色差计算（Sharma 2005 论文实现，含旋转项修正）。</p>
+    <p><strong>Beer-Lambert 光衰减：</strong>玻璃滤色模拟真实光线吸收；<strong>黑体辐射色温：</strong>1000K–10000K 映射为 RGB。</p>
+    <p>12 个精心关卡 + 4 档限时挑战 + 云端排行榜，兼顾休闲探索与硬核竞速。</p>`,
+    tags: ['CIEDE2000','Beer-Lambert','色温模拟','NanoVG','UrhoX','Lua','矢量渲染'],
+    link: null,
+    stats: [
+      { val: '11,994', label: '代码行' },
+      { val: '12', label: '关卡' },
+      { val: '16', label: '玻璃种类' },
+      { val: '25', label: '脚本文件' }
+    ],
+    shots: [
+      'assets/games/spectrum-workshop/menu-light.png',
+      'assets/games/spectrum-workshop/gameplay-glass-overlay.jpg',
+      'assets/games/spectrum-workshop/gameplay-match-3s.jpg',
+      'assets/games/spectrum-workshop/result-3s-perfect.png',
+      'assets/games/spectrum-workshop/race-mode.png'
+    ]
+  }
+];
+
+/* ===== OPEN / CLOSE PROJECT DETAIL ===== */
+function openProject(idx) {
+  const p = projects[idx];
+  const overlay = document.getElementById('detailOverlay');
+  const inner = document.getElementById('detailInner');
+  const close = document.getElementById('detailClose');
+
+  const statsHTML = p.stats.map(s =>
+    `<div class="detail-stat"><div class="detail-stat-val">${s.val}</div><div class="detail-stat-label">${s.label}</div></div>`
+  ).join('');
+
+  const tagsHTML = p.tags.map(t => `<span class="detail-tag">${t}</span>`).join('');
+
+  const shotsHTML = p.shots.map(s =>
+    `<img src="${s}" alt="" class="protected">`
+  ).join('');
+
+  const linkHTML = p.link
+    ? `<a href="${p.link.url}" target="_blank" class="detail-link">${p.link.text}</a>`
+    : '';
+
+  inner.innerHTML = `
+    <div class="detail-header">
+      <div class="detail-num">${p.num}</div>
+      <div class="detail-title">${p.title}<br><span style="font-weight:200;font-size:0.6em;color:rgba(255,255,255,0.3)">${p.titleEn}</span></div>
+      <div class="detail-type">${p.type}</div>
+    </div>
+    <div class="detail-body">
+      <div>
+        <div class="detail-desc">${p.desc}</div>
+        <div class="detail-tags">${tagsHTML}</div>
+        ${linkHTML}
+      </div>
+      <div class="detail-stats">${statsHTML}</div>
+    </div>
+    <div class="detail-screenshots">${shotsHTML}</div>
+  `;
+
+  overlay.classList.add('active');
+  close.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  overlay.scrollTop = 0;
+}
+
+function closeProject() {
+  document.getElementById('detailOverlay').classList.remove('active');
+  document.getElementById('detailClose').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeProject(); });
+</script>
+
+</body>
+</html>
