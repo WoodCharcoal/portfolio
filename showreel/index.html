@@ -61,7 +61,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .section-title{font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-1px;line-height:1.1}
 .section-num{font-size:clamp(72px,8vw,120px);font-weight:800;color:rgba(255,255,255,0.03);position:absolute;top:-40px;right:0;line-height:1;pointer-events:none}
 
-/* Section Banner - gradient overlay effect */
+/* Section Banner */
 .section-banner{position:relative;height:280px;margin-bottom:64px;border-radius:20px;overflow:hidden}
 .section-banner img{width:100%;height:100%;object-fit:cover}
 .section-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,12,0.3) 0%,rgba(8,8,12,0.7) 60%,#08080c 100%);pointer-events:none}
@@ -69,7 +69,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .section-banner-text .section-label{margin-bottom:8px}
 .section-banner-text .section-title{color:#fff;text-shadow:0 2px 30px rgba(0,0,0,0.5)}
 
-/* ===== GAMES SECTION - Large Card Style ===== */
+/* ===== GAMES SECTION ===== */
 .game-showcase{max-width:1100px;margin:0 auto}
 .game-card{margin-bottom:100px;cursor:pointer}
 .game-card:last-child{margin-bottom:0}
@@ -96,13 +96,33 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .game-stat-val{font-size:22px;font-weight:700;color:#fff}
 .game-stat-label{font-size:10px;color:rgba(255,255,255,0.3);margin-top:4px;letter-spacing:1px;text-transform:uppercase}
 
-/* ===== ART SECTION ===== */
-.art-grid{max-width:1300px;margin:60px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.art-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;border:1px solid rgba(255,255,255,0.04);transition:transform .4s ease,box-shadow .4s ease}
-.art-card:hover{transform:scale(1.03);box-shadow:0 20px 60px rgba(0,0,0,0.5);z-index:5}
+/* ===== SPRITE / GAME ART ASSETS SECTION ===== */
+.sprite-section{background:#06060a}
+.sprite-scroll-container{max-width:1300px;margin:60px auto 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.15) transparent;mask-image:linear-gradient(to right,transparent,black 3%,black 97%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 3%,black 97%,transparent)}
+.sprite-scroll-container::-webkit-scrollbar{height:4px}
+.sprite-scroll-container::-webkit-scrollbar-track{background:transparent}
+.sprite-scroll-container::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15);border-radius:2px}
+.sprite-row{display:flex;gap:20px;padding:8px 4px}
+.sprite-item{flex-shrink:0;width:260px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.sprite-item:hover{transform:translateY(-6px);border-color:rgba(255,255,255,0.12);box-shadow:0 12px 40px rgba(0,0,0,0.4)}
+.sprite-item img{width:100%;aspect-ratio:1;object-fit:contain;background:#0c0c12}
+.sprite-item-info{padding:14px 16px}
+.sprite-item-name{font-size:13px;font-weight:600;color:rgba(255,255,255,0.75)}
+.sprite-item-desc{font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px}
+
+/* ===== ART SERIES SECTION ===== */
+.art-series-group{max-width:1300px;margin:0 auto 64px}
+.art-series-header{display:flex;align-items:baseline;gap:16px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.art-series-title{font-size:18px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:1px}
+.art-series-subtitle{font-size:12px;color:rgba(255,255,255,0.25);letter-spacing:1px}
+.art-scroll-container{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.art-scroll-container::-webkit-scrollbar{display:none}
+.art-scroll-row{display:flex;gap:16px;padding:4px 0}
+.art-card{flex-shrink:0;width:240px;border-radius:14px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;border:1px solid rgba(255,255,255,0.04);transition:transform .4s ease,box-shadow .4s ease}
+.art-card:hover{transform:scale(1.04);box-shadow:0 20px 60px rgba(0,0,0,0.5);z-index:5}
 .art-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .art-card:hover img{transform:scale(1.06)}
-.art-card-label{position:absolute;bottom:0;left:0;right:0;padding:18px;background:linear-gradient(transparent,rgba(0,0,0,0.85));font-size:13px;font-weight:600;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
+.art-card-label{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.88));font-size:12px;font-weight:600;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
 .art-card:hover .art-card-label{opacity:1;transform:translateY(0)}
 
 /* Art lightbox */
@@ -126,7 +146,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .award-item{padding:28px 32px;margin-bottom:16px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;transition:border-color .3s,background .3s}
 .award-item:hover{border-color:rgba(255,215,0,0.2);background:rgba(255,255,255,0.03)}
 .award-name{font-size:15px;color:rgba(255,255,255,0.75);font-weight:500}
-.award-level{font-size:13px;padding:6px 18px;border-radius:20px;font-weight:600;letter-spacing:1px}
+.award-level{font-size:13px;padding:6px 18px;border-radius:20px;font-weight:600;letter-spacing:1px;white-space:nowrap}
 .award-level.gold{background:linear-gradient(135deg,#f59e0b,#d97706);color:#1a1200}
 .award-level.silver{background:linear-gradient(135deg,#9ca3af,#6b7280);color:#111827}
 .award-level.bronze{background:linear-gradient(135deg,#d97706,#b45309);color:#1c1410}
@@ -143,6 +163,8 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .about-content{max-width:800px;margin:60px auto 0}
 .about-text{font-size:17px;color:rgba(255,255,255,0.45);line-height:2.2;margin-bottom:48px}
 .about-text em{font-style:normal;color:rgba(255,255,255,0.7)}
+.about-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
+.about-badge{font-size:12px;padding:8px 18px;border-radius:20px;background:rgba(99,102,241,0.08);color:#a5b4fc;border:1px solid rgba(99,102,241,0.15);letter-spacing:.5px;white-space:nowrap}
 .contact-row{display:flex;gap:16px;flex-wrap:wrap}
 .contact-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:40px;font-size:13px;font-weight:600;letter-spacing:.5px;transition:transform .3s,box-shadow .3s;cursor:pointer}
 .contact-btn:hover{transform:translateY(-2px)}
@@ -160,11 +182,12 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 @media(max-width:1024px){
   .game-card-body{grid-template-columns:1fr}
   .game-card-shots{grid-template-columns:1fr 1fr 1fr}
-  .art-grid{grid-template-columns:repeat(3,1fr)}
   .game-tags-row{gap:6px}
   .game-tag{font-size:11px;padding:5px 14px}
   .section-banner{height:220px}
   .game-card-hero{height:360px}
+  .sprite-item{width:220px}
+  .art-card{width:200px}
 }
 @media(max-width:768px){
   .nav{padding:16px 24px}
@@ -172,7 +195,6 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   .nav-links{gap:20px}
   .section{padding:100px 24px}
   .section-num{display:none}
-  .art-grid{grid-template-columns:1fr 1fr}
   .skills-row{flex-direction:column}
   .footer{flex-direction:column;gap:16px;text-align:center}
   .award-item{flex-direction:column;gap:12px;text-align:center}
@@ -182,6 +204,8 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   .game-card-shots{grid-template-columns:1fr 1fr}
   .section-banner{height:180px}
   .section-banner-text{left:24px;bottom:20px}
+  .sprite-item{width:180px}
+  .art-card{width:160px}
 }
 </style>
 </head>
@@ -201,6 +225,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="nav-logo">WC</div>
   <div class="nav-links">
     <a href="#work">Work</a>
+    <a href="#sprites">Sprites</a>
     <a href="#art">Art</a>
     <a href="#experience">Experience</a>
     <a href="#about">About</a>
@@ -365,61 +390,166 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   </div>
 </section>
 
-<!-- ART -->
+<!-- SPRITE ASSETS / GAME ART -->
+<section id="sprites" class="section sprite-section">
+  <div class="section-header reveal">
+    <div class="section-label">Game Art Assets</div>
+    <div class="section-title">游戏美术素材</div>
+    <span class="section-num">04</span>
+  </div>
+
+  <div class="sprite-scroll-container reveal">
+    <div class="sprite-row">
+      <div class="sprite-item">
+        <img src="assets/sprites/01-pets.png" alt="宠物系列" loading="lazy">
+        <div class="sprite-item-info">
+          <div class="sprite-item-name">宠物系列</div>
+          <div class="sprite-item-desc">猫、狗、狐狸、猫头鹰、青蛙、鸭子、螃蟹等</div>
+        </div>
+      </div>
+      <div class="sprite-item">
+        <img src="assets/sprites/02-food-sweet.png" alt="甜点系列" loading="lazy">
+        <div class="sprite-item-info">
+          <div class="sprite-item-name">甜点系列</div>
+          <div class="sprite-item-desc">派、鸡蛋、果酱、面包、火腿、蛋糕</div>
+        </div>
+      </div>
+      <div class="sprite-item">
+        <img src="assets/sprites/03-food-meals.png" alt="餐食系列" loading="lazy">
+        <div class="sprite-item-info">
+          <div class="sprite-item-name">餐食系列</div>
+          <div class="sprite-item-desc">卷饼、猕猴桃、冰淇淋、咖啡、汉堡、披萨</div>
+        </div>
+      </div>
+      <div class="sprite-item">
+        <img src="assets/sprites/04-wildlife.png" alt="野生动物" loading="lazy">
+        <div class="sprite-item-info">
+          <div class="sprite-item-name">野生动物</div>
+          <div class="sprite-item-desc">狼、鹿、海豹、鼹鼠、兔子、熊猫、老虎</div>
+        </div>
+      </div>
+      <div class="sprite-item">
+        <img src="assets/sprites/05-food-asian.png" alt="中式食物" loading="lazy">
+        <div class="sprite-item-info">
+          <div class="sprite-item-name">中式食物</div>
+          <div class="sprite-item-desc">粥品、米饭、玉米、梨、李子、牛奶、豌豆</div>
+        </div>
+      </div>
+      <div class="sprite-item">
+        <img src="assets/sprites/06-tools.png" alt="工具道具" loading="lazy">
+        <div class="sprite-item-info">
+          <div class="sprite-item-name">工具道具</div>
+          <div class="sprite-item-desc">钥匙、锯子、钢笔、地图、捕虫网、鱼竿</div>
+        </div>
+      </div>
+      <div class="sprite-item">
+        <img src="assets/sprites/07-farm.png" alt="农场动物" loading="lazy">
+        <div class="sprite-item-info">
+          <div class="sprite-item-name">农场动物</div>
+          <div class="sprite-item-desc">猪、牛、蝙蝠、老鼠、母鸡、山羊、狮子、熊</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ART - Series Layout -->
 <section id="art" class="section" style="background:#06060a">
   <div class="section-header reveal">
     <div class="section-label">Art Works</div>
     <div class="section-title">艺术作品</div>
+    <span class="section-num">05</span>
   </div>
 
-  <div class="art-grid">
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/01-dvh-cubes.jpg" alt="DVH 系列 I" loading="lazy">
-      <div class="art-card-label">DVH 系列 I</div>
+  <!-- Series 1: 墨隐缄语 -->
+  <div class="art-series-group reveal">
+    <div class="art-series-header">
+      <div class="art-series-title">万物鑒 · 墨隐缄语</div>
+      <div class="art-series-subtitle">Moyin Jinyu — Digital Painting · 3 Versions</div>
     </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/02-dvh-cubes.jpg" alt="DVH 系列 II" loading="lazy">
-      <div class="art-card-label">DVH 系列 II</div>
+    <div class="art-scroll-container">
+      <div class="art-scroll-row">
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/07-moyin-v3.jpg" alt="墨隐缄语 V3" loading="lazy">
+          <div class="art-card-label">V3 最终版</div>
+        </div>
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/08-moyin-v2.jpg" alt="墨隐缄语 V2" loading="lazy">
+          <div class="art-card-label">V2 迭代版</div>
+        </div>
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/09-moyin-v1.jpg" alt="墨隐缄语 V1" loading="lazy">
+          <div class="art-card-label">V1 初稿</div>
+        </div>
+      </div>
     </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/03-watercolor-shanghai.jpg" alt="水彩·上海" loading="lazy">
-      <div class="art-card-label">水彩 · 上海</div>
+  </div>
+
+  <!-- Series 2: DVH -->
+  <div class="art-series-group reveal">
+    <div class="art-series-header">
+      <div class="art-series-title">DVH 系列</div>
+      <div class="art-series-subtitle">DVH Series — Abstract Composition</div>
     </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/04-sketch-street.jpg" alt="钢笔速写" loading="lazy">
-      <div class="art-card-label">钢笔速写</div>
+    <div class="art-scroll-container">
+      <div class="art-scroll-row">
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/01-dvh-cubes.jpg" alt="DVH 系列 I" loading="lazy">
+          <div class="art-card-label">DVH I</div>
+        </div>
+      </div>
     </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/05-sketch-castle.jpg" alt="城堡速写" loading="lazy">
-      <div class="art-card-label">城堡速写</div>
+  </div>
+
+  <!-- Series 3: 速写 -->
+  <div class="art-series-group reveal">
+    <div class="art-series-header">
+      <div class="art-series-title">速写系列</div>
+      <div class="art-series-subtitle">Sketches — Pen & Ink · Urban & Architecture</div>
     </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/06-sketch-interior.jpg" alt="展厅速写" loading="lazy">
-      <div class="art-card-label">展厅速写</div>
+    <div class="art-scroll-container">
+      <div class="art-scroll-row">
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/04-sketch-street.jpg" alt="街景速写" loading="lazy">
+          <div class="art-card-label">街景</div>
+        </div>
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/05-sketch-castle.jpg" alt="城堡速写" loading="lazy">
+          <div class="art-card-label">城堡</div>
+        </div>
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/06-sketch-interior.jpg" alt="展厅速写" loading="lazy">
+          <div class="art-card-label">展厅</div>
+        </div>
+      </div>
     </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/07-moyin-v3.jpg" alt="万物鑒·墨隐缄语 V3" loading="lazy">
-      <div class="art-card-label">万物鑒 · 墨隐缄语 V3</div>
+  </div>
+
+  <!-- Series 4: 其他创作 -->
+  <div class="art-series-group reveal">
+    <div class="art-series-header">
+      <div class="art-series-title">其他创作</div>
+      <div class="art-series-subtitle">Watercolor · Ceramic · Digital · Abstract</div>
     </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/08-moyin-v2.jpg" alt="万物鑒·墨隐缄语 V2" loading="lazy">
-      <div class="art-card-label">万物鑒 · 墨隐缄语 V2</div>
-    </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/09-moyin-v1.jpg" alt="万物鑒·墨隐缄语 V1" loading="lazy">
-      <div class="art-card-label">万物鑒 · 墨隐缄语 V1</div>
-    </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/10-ceramic.jpg" alt="瓷板系列" loading="lazy">
-      <div class="art-card-label">瓷板系列</div>
-    </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/11-yinyun-realm.png" alt="氤氲之境" loading="lazy">
-      <div class="art-card-label">氤氲之境</div>
-    </div>
-    <div class="art-card protected reveal" onclick="openLightbox(this)">
-      <img src="assets/art/12-abstract-brown.jpg" alt="抽象习作" loading="lazy">
-      <div class="art-card-label">抽象习作</div>
+    <div class="art-scroll-container">
+      <div class="art-scroll-row">
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/03-watercolor-shanghai.jpg" alt="水彩·上海" loading="lazy">
+          <div class="art-card-label">水彩 · 上海</div>
+        </div>
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/10-ceramic.jpg" alt="瓷板系列" loading="lazy">
+          <div class="art-card-label">瓷板系列</div>
+        </div>
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/11-yinyun-realm.png" alt="氤氲之境" loading="lazy">
+          <div class="art-card-label">氤氲之境</div>
+        </div>
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/12-abstract-brown.jpg" alt="抽象习作" loading="lazy">
+          <div class="art-card-label">抽象习作</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -439,6 +569,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">Gaming Experience</div>
     <div class="section-title">游戏经历</div>
+    <span class="section-num">06</span>
   </div>
 
   <div class="game-exp-grid reveal">
@@ -524,20 +655,25 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">Awards & Honors</div>
     <div class="section-title">获奖经历</div>
+    <span class="section-num">07</span>
   </div>
 
   <div class="awards-list reveal">
     <div class="award-item">
       <div class="award-name">第二届长三角地区美术教育专业本科生创新学术论坛</div>
-      <div class="award-level gold">特等奖（三项）</div>
+      <div class="award-level gold">特等奖</div>
+    </div>
+    <div class="award-item">
+      <div class="award-name">第七届香港当代设计奖</div>
+      <div class="award-level bronze">三项铜奖</div>
     </div>
     <div class="award-item">
       <div class="award-name">第六届香港当代设计奖</div>
-      <div class="award-level silver">铜奖（两项）</div>
+      <div class="award-level bronze">两项铜奖</div>
     </div>
     <div class="award-item">
-      <div class="award-name">第四届中华伦教艺术交流展</div>
-      <div class="award-level bronze">铜奖</div>
+      <div class="award-name">Global Game Jam 2023</div>
+      <div class="award-level silver">主美 & 策划</div>
     </div>
   </div>
 </section>
@@ -552,12 +688,12 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
     <div class="skill-item reveal">
       <div class="skill-icon">🎮</div>
       <div class="skill-name">游戏设计</div>
-      <div class="skill-desc">机制创新<br>关卡设计<br>数值平衡<br>叙事设计</div>
+      <div class="skill-desc">涌现式玩法<br>机制创新<br>关卡设计<br>数值平衡<br>叙事设计</div>
     </div>
     <div class="skill-item reveal">
       <div class="skill-icon">🎨</div>
       <div class="skill-name">美术创作</div>
-      <div class="skill-desc">数字绘画<br>传统美术<br>UI 设计<br>视觉叙事</div>
+      <div class="skill-desc">数字绘画<br>传统美术<br>AI 深度结合<br>UI 设计<br>视觉叙事</div>
     </div>
     <div class="skill-item reveal">
       <div class="skill-icon">📐</div>
@@ -572,12 +708,20 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">About</div>
     <div class="section-title">关于我</div>
+    <span class="section-num">08</span>
   </div>
   <div class="about-content reveal">
+    <div class="about-badges">
+      <span class="about-badge">独立开发者</span>
+      <span class="about-badge">视觉艺术创作者</span>
+      <span class="about-badge">B站 UP 主</span>
+      <span class="about-badge">GGJ 2023 主美 & 策划</span>
+    </div>
     <div class="about-text">
       我是一名<em>独立游戏开发者</em>与<em>视觉艺术创作者</em>，热爱将抽象的游戏机制转化为具象的交互体验。<br><br>
+      我个人偏好<strong>涌现式设计（Emergent Gameplay）</strong>——相信最有趣的游戏体验往往不是被「设计」出来的，而是从简洁规则的交互中自然涌现的。<br><br>
       从底层算法——<em>A* 寻路、程序化生成、色彩科学管线</em>——到上层设计——<em>关卡教学曲线、叙事触发器、玩家心理学</em>，我享受在技术与创意交汇处工作的过程。<br><br>
-      10 年的游戏沉浸经历赋予我对玩法本质的直觉理解；艺术创作的训练让我能独立完成从概念到落地的全流程。
+      10 年的游戏沉浸经历赋予我对玩法本质的直觉理解；艺术创作的训练让我能独立完成从概念到落地的全流程；同时我也在积极探索 <em>AI 与创意工作的深度结合</em>，将其融入美术生产与设计流程。
     </div>
     <div class="contact-row">
       <a class="contact-btn contact-btn-primary" href="https://github.com/WoodCharcoal" target="_blank">GitHub →</a>
@@ -662,29 +806,11 @@ document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
   draw();
 })();
 
-/* ===== PROJECT DATA (for detail overlay if needed later) ===== */
+/* ===== PROJECT DATA ===== */
 const projects = [
-  {
-    num: '01 / 03',
-    title: '时空回溯',
-    titleEn: 'Chronosphere',
-    type: '解谜 / 推箱子变体 · 已上线',
-    link: 'https://www.taptap.cn/app/834934'
-  },
-  {
-    num: '02 / 03',
-    title: '无尽迷宫',
-    titleEn: 'Infinite Maze',
-    type: 'Roguelike / 迷宫生存 · 已上线',
-    link: 'https://maker.taptap.cn/shares/8yqmgx'
-  },
-  {
-    num: '03 / 03',
-    title: '光谱工坊',
-    titleEn: 'Spectrum Workshop',
-    type: '益智解谜 / 光学色彩 · 已上线',
-    link: null
-  }
+  { num:'01 / 03', title:'时空回溯', titleEn:'Chronosphere', type:'解谜 / 推箱子变体 · 已上线', link:'https://www.taptap.cn/app/834934' },
+  { num:'02 / 03', title:'无尽迷宫', titleEn:'Infinite Maze', type:'Roguelike / 迷宫生存 · 已上线', link:'https://maker.taptap.cn/shares/8yqmgx' },
+  { num:'03 / 03', title:'光谱工坊', titleEn:'Spectrum Workshop', type:'益智解谜 / 光学色彩 · 已上线', link:null }
 ];
 
 function openProject(idx) {
