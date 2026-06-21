@@ -56,61 +56,65 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 
 /* ===== SECTION COMMON ===== */
 .section{padding:160px 56px;position:relative}
+.section-header{margin-bottom:80px;position:relative}
 .section-label{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:20px}
 .section-title{font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-1px;line-height:1.1}
-.section-num{font-size:clamp(72px,8vw,120px);font-weight:800;color:rgba(255,255,255,0.03);position:absolute;top:80px;right:56px;line-height:1;pointer-events:none}
+.section-num{font-size:clamp(72px,8vw,120px);font-weight:800;color:rgba(255,255,255,0.03);position:absolute;top:-40px;right:0;line-height:1;pointer-events:none}
 
-/* ===== PROJECT LIST ===== */
-.project-list{max-width:1200px;margin:80px auto 0}
-.project-item{border-top:1px solid rgba(255,255,255,0.06);padding:48px 0;display:grid;grid-template-columns:1fr 200px 280px;gap:32px;align-items:center;cursor:pointer;transition:background .3s;position:relative}
-.project-item:last-child{border-bottom:1px solid rgba(255,255,255,0.06)}
-.project-item:hover{background:rgba(255,255,255,0.02)}
-.project-item-num{font-size:12px;color:rgba(255,255,255,0.15);font-variant-numeric:tabular-nums}
-.project-item-title{font-size:clamp(28px,3.5vw,48px);font-weight:700;letter-spacing:-1px;transition:color .3s}
-.project-item:hover .project-item-title{color:#fff}
-.project-item-type{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3)}
-.project-item-preview{position:absolute;right:0;top:50%;transform:translateY(-50%);width:280px;height:180px;border-radius:12px;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .3s;z-index:10}
-.project-item:hover .project-item-preview{opacity:1}
-.project-item-preview img{width:100%;height:100%;object-fit:cover}
-.project-item-arrow{font-size:24px;color:rgba(255,255,255,0);transition:color .3s,transform .3s}
-.project-item:hover .project-item-arrow{color:rgba(255,255,255,0.5);transform:translateX(8px)}
+/* Section Banner - gradient overlay effect */
+.section-banner{position:relative;height:280px;margin-bottom:64px;border-radius:20px;overflow:hidden}
+.section-banner img{width:100%;height:100%;object-fit:cover}
+.section-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,12,0.3) 0%,rgba(8,8,12,0.7) 60%,#08080c 100%);pointer-events:none}
+.section-banner-text{position:absolute;bottom:32px;left:40px;z-index:3}
+.section-banner-text .section-label{margin-bottom:8px}
+.section-banner-text .section-title{color:#fff;text-shadow:0 2px 30px rgba(0,0,0,0.5)}
 
-/* ===== PROJECT DETAIL ===== */
-.detail-overlay{position:fixed;inset:0;z-index:9500;background:#08080c;opacity:0;pointer-events:none;transition:opacity .5s ease;overflow-y:auto}
-.detail-overlay.active{opacity:1;pointer-events:all}
-.detail-inner{min-height:100vh;padding:120px 56px 80px;max-width:1100px;margin:0 auto}
-.detail-close{position:fixed;top:32px;right:56px;z-index:9600;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;justify-content:center;align-items:center;cursor:pointer;transition:background .3s,transform .3s;font-size:20px;color:rgba(255,255,255,0.5)}
-.detail-close:hover{background:rgba(255,255,255,0.1);transform:rotate(90deg);color:#fff}
-.detail-header{margin-bottom:64px}
-.detail-num{font-size:12px;letter-spacing:2px;color:rgba(255,255,255,0.2);margin-bottom:16px}
-.detail-title{font-size:clamp(40px,5vw,72px);font-weight:700;letter-spacing:-2px;line-height:1.05}
-.detail-type{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:16px}
-.detail-body{display:grid;grid-template-columns:1fr 1fr;gap:64px}
-.detail-desc{font-size:15px;color:rgba(255,255,255,0.5);line-height:2}
-.detail-desc strong{color:rgba(255,255,255,0.85);font-weight:600}
-.detail-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
-.detail-tag{font-size:11px;padding:6px 16px;border-radius:20px;background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.08)}
-.detail-link{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:12px 28px;border-radius:40px;background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;font-size:13px;font-weight:600;transition:transform .3s,box-shadow .3s}
-.detail-link:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(99,102,241,0.4)}
-.detail-screenshots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:64px}
-.detail-screenshots img{width:100%;border-radius:10px;border:1px solid rgba(255,255,255,0.06)}
-.detail-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;margin-top:48px}
-.detail-stat{text-align:center;padding:20px;background:rgba(255,255,255,0.02);border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
-.detail-stat-val{font-size:28px;font-weight:700;color:#fff}
-.detail-stat-label{font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px;letter-spacing:1px;text-transform:uppercase}
+/* ===== GAMES SECTION - Large Card Style ===== */
+.game-showcase{max-width:1100px;margin:0 auto}
+.game-card{margin-bottom:100px;cursor:pointer}
+.game-card:last-child{margin-bottom:0}
+.game-card-hero{position:relative;width:100%;height:480px;border-radius:20px;overflow:hidden;margin-bottom:32px}
+.game-card-hero img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.game-card:hover .game-card-hero img{transform:scale(1.03)}
+.game-card-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(8,8,12,0.85) 100%);pointer-events:none;display:flex;flex-direction:column;justify-content:flex-end;padding:40px}
+.game-card-hero-num{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:8px}
+.game-card-hero-title{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-1px;color:#fff}
+.game-card-hero-type{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:8px}
+.game-card-body{display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:start}
+.game-card-desc{font-size:15px;color:rgba(255,255,255,0.5);line-height:2}
+.game-card-desc strong{color:rgba(255,255,255,0.85);font-weight:600}
+.game-card-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.game-card-tag{font-size:11px;padding:6px 16px;border-radius:20px;background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.07);transition:all .3s}
+.game-card:hover .game-card-tag{background:rgba(99,102,241,0.1);border-color:rgba(99,102,241,0.2)}
+.game-card-link{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:12px 28px;border-radius:40px;background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;font-size:13px;font-weight:600;transition:transform .3s,box-shadow .3s}
+.game-card-link:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(99,102,241,0.4)}
+.game-card-shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.game-card-shots img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,0.05);transition:transform .4s ease,box-shadow .4s ease;pointer-events:auto}
+.game-card-shots img:hover{transform:scale(1.03);box-shadow:0 8px 24px rgba(0,0,0,0.4)}
+.game-card-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+.game-stat{text-align:center;padding:16px;background:rgba(255,255,255,0.02);border-radius:12px;border:1px solid rgba(255,255,255,0.05)}
+.game-stat-val{font-size:22px;font-weight:700;color:#fff}
+.game-stat-label{font-size:10px;color:rgba(255,255,255,0.3);margin-top:4px;letter-spacing:1px;text-transform:uppercase}
 
 /* ===== ART SECTION ===== */
-.art-grid{max-width:1200px;margin:80px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.art-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;border:1px solid rgba(255,255,255,0.04);transition:transform .4s ease,box-shadow .4s ease}
-.art-card:hover{transform:scale(1.02);box-shadow:0 16px 64px rgba(0,0,0,0.5)}
+.art-grid{max-width:1300px;margin:60px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.art-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;border:1px solid rgba(255,255,255,0.04);transition:transform .4s ease,box-shadow .4s ease}
+.art-card:hover{transform:scale(1.03);box-shadow:0 20px 60px rgba(0,0,0,0.5);z-index:5}
 .art-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.art-card:hover img{transform:scale(1.05)}
-.art-card-label{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:13px;font-weight:600;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
+.art-card:hover img{transform:scale(1.06)}
+.art-card-label{position:absolute;bottom:0;left:0;right:0;padding:18px;background:linear-gradient(transparent,rgba(0,0,0,0.85));font-size:13px;font-weight:600;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
 .art-card:hover .art-card-label{opacity:1;transform:translateY(0)}
 
+/* Art lightbox */
+.art-lightbox{position:fixed;inset:0;z-index:9700;background:rgba(0,0,0,0.92);backdrop-filter:blur(20px);display:flex;justify-content:center;align-items:center;opacity:0;pointer-events:none;transition:opacity .4s ease}
+.art-lightbox.active{opacity:1;pointer-events:all}
+.art-lightbox img{max-width:90vw;max-height:85vh;border-radius:12px;object-fit:contain;box-shadow:0 20px 80px rgba(0,0,0,0.6);pointer-events:auto}
+.art-lightbox-close{position:fixed;top:32px;right:56px;z-index:9701;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;justify-content:center;align-items:center;cursor:pointer;font-size:18px;color:rgba(255,255,255,0.5);transition:background .3s,transform .3s}
+.art-lightbox-close:hover{background:rgba(255,255,255,0.15);transform:rotate(90deg);color:#fff}
+
 /* ===== GAME EXPERIENCE SECTION ===== */
-.game-exp-grid{max-width:1100px;margin:80px auto 0}
-.game-exp-category{margin-bottom:32px}
+.game-exp-grid{max-width:1100px;margin:60px auto 0}
+.game-exp-category{margin-bottom:28px}
 .game-exp-cat-title{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.05)}
 .game-tags-row{display:flex;flex-wrap:wrap;gap:8px}
 .game-tag{font-size:13px;padding:7px 18px;border-radius:24px;background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.07);transition:all .3s}
@@ -118,7 +122,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .game-tag.highlight{background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(168,85,247,0.15));color:#c4b5fd;border-color:rgba(168,85,247,0.3);font-weight:600}
 
 /* ===== AWARDS SECTION ===== */
-.awards-list{max-width:800px;margin:80px auto 0}
+.awards-list{max-width:800px;margin:60px auto 0}
 .award-item{padding:28px 32px;margin-bottom:16px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;transition:border-color .3s,background .3s}
 .award-item:hover{border-color:rgba(255,215,0,0.2);background:rgba(255,255,255,0.03)}
 .award-name{font-size:15px;color:rgba(255,255,255,0.75);font-weight:500}
@@ -128,7 +132,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .award-level.bronze{background:linear-gradient(135deg,#d97706,#b45309);color:#1c1410}
 
 /* ===== SKILLS SECTION ===== */
-.skills-row{max-width:700px;margin:80px auto 0;display:flex;justify-content:space-between;gap:24px}
+.skills-row{max-width:700px;margin:60px auto 0;display:flex;justify-content:space-between;gap:24px}
 .skill-item{text-align:center;flex:1;padding:40px 20px;border:1px solid rgba(255,255,255,0.04);border-radius:16px;transition:border-color .3s,background .3s}
 .skill-item:hover{border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.02)}
 .skill-icon{font-size:28px;margin-bottom:16px}
@@ -136,7 +140,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .skill-desc{font-size:11px;color:rgba(255,255,255,0.3);line-height:1.6}
 
 /* ===== ABOUT ===== */
-.about-content{max-width:800px;margin:80px auto 0}
+.about-content{max-width:800px;margin:60px auto 0}
 .about-text{font-size:17px;color:rgba(255,255,255,0.45);line-height:2.2;margin-bottom:48px}
 .about-text em{font-style:normal;color:rgba(255,255,255,0.7)}
 .contact-row{display:flex;gap:16px;flex-wrap:wrap}
@@ -149,17 +153,18 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .footer{padding:64px 56px;border-top:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(255,255,255,0.15);letter-spacing:2px;text-transform:uppercase}
 
 /* ===== SCROLL ANIMATION ===== */
-.reveal{opacity:0;transform:translateY(48px);transition:opacity 1s ease,transform 1s ease}
+.reveal{opacity:0;transform:translateY(48px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
-  .project-item{grid-template-columns:1fr 120px;gap:16px}
-  .project-item-preview{display:none}
-  .detail-body{grid-template-columns:1fr}
-  .art-grid{grid-template-columns:repeat(2,1fr)}
+  .game-card-body{grid-template-columns:1fr}
+  .game-card-shots{grid-template-columns:1fr 1fr 1fr}
+  .art-grid{grid-template-columns:repeat(3,1fr)}
   .game-tags-row{gap:6px}
   .game-tag{font-size:11px;padding:5px 14px}
+  .section-banner{height:220px}
+  .game-card-hero{height:360px}
 }
 @media(max-width:768px){
   .nav{padding:16px 24px}
@@ -167,17 +172,16 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   .nav-links{gap:20px}
   .section{padding:100px 24px}
   .section-num{display:none}
-  .project-item{grid-template-columns:1fr 80px;padding:32px 0}
-  .project-item-title{font-size:24px}
   .art-grid{grid-template-columns:1fr 1fr}
   .skills-row{flex-direction:column}
-  .detail-inner{padding:80px 24px 60px}
-  .detail-close{right:24px;top:24px}
-  .detail-screenshots{grid-template-columns:1fr}
-  .detail-stats{grid-template-columns:1fr 1fr}
   .footer{flex-direction:column;gap:16px;text-align:center}
   .award-item{flex-direction:column;gap:12px;text-align:center}
   .game-tag{font-size:11px;padding:5px 12px}
+  .game-card-hero{height:280px}
+  .game-card-hero-overlay{padding:24px}
+  .game-card-shots{grid-template-columns:1fr 1fr}
+  .section-banner{height:180px}
+  .section-banner-text{left:24px;bottom:20px}
 }
 </style>
 </head>
@@ -218,111 +222,203 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   </div>
 </section>
 
-<!-- WORK -->
+<!-- WORK / GAMES -->
 <section id="work" class="section">
-  <div class="section-num">01</div>
-  <div class="reveal">
+  <div class="section-header reveal">
     <div class="section-label">Selected Work</div>
     <div class="section-title">游戏作品</div>
   </div>
 
-  <div class="project-list">
-    <!-- 01 Chronosphere -->
-    <div class="project-item reveal" onclick="openProject(0)">
-      <div>
-        <div class="project-item-num">01 / 03</div>
-        <div class="project-item-title">时空回溯</div>
+  <div class="game-showcase">
+
+    <!-- Game 01: Chronosphere -->
+    <div class="game-card reveal" onclick="openProject(0)">
+      <div class="game-card-hero protected">
+        <img src="assets/games/banners/banner-chronosphere.jpg" alt="时空回溯" loading="lazy">
+        <div class="game-card-hero-overlay">
+          <div class="game-card-hero-num">01 / 03</div>
+          <div class="game-card-hero-title">时空回溯</div>
+          <div class="game-card-hero-type">Chronosphere — Puzzle · Time Manipulation</div>
+        </div>
       </div>
-      <div class="project-item-type">Puzzle · Time Manipulation</div>
-      <div class="project-item-arrow">→</div>
-      <div class="project-item-preview">
-        <img src="assets/games/chronosphere/menu-hub.png" alt="Chronosphere" loading="lazy">
+      <div class="game-card-body">
+        <div>
+          <div class="game-card-desc">
+            <p>在经典推箱子（Sokoban）玩法基础上，引入<strong>时间操控机制</strong>的单人解谜游戏。</p>
+            <p>核心设计围绕<strong>「时间属性二元对立」</strong>展开：可回溯 vs 锚定。三大类回溯系统——全局回溯 → 碎片回溯 → 信标回溯——从单一机制到多类型组合，构建递进式玩法深度。</p>
+            <p>20关教学曲线严格遵循「引入→练习→组合→挑战」节奏。</p>
+          </div>
+          <div class="game-card-tags">
+            <span class="game-card-tag">时间回溯</span>
+            <span class="game-card-tag">推箱子变体</span>
+            <span class="game-card-tag">UrhoX</span>
+            <span class="game-card-tag">Lua</span>
+            <span class="game-card-tag">Hub World</span>
+            <span class="game-card-tag">关卡编辑器</span>
+          </div>
+          <a href="https://www.taptap.cn/app/834934" target="_blank" class="game-card-link">▶ TapTap 试玩</a>
+        </div>
+        <div>
+          <div class="game-card-shots">
+            <img src="assets/games/chronosphere/tutorial-01-welcome.png" alt="" loading="lazy">
+            <img src="assets/games/chronosphere/menu-hub.png" alt="" loading="lazy">
+            <img src="assets/games/chronosphere/level-01-tutorial.png" alt="" loading="lazy">
+            <img src="assets/games/chronosphere/level-02-gameplay.png" alt="" loading="lazy">
+          </div>
+          <div class="game-card-stats">
+            <div class="game-stat"><div class="game-stat-val">20</div><div class="game-stat-label">关卡</div></div>
+            <div class="game-stat"><div class="game-stat-val">3</div><div class="game-stat-label">回溯类型</div></div>
+            <div class="game-stat"><div class="game-stat-val">2</div><div class="game-stat-label">时间属性</div></div>
+            <div class="game-stat"><div class="game-stat-val">v1.0</div><div class="game-stat-label">版本</div></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- 02 Infinite Maze -->
-    <div class="project-item reveal" onclick="openProject(1)">
-      <div>
-        <div class="project-item-num">02 / 03</div>
-        <div class="project-item-title">无尽迷宫</div>
+    <!-- Game 02: Infinite Maze -->
+    <div class="game-card reveal" onclick="openProject(1)">
+      <div class="game-card-hero protected">
+        <img src="assets/games/banners/banner-infinite-maze.jpg" alt="无尽迷宫" loading="lazy">
+        <div class="game-card-hero-overlay">
+          <div class="game-card-hero-num">02 / 03</div>
+          <div class="game-card-hero-title">无尽迷宫</div>
+          <div class="game-card-hero-type">Infinite Maze — Roguelike · Procedural Maze</div>
+        </div>
       </div>
-      <div class="project-item-type">Roguelike · Procedural Maze</div>
-      <div class="project-item-arrow">→</div>
-      <div class="project-item-preview">
-        <img src="assets/games/infinite-maze/screenshot-02-gameplay.png" alt="Infinite Maze" loading="lazy">
+      <div class="game-card-body">
+        <div>
+          <div class="game-card-desc">
+            <p>暗黑风格 2D 迷宫探索生存游戏。基于 <strong>Chunk 确定性程序化生成</strong>，迷宫无限延展，雾气遮盖未探索区域。</p>
+            <p><strong>双模式设计：</strong>坠落模式提供 4 章 8 关叙事体验；无尽模式剥离所有道具，考验纯粹操作与决策。</p>
+            <p>xorshift 确定性 RNG 保证相同 Chunk 永远一致；A* 寻路（二叉堆优化）。</p>
+          </div>
+          <div class="game-card-tags">
+            <span class="game-card-tag">程序化生成</span>
+            <span class="game-card-tag">A* 寻路</span>
+            <span class="game-card-tag">Roguelike</span>
+            <span class="game-card-tag">UrhoX</span>
+            <span class="game-card-tag">Lua</span>
+            <span class="game-card-tag">分层音频</span>
+          </div>
+          <a href="https://maker.taptap.cn/shares/8yqmgx" target="_blank" class="game-card-link">▶ TapTap 测试</a>
+        </div>
+        <div>
+          <div class="game-card-shots">
+            <img src="assets/games/infinite-maze/screenshot-01-intro.png" alt="" loading="lazy">
+            <img src="assets/games/infinite-maze/screenshot-02-gameplay.png" alt="" loading="lazy">
+            <img src="assets/games/infinite-maze/screenshot-03-explore.png" alt="" loading="lazy">
+            <img src="assets/games/infinite-maze/screenshot-04-codex.png" alt="" loading="lazy">
+          </div>
+          <div class="game-card-stats">
+            <div class="game-stat"><div class="game-stat-val">13K</div><div class="game-stat-label">代码行</div></div>
+            <div class="game-stat"><div class="game-stat-val">14</div><div class="game-stat-label">模块</div></div>
+            <div class="game-stat"><div class="game-stat-val">9</div><div class="game-stat-label">道具类型</div></div>
+            <div class="game-stat"><div class="game-stat-val">20</div><div class="game-stat-label">记忆碎片</div></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- 03 Spectrum Workshop -->
-    <div class="project-item reveal" onclick="openProject(2)">
-      <div>
-        <div class="project-item-num">03 / 03</div>
-        <div class="project-item-title">光谱工坊</div>
+    <!-- Game 03: Spectrum Workshop -->
+    <div class="game-card reveal" onclick="openProject(2)">
+      <div class="game-card-hero protected">
+        <img src="assets/games/banners/banner-spectrum-workshop.jpg" alt="光谱工坊" loading="lazy">
+        <div class="game-card-hero-overlay">
+          <div class="game-card-hero-num">03 / 03</div>
+          <div class="game-card-hero-title">光谱工坊</div>
+          <div class="game-card-hero-type">Spectrum Workshop — Puzzle · Color Science</div>
+        </div>
       </div>
-      <div class="project-item-type">Puzzle · Color Science</div>
-      <div class="project-item-arrow">→</div>
-      <div class="project-item-preview">
-        <img src="assets/games/spectrum-workshop/promo-prism.jpg" alt="Spectrum Workshop" loading="lazy">
+      <div class="game-card-body">
+        <div>
+          <div class="game-card-desc">
+            <p>以<strong>光学色彩科学</strong>为核心机制的益智解谜游戏。不是粗暴的 RGB 混合，而是符合人眼感知的精确色彩匹配。</p>
+            <p><strong>完整色彩科学管线：</strong>sRGB ↔ Linear ↔ XYZ ↔ CIE L*a*b* 完整转换，CIEDE2000 色差计算。</p>
+            <p>Beer-Lambert 光衰减模拟真实光线吸收；黑体辐射色温 1000K–10000K 映射为 RGB。</p>
+          </div>
+          <div class="game-card-tags">
+            <span class="game-card-tag">CIEDE2000</span>
+            <span class="game-card-tag">Beer-Lambert</span>
+            <span class="game-card-tag">色温模拟</span>
+            <span class="game-card-tag">NanoVG</span>
+            <span class="game-card-tag">UrhoX</span>
+            <span class="game-card-tag">矢量渲染</span>
+          </div>
+        </div>
+        <div>
+          <div class="game-card-shots">
+            <img src="assets/games/spectrum-workshop/menu-light.png" alt="" loading="lazy">
+            <img src="assets/games/spectrum-workshop/gameplay-glass-overlay.jpg" alt="" loading="lazy">
+            <img src="assets/games/spectrum-workshop/gameplay-match-3s.jpg" alt="" loading="lazy">
+            <img src="assets/games/spectrum-workshop/race-mode.png" alt="" loading="lazy">
+          </div>
+          <div class="game-card-stats">
+            <div class="game-stat"><div class="game-stat-val">12K</div><div class="game-stat-label">代码行</div></div>
+            <div class="game-stat"><div class="game-stat-val">12</div><div class="game-stat-label">关卡</div></div>
+            <div class="game-stat"><div class="game-stat-val">16</div><div class="game-stat-label">玻璃种类</div></div>
+            <div class="game-stat"><div class="game-stat-val">25</div><div class="game-stat-label">脚本文件</div></div>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- ART -->
 <section id="art" class="section" style="background:#06060a">
-  <div class="section-num">02</div>
-  <div class="reveal">
+  <div class="section-header reveal">
     <div class="section-label">Art Works</div>
     <div class="section-title">艺术作品</div>
   </div>
 
   <div class="art-grid">
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/01-dvh-cubes.jpg" alt="DVH 系列 I" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/01-dvh-cubes.jpg" alt="DVH 系列 I" loading="lazy">
       <div class="art-card-label">DVH 系列 I</div>
     </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/02-dvh-cubes.jpg" alt="DVH 系列 II" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/02-dvh-cubes.jpg" alt="DVH 系列 II" loading="lazy">
       <div class="art-card-label">DVH 系列 II</div>
     </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/03-watercolor-shanghai.jpg" alt="水彩·上海" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/03-watercolor-shanghai.jpg" alt="水彩·上海" loading="lazy">
       <div class="art-card-label">水彩 · 上海</div>
     </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/04-sketch-street.jpg" alt="钢笔速写" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/04-sketch-street.jpg" alt="钢笔速写" loading="lazy">
       <div class="art-card-label">钢笔速写</div>
     </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/05-sketch-castle.jpg" alt="城堡速写" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/05-sketch-castle.jpg" alt="城堡速写" loading="lazy">
       <div class="art-card-label">城堡速写</div>
     </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/06-sketch-interior.jpg" alt="展厅速写" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/06-sketch-interior.jpg" alt="展厅速写" loading="lazy">
       <div class="art-card-label">展厅速写</div>
     </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/09-moyin-v1.jpg" alt="万物鑒·墨隐缄语 V1" loading="lazy">
-      <div class="art-card-label">万物鑒 · 墨隐缄语 V1</div>
-    </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/08-moyin-v2.jpg" alt="万物鑒·墨隐缄语 V2" loading="lazy">
-      <div class="art-card-label">万物鑒 · 墨隐缄语 V2</div>
-    </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/07-moyin-v3.jpg" alt="万物鑒·墨隐缄语 V3" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/07-moyin-v3.jpg" alt="万物鑒·墨隐缄语 V3" loading="lazy">
       <div class="art-card-label">万物鑒 · 墨隐缄语 V3</div>
     </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/10-ceramic.jpg" alt="瓷板系列" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/08-moyin-v2.jpg" alt="万物鑒·墨隐缄语 V2" loading="lazy">
+      <div class="art-card-label">万物鑒 · 墨隐缄语 V2</div>
+    </div>
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/09-moyin-v1.jpg" alt="万物鑒·墨隐缄语 V1" loading="lazy">
+      <div class="art-card-label">万物鑒 · 墨隐缄语 V1</div>
+    </div>
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/10-ceramic.jpg" alt="瓷板系列" loading="lazy">
       <div class="art-card-label">瓷板系列</div>
     </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/11-yinyun-realm.png" alt="氤氲之境" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/11-yinyun-realm.png" alt="氤氲之境" loading="lazy">
       <div class="art-card-label">氤氲之境</div>
     </div>
-    <div class="art-card protected reveal">
-      <img src="assets/art-new/12-abstract-brown.jpg" alt="抽象习作" loading="lazy">
+    <div class="art-card protected reveal" onclick="openLightbox(this)">
+      <img src="assets/art/12-abstract-brown.jpg" alt="抽象习作" loading="lazy">
       <div class="art-card-label">抽象习作</div>
     </div>
   </div>
@@ -332,10 +428,15 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   </div>
 </section>
 
+<!-- Art Lightbox -->
+<div class="art-lightbox" id="artLightbox" onclick="closeLightbox()">
+  <button class="art-lightbox-close">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
 <!-- GAME EXPERIENCE -->
 <section id="experience" class="section">
-  <div class="section-num">03</div>
-  <div class="reveal">
+  <div class="section-header reveal">
     <div class="section-label">Gaming Experience</div>
     <div class="section-title">游戏经历</div>
   </div>
@@ -420,8 +521,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 
 <!-- AWARDS -->
 <section class="section" style="background:#06060a">
-  <div class="section-num">04</div>
-  <div class="reveal">
+  <div class="section-header reveal">
     <div class="section-label">Awards & Honors</div>
     <div class="section-title">获奖经历</div>
   </div>
@@ -444,8 +544,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 
 <!-- SKILLS -->
 <section class="section">
-  <div class="section-num">05</div>
-  <div class="reveal">
+  <div class="section-header reveal">
     <div class="section-label">Capabilities</div>
     <div class="section-title">技能领域</div>
   </div>
@@ -470,8 +569,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 
 <!-- ABOUT -->
 <section id="about" class="section" style="background:#06060a">
-  <div class="section-num">06</div>
-  <div class="reveal">
+  <div class="section-header reveal">
     <div class="section-label">About</div>
     <div class="section-title">关于我</div>
   </div>
@@ -495,16 +593,10 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <span>2026</span>
 </footer>
 
-<!-- PROJECT DETAIL OVERLAY -->
-<div class="detail-overlay" id="detailOverlay">
-  <div class="detail-inner" id="detailInner"></div>
-</div>
-<button class="detail-close" id="detailClose" onclick="closeProject()" style="display:none">✕</button>
-
 <script>
 /* ===== PRELOADER ===== */
 window.addEventListener('load', () => {
-  setTimeout(() => document.getElementById('preloader').classList.add('done'), 800);
+  setTimeout(() => document.getElementById('preloader').classList.add('done'), 600);
 });
 
 /* ===== ANTI-THEFT ===== */
@@ -540,21 +632,6 @@ const revealObs = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-/* ===== LAZY LOADING ===== */
-const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-if ('IntersectionObserver' in window) {
-  const imgObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src || img.src;
-        imgObserver.unobserve(img);
-      }
-    });
-  }, { rootMargin: '200px' });
-  lazyImages.forEach(img => imgObserver.observe(img));
-}
-
 /* ===== HERO CANVAS ===== */
 (function(){
   const c = document.getElementById('heroCanvas');
@@ -585,135 +662,52 @@ if ('IntersectionObserver' in window) {
   draw();
 })();
 
-/* ===== PROJECT DATA ===== */
+/* ===== PROJECT DATA (for detail overlay if needed later) ===== */
 const projects = [
   {
     num: '01 / 03',
     title: '时空回溯',
     titleEn: 'Chronosphere',
     type: '解谜 / 推箱子变体 · 已上线',
-    desc: `<p>在经典推箱子（Sokoban）玩法基础上，引入<strong>时间操控机制</strong>的单人解谜游戏。</p>
-    <p>核心设计围绕<strong>「时间属性二元对立」</strong>展开：可回溯 vs 锚定。三大类回溯系统——全局回溯 → 碎片回溯 → 信标回溯——从单一机制到多类型组合，构建递进式玩法深度。</p>
-    <p>20关教学曲线严格遵循「引入→练习→组合→挑战」节奏，通过地形设计迫使玩家发现机制（约束创造发现）。</p>
-    <p>Hub World 以核心玩法作为导航方式，关卡编辑器降低 UGC 创作门槛，社区系统实现完整的创作者→评价→反馈循环。</p>`,
-    tags: ['时间回溯','推箱子变体','UrhoX','Lua','Hub World','关卡编辑器','社区系统'],
-    link: { url: 'https://www.taptap.cn/app/834934', text: '▶ TapTap 试玩' },
-    stats: [
-      { val: '20', label: '关卡' },
-      { val: '3', label: '回溯类型' },
-      { val: '2', label: '时间属性' },
-      { val: 'v1.0', label: '版本' }
-    ],
-    shots: [
-      'assets/games/chronosphere/tutorial-01-welcome.png',
-      'assets/games/chronosphere/level-01-tutorial.png',
-      'assets/games/chronosphere/level-02-gameplay.png',
-      'assets/games/chronosphere/menu-hub.png',
-      'assets/games/chronosphere/menu-chapter-select.png',
-      'assets/games/chronosphere/tutorial-07-rewind.png'
-    ]
+    link: 'https://www.taptap.cn/app/834934'
   },
   {
     num: '02 / 03',
     title: '无尽迷宫',
     titleEn: 'Infinite Maze',
     type: 'Roguelike / 迷宫生存 · 已上线',
-    desc: `<p>暗黑风格 2D 迷宫探索生存游戏。基于 <strong>Chunk 确定性程序化生成</strong>，迷宫无限延展，雾气遮盖未探索区域——每一步都充满未知。</p>
-    <p><strong>双模式设计：</strong>坠落模式提供 4 章 8 关叙事体验，解锁冲刺/破墙/穿墙能力；无尽模式剥离所有道具，考验纯粹操作与决策。</p>
-    <p><strong>技术亮点：</strong>xorshift 确定性 RNG 保证相同 Chunk 永远一致；A* 寻路（二叉堆优化，8000 节点上限）；5 层 BGM 交叉淡入淡出；伪随机保底系统借鉴抽卡机制。</p>`,
-    tags: ['程序化生成','A* 寻路','Roguelike','UrhoX','Lua','分层音频','保底系统'],
-    link: { url: 'https://maker.taptap.cn/shares/8yqmgx', text: '▶ TapTap 试玩' },
-    stats: [
-      { val: '13,208', label: '代码行' },
-      { val: '14', label: '模块' },
-      { val: '9', label: '道具类型' },
-      { val: '20', label: '记忆碎片' }
-    ],
-    shots: [
-      'assets/games/infinite-maze/screenshot-01-intro.png',
-      'assets/games/infinite-maze/screenshot-02-gameplay.png',
-      'assets/games/infinite-maze/screenshot-03-explore.png',
-      'assets/games/infinite-maze/screenshot-04-codex.png'
-    ]
+    link: 'https://maker.taptap.cn/shares/8yqmgx'
   },
   {
     num: '03 / 03',
     title: '光谱工坊',
     titleEn: 'Spectrum Workshop',
     type: '益智解谜 / 光学色彩 · 已上线',
-    desc: `<p>以<strong>光学色彩科学</strong>为核心机制的益智解谜游戏。不是粗暴的 RGB 混合，而是符合人眼感知的精确色彩匹配。</p>
-    <p><strong>完整色彩科学管线：</strong>sRGB ↔ Linear RGB ↔ XYZ ↔ CIE L*a*b* 完整转换，CIEDE2000 色差计算（Sharma 2005 论文实现，含旋转项修正）。</p>
-    <p><strong>Beer-Lambert 光衰减：</strong>玻璃滤色模拟真实光线吸收；<strong>黑体辐射色温：</strong>1000K–10000K 映射为 RGB。</p>
-    <p>12 个精心关卡 + 4 档限时挑战 + 云端排行榜，兼顾休闲探索与硬核竞速。</p>`,
-    tags: ['CIEDE2000','Beer-Lambert','色温模拟','NanoVG','UrhoX','Lua','矢量渲染'],
-    link: null,
-    stats: [
-      { val: '11,994', label: '代码行' },
-      { val: '12', label: '关卡' },
-      { val: '16', label: '玻璃种类' },
-      { val: '25', label: '脚本文件' }
-    ],
-    shots: [
-      'assets/games/spectrum-workshop/menu-light.png',
-      'assets/games/spectrum-workshop/gameplay-glass-overlay.jpg',
-      'assets/games/spectrum-workshop/gameplay-match-3s.jpg',
-      'assets/games/spectrum-workshop/result-3s-perfect.png',
-      'assets/games/spectrum-workshop/race-mode.png'
-    ]
+    link: null
   }
 ];
 
-/* ===== OPEN / CLOSE PROJECT DETAIL ===== */
 function openProject(idx) {
   const p = projects[idx];
-  const overlay = document.getElementById('detailOverlay');
-  const inner = document.getElementById('detailInner');
-  const close = document.getElementById('detailClose');
-
-  const statsHTML = p.stats.map(s =>
-    `<div class="detail-stat"><div class="detail-stat-val">${s.val}</div><div class="detail-stat-label">${s.label}</div></div>`
-  ).join('');
-
-  const tagsHTML = p.tags.map(t => `<span class="detail-tag">${t}</span>`).join('');
-
-  const shotsHTML = p.shots.map(s =>
-    `<img src="${s}" alt="" class="protected" loading="lazy">`
-  ).join('');
-
-  const linkHTML = p.link
-    ? `<a href="${p.link.url}" target="_blank" class="detail-link">${p.link.text}</a>`
-    : '';
-
-  inner.innerHTML = `
-    <div class="detail-header">
-      <div class="detail-num">${p.num}</div>
-      <div class="detail-title">${p.title}<br><span style="font-weight:200;font-size:0.6em;color:rgba(255,255,255,0.3)">${p.titleEn}</span></div>
-      <div class="detail-type">${p.type}</div>
-    </div>
-    <div class="detail-body">
-      <div>
-        <div class="detail-desc">${p.desc}</div>
-        <div class="detail-tags">${tagsHTML}</div>
-        ${linkHTML}
-      </div>
-      <div class="detail-stats">${statsHTML}</div>
-    </div>
-    <div class="detail-screenshots">${shotsHTML}</div>
-  `;
-
-  overlay.classList.add('active');
-  close.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-  overlay.scrollTop = 0;
+  if(p.link) window.open(p.link, '_blank');
 }
 
-function closeProject() {
-  document.getElementById('detailOverlay').classList.remove('active');
-  document.getElementById('detailClose').style.display = 'none';
+/* ===== ART LIGHTBOX ===== */
+function openLightbox(card) {
+  const img = card.querySelector('img');
+  const lb = document.getElementById('artLightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  lbImg.src = img.src.replace(/loading="lazy"/,'');
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('artLightbox').classList.remove('active');
   document.body.style.overflow = '';
 }
 
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeProject(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
 </script>
 
 </body>
