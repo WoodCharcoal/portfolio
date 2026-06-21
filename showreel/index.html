@@ -11,7 +11,7 @@ html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:rgba(255,255,25
 body{font-family:'Helvetica Neue','PingFang SC','Noto Sans SC',sans-serif;background:#08080c;color:#e0ddd8;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 
-/* ===== ANTI-THEFT: disable right-click, drag, select on images ===== */
+/* ===== ANTI-THEFT ===== */
 img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .protected{position:relative;overflow:hidden}
 .protected::after{content:'';position:absolute;inset:0;z-index:2;background:transparent}
@@ -60,7 +60,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .section-title{font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-1px;line-height:1.1}
 .section-num{font-size:clamp(72px,8vw,120px);font-weight:800;color:rgba(255,255,255,0.03);position:absolute;top:80px;right:56px;line-height:1;pointer-events:none}
 
-/* ===== PROJECT LIST (wodniack.dev inspired) ===== */
+/* ===== PROJECT LIST ===== */
 .project-list{max-width:1200px;margin:80px auto 0}
 .project-item{border-top:1px solid rgba(255,255,255,0.06);padding:48px 0;display:grid;grid-template-columns:1fr 200px 280px;gap:32px;align-items:center;cursor:pointer;transition:background .3s;position:relative}
 .project-item:last-child{border-bottom:1px solid rgba(255,255,255,0.06)}
@@ -75,7 +75,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .project-item-arrow{font-size:24px;color:rgba(255,255,255,0);transition:color .3s,transform .3s}
 .project-item:hover .project-item-arrow{color:rgba(255,255,255,0.5);transform:translateX(8px)}
 
-/* ===== PROJECT DETAIL (fullscreen overlay) ===== */
+/* ===== PROJECT DETAIL ===== */
 .detail-overlay{position:fixed;inset:0;z-index:9500;background:#08080c;opacity:0;pointer-events:none;transition:opacity .5s ease;overflow-y:auto}
 .detail-overlay.active{opacity:1;pointer-events:all}
 .detail-inner{min-height:100vh;padding:120px 56px 80px;max-width:1100px;margin:0 auto}
@@ -108,8 +108,27 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .art-card-label{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:13px;font-weight:600;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
 .art-card:hover .art-card-label{opacity:1;transform:translateY(0)}
 
+/* ===== GAME EXPERIENCE SECTION ===== */
+.game-exp-grid{max-width:1100px;margin:80px auto 0}
+.game-exp-category{margin-bottom:32px}
+.game-exp-cat-title{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.game-tags-row{display:flex;flex-wrap:wrap;gap:8px}
+.game-tag{font-size:13px;padding:7px 18px;border-radius:24px;background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.07);transition:all .3s}
+.game-tag:hover{background:rgba(99,102,241,0.15);color:rgba(255,255,255,0.85);border-color:rgba(99,102,241,0.3)}
+.game-tag.highlight{background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(168,85,247,0.15));color:#c4b5fd;border-color:rgba(168,85,247,0.3);font-weight:600}
+
+/* ===== AWARDS SECTION ===== */
+.awards-list{max-width:800px;margin:80px auto 0}
+.award-item{padding:28px 32px;margin-bottom:16px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;transition:border-color .3s,background .3s}
+.award-item:hover{border-color:rgba(255,215,0,0.2);background:rgba(255,255,255,0.03)}
+.award-name{font-size:15px;color:rgba(255,255,255,0.75);font-weight:500}
+.award-level{font-size:13px;padding:6px 18px;border-radius:20px;font-weight:600;letter-spacing:1px}
+.award-level.gold{background:linear-gradient(135deg,#f59e0b,#d97706);color:#1a1200}
+.award-level.silver{background:linear-gradient(135deg,#9ca3af,#6b7280);color:#111827}
+.award-level.bronze{background:linear-gradient(135deg,#d97706,#b45309);color:#1c1410}
+
 /* ===== SKILLS SECTION ===== */
-.skills-row{max-width:900px;margin:80px auto 0;display:flex;justify-content:space-between;gap:24px}
+.skills-row{max-width:700px;margin:80px auto 0;display:flex;justify-content:space-between;gap:24px}
 .skill-item{text-align:center;flex:1;padding:40px 20px;border:1px solid rgba(255,255,255,0.04);border-radius:16px;transition:border-color .3s,background .3s}
 .skill-item:hover{border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.02)}
 .skill-icon{font-size:28px;margin-bottom:16px}
@@ -139,6 +158,8 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   .project-item-preview{display:none}
   .detail-body{grid-template-columns:1fr}
   .art-grid{grid-template-columns:repeat(2,1fr)}
+  .game-tags-row{gap:6px}
+  .game-tag{font-size:11px;padding:5px 14px}
 }
 @media(max-width:768px){
   .nav{padding:16px 24px}
@@ -155,6 +176,8 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   .detail-screenshots{grid-template-columns:1fr}
   .detail-stats{grid-template-columns:1fr 1fr}
   .footer{flex-direction:column;gap:16px;text-align:center}
+  .award-item{flex-direction:column;gap:12px;text-align:center}
+  .game-tag{font-size:11px;padding:5px 12px}
 }
 </style>
 </head>
@@ -175,6 +198,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="nav-links">
     <a href="#work">Work</a>
     <a href="#art">Art</a>
+    <a href="#experience">Experience</a>
     <a href="#about">About</a>
   </div>
   <div class="nav-counter" id="scrollCounter">000</div>
@@ -186,7 +210,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="hero-content">
     <div class="hero-line"><span class="hero-name">Wood</span></div>
     <div class="hero-line"><span class="hero-name-sub">Charcoal</span></div>
-    <div class="hero-role">Game Designer · Creative Developer · Artist</div>
+    <div class="hero-role">Game Designer · Artist · Creative Developer</div>
   </div>
   <div class="hero-scroll">
     <span>Scroll</span>
@@ -212,7 +236,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
       <div class="project-item-type">Puzzle · Time Manipulation</div>
       <div class="project-item-arrow">→</div>
       <div class="project-item-preview">
-        <img src="assets/games/chronosphere/menu-hub.png" alt="Chronosphere">
+        <img src="assets/games/chronosphere/menu-hub.png" alt="Chronosphere" loading="lazy">
       </div>
     </div>
 
@@ -225,7 +249,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
       <div class="project-item-type">Roguelike · Procedural Maze</div>
       <div class="project-item-arrow">→</div>
       <div class="project-item-preview">
-        <img src="assets/games/infinite-maze/screenshot-02-gameplay.png" alt="Infinite Maze">
+        <img src="assets/games/infinite-maze/screenshot-02-gameplay.png" alt="Infinite Maze" loading="lazy">
       </div>
     </div>
 
@@ -238,7 +262,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
       <div class="project-item-type">Puzzle · Color Science</div>
       <div class="project-item-arrow">→</div>
       <div class="project-item-preview">
-        <img src="assets/games/spectrum-workshop/promo-prism.jpg" alt="Spectrum Workshop">
+        <img src="assets/games/spectrum-workshop/promo-prism.jpg" alt="Spectrum Workshop" loading="lazy">
       </div>
     </div>
   </div>
@@ -254,36 +278,52 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 
   <div class="art-grid">
     <div class="art-card protected reveal">
-      <img src="assets/art/page02_wanwujian.png" alt="万物鉴 I">
-      <div class="art-card-label">万物鉴 I</div>
+      <img src="assets/art-new/01-dvh-cubes.jpg" alt="DVH 系列 I" loading="lazy">
+      <div class="art-card-label">DVH 系列 I</div>
     </div>
     <div class="art-card protected reveal">
-      <img src="assets/art/page03_wanwujian.png" alt="万物鉴 II">
-      <div class="art-card-label">万物鉴 II</div>
+      <img src="assets/art-new/02-dvh-cubes.jpg" alt="DVH 系列 II" loading="lazy">
+      <div class="art-card-label">DVH 系列 II</div>
     </div>
     <div class="art-card protected reveal">
-      <img src="assets/art/page04_wanwujian.png" alt="万物鉴 III">
-      <div class="art-card-label">万物鉴 III</div>
+      <img src="assets/art-new/03-watercolor-shanghai.jpg" alt="水彩·上海" loading="lazy">
+      <div class="art-card-label">水彩 · 上海</div>
     </div>
     <div class="art-card protected reveal">
-      <img src="assets/art/page05_wanwujian.png" alt="万物鉴 IV">
-      <div class="art-card-label">万物鉴 IV</div>
+      <img src="assets/art-new/04-sketch-street.jpg" alt="钢笔速写" loading="lazy">
+      <div class="art-card-label">钢笔速写</div>
     </div>
     <div class="art-card protected reveal">
-      <img src="assets/art/page09_digital.png" alt="数字习作 I">
-      <div class="art-card-label">数字习作 I</div>
+      <img src="assets/art-new/05-sketch-castle.jpg" alt="城堡速写" loading="lazy">
+      <div class="art-card-label">城堡速写</div>
     </div>
     <div class="art-card protected reveal">
-      <img src="assets/art/page10_digital.png" alt="数字习作 II">
-      <div class="art-card-label">数字习作 II</div>
+      <img src="assets/art-new/06-sketch-interior.jpg" alt="展厅速写" loading="lazy">
+      <div class="art-card-label">展厅速写</div>
     </div>
     <div class="art-card protected reveal">
-      <img src="assets/art/page11_digital.png" alt="数字习作 III">
-      <div class="art-card-label">数字习作 III</div>
+      <img src="assets/art-new/09-moyin-v1.jpg" alt="万物鑒·墨隐缄语 V1" loading="lazy">
+      <div class="art-card-label">万物鑒 · 墨隐缄语 V1</div>
     </div>
     <div class="art-card protected reveal">
-      <img src="assets/art/page12_digital.png" alt="数字习作 IV">
-      <div class="art-card-label">数字习作 IV</div>
+      <img src="assets/art-new/08-moyin-v2.jpg" alt="万物鑒·墨隐缄语 V2" loading="lazy">
+      <div class="art-card-label">万物鑒 · 墨隐缄语 V2</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art-new/07-moyin-v3.jpg" alt="万物鑒·墨隐缄语 V3" loading="lazy">
+      <div class="art-card-label">万物鑒 · 墨隐缄语 V3</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art-new/10-ceramic.jpg" alt="瓷板系列" loading="lazy">
+      <div class="art-card-label">瓷板系列</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art-new/11-yinyun-realm.png" alt="氤氲之境" loading="lazy">
+      <div class="art-card-label">氤氲之境</div>
+    </div>
+    <div class="art-card protected reveal">
+      <img src="assets/art-new/12-abstract-brown.jpg" alt="抽象习作" loading="lazy">
+      <div class="art-card-label">抽象习作</div>
     </div>
   </div>
 
@@ -292,9 +332,119 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   </div>
 </section>
 
+<!-- GAME EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="section-num">03</div>
+  <div class="reveal">
+    <div class="section-label">Gaming Experience</div>
+    <div class="section-title">游戏经历</div>
+  </div>
+
+  <div class="game-exp-grid reveal">
+    <div class="game-exp-category">
+      <div class="game-exp-cat-title">深度沉浸（4年+）</div>
+      <div class="game-tags-row">
+        <span class="game-tag highlight">Minecraft · 10年</span>
+        <span class="game-tag highlight">部落冲突 · 6年</span>
+        <span class="game-tag highlight">炉石传说 · 4年</span>
+        <span class="game-tag highlight">神偷 · 4年</span>
+      </div>
+    </div>
+    <div class="game-exp-category">
+      <div class="game-exp-cat-title">独立与创意</div>
+      <div class="game-tags-row">
+        <span class="game-tag">Baba Is You</span>
+        <span class="game-tag">Noita</span>
+        <span class="game-tag">传送门 Portal</span>
+        <span class="game-tag">There Is No Game</span>
+        <span class="game-tag">Balatro</span>
+        <span class="game-tag">死亡细胞</span>
+        <span class="game-tag">杀戮尖塔</span>
+        <span class="game-tag">元气骑士</span>
+        <span class="game-tag">空洞骑士</span>
+        <span class="game-tag">蔚蓝</span>
+        <span class="game-tag">雨世界</span>
+        <span class="game-tag">茶杯头</span>
+        <span class="game-tag">见证人</span>
+        <span class="game-tag">Helltaker</span>
+        <span class="game-tag">奥日与萤火意志</span>
+        <span class="game-tag">Ori</span>
+      </div>
+    </div>
+    <div class="game-exp-category">
+      <div class="game-exp-cat-title">开放世界与大作</div>
+      <div class="game-tags-row">
+        <span class="game-tag">王国之泪</span>
+        <span class="game-tag">旷野之息</span>
+        <span class="game-tag">艾尔登法环</span>
+        <span class="game-tag">无人深空</span>
+        <span class="game-tag">泰拉瑞亚</span>
+        <span class="game-tag">赛博朋克2077</span>
+        <span class="game-tag">模拟人生</span>
+        <span class="game-tag">明日方舟</span>
+        <span class="game-tag">锈湖系列</span>
+        <span class="game-tag">超阈限空间</span>
+      </div>
+    </div>
+    <div class="game-exp-category">
+      <div class="game-exp-cat-title">解谜与探索</div>
+      <div class="game-tags-row">
+        <span class="game-tag">纪念碑谷</span>
+        <span class="game-tag">地狱边境</span>
+        <span class="game-tag">小小梦魇</span>
+        <span class="game-tag">画中世界</span>
+        <span class="game-tag">传说之下</span>
+        <span class="game-tag">三角符文</span>
+        <span class="game-tag">picopark</span>
+        <span class="game-tag">双人成行</span>
+        <span class="game-tag">人类一败涂地</span>
+        <span class="game-tag">超级鸡马</span>
+      </div>
+    </div>
+    <div class="game-exp-category">
+      <div class="game-exp-cat-title">更多</div>
+      <div class="game-tags-row">
+        <span class="game-tag">围攻</span>
+        <span class="game-tag">皇室战争</span>
+        <span class="game-tag">史莱姆农场</span>
+        <span class="game-tag">潜水员戴夫</span>
+        <span class="game-tag">恐怖奶奶</span>
+        <span class="game-tag">三国杀</span>
+        <span class="game-tag">蓝途王子</span>
+        <span class="game-tag">图灵完备</span>
+        <span class="game-tag">丝之歌</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="section" style="background:#06060a">
+  <div class="section-num">04</div>
+  <div class="reveal">
+    <div class="section-label">Awards & Honors</div>
+    <div class="section-title">获奖经历</div>
+  </div>
+
+  <div class="awards-list reveal">
+    <div class="award-item">
+      <div class="award-name">第二届长三角地区美术教育专业本科生创新学术论坛</div>
+      <div class="award-level gold">特等奖（三项）</div>
+    </div>
+    <div class="award-item">
+      <div class="award-name">第六届香港当代设计奖</div>
+      <div class="award-level silver">铜奖（两项）</div>
+    </div>
+    <div class="award-item">
+      <div class="award-name">第四届中华伦教艺术交流展</div>
+      <div class="award-level bronze">铜奖</div>
+    </div>
+  </div>
+</section>
+
 <!-- SKILLS -->
 <section class="section">
-  <div class="section-num">03</div>
+  <div class="section-num">05</div>
   <div class="reveal">
     <div class="section-label">Capabilities</div>
     <div class="section-title">技能领域</div>
@@ -304,11 +454,6 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
       <div class="skill-icon">🎮</div>
       <div class="skill-name">游戏设计</div>
       <div class="skill-desc">机制创新<br>关卡设计<br>数值平衡<br>叙事设计</div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon">⌨️</div>
-      <div class="skill-name">程序实现</div>
-      <div class="skill-desc">Lua · Python<br>UrhoX 引擎<br>NanoVG 渲染<br>算法实现</div>
     </div>
     <div class="skill-item reveal">
       <div class="skill-icon">🎨</div>
@@ -325,16 +470,16 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 
 <!-- ABOUT -->
 <section id="about" class="section" style="background:#06060a">
-  <div class="section-num">04</div>
+  <div class="section-num">06</div>
   <div class="reveal">
     <div class="section-label">About</div>
     <div class="section-title">关于我</div>
   </div>
   <div class="about-content reveal">
     <div class="about-text">
-      我是一名<em>独立游戏开发者</em>，热爱将抽象的游戏机制转化为具象的交互体验。<br><br>
+      我是一名<em>独立游戏开发者</em>与<em>视觉艺术创作者</em>，热爱将抽象的游戏机制转化为具象的交互体验。<br><br>
       从底层算法——<em>A* 寻路、程序化生成、色彩科学管线</em>——到上层设计——<em>关卡教学曲线、叙事触发器、玩家心理学</em>，我享受在技术与创意交汇处工作的过程。<br><br>
-      除了游戏开发，我也从事<em>视觉艺术创作</em>，探索数字与传统文化表达之间的边界。
+      10 年的游戏沉浸经历赋予我对玩法本质的直觉理解；艺术创作的训练让我能独立完成从概念到落地的全流程。
     </div>
     <div class="contact-row">
       <a class="contact-btn contact-btn-primary" href="https://github.com/WoodCharcoal" target="_blank">GitHub →</a>
@@ -392,10 +537,25 @@ window.addEventListener('scroll', () => {
 /* ===== SCROLL REVEAL ===== */
 const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); revealObs.unobserve(e.target); }});
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-/* ===== HERO CANVAS (subtle grain/noise) ===== */
+/* ===== LAZY LOADING ===== */
+const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+if ('IntersectionObserver' in window) {
+  const imgObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src || img.src;
+        imgObserver.unobserve(img);
+      }
+    });
+  }, { rootMargin: '200px' });
+  lazyImages.forEach(img => imgObserver.observe(img));
+}
+
+/* ===== HERO CANVAS ===== */
 (function(){
   const c = document.getElementById('heroCanvas');
   const ctx = c.getContext('2d');
@@ -404,14 +564,12 @@ document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
   resize(); window.addEventListener('resize', resize);
   function draw(){
     ctx.clearRect(0,0,w,h);
-    /* Subtle radial glow */
     const grd = ctx.createRadialGradient(w*.5, h*.4, 0, w*.5, h*.4, w*.6);
     grd.addColorStop(0, 'rgba(99,102,241,0.06)');
     grd.addColorStop(0.5, 'rgba(168,85,247,0.03)');
     grd.addColorStop(1, 'transparent');
     ctx.fillStyle = grd;
     ctx.fillRect(0,0,w,h);
-    /* Floating particles */
     const t = Date.now() * 0.001;
     for(let i=0; i<40; i++){
       const x = (Math.sin(t*0.3+i*1.7)*0.4+0.5)*w;
@@ -519,7 +677,7 @@ function openProject(idx) {
   const tagsHTML = p.tags.map(t => `<span class="detail-tag">${t}</span>`).join('');
 
   const shotsHTML = p.shots.map(s =>
-    `<img src="${s}" alt="" class="protected">`
+    `<img src="${s}" alt="" class="protected" loading="lazy">`
   ).join('');
 
   const linkHTML = p.link
