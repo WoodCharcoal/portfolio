@@ -117,7 +117,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .blender-section{background:#06060a}
 .blender-hero-video{position:relative;width:100%;max-width:1300px;margin:0 auto 58px;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.06)}
 .blender-hero-video video{width:100%;display:block;border-radius:20px;background:#000}
-.blender-content-grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.blender-content-grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .blender-video-card{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);transition:border-color .3s,transform .3s;cursor:pointer}
 .blender-video-card:hover{border-color:rgba(99,102,241,0.2);transform:translateY(-4px)}
 .blender-video-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0c0c12}
@@ -125,8 +125,6 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .blender-video-thumb::after{content:'▶';position:absolute;inset:0;display:flex;justify-content:center;align-items:center;font-size:24px;color:rgba(255,255,255,0.6);background:rgba(0,0,0,0.35);transition:background .3s;pointer-events:none}
 .blender-video-card:hover .blender-video-thumb::after{background:rgba(0,0,0,0.15)}
 .stl-viewer-card{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);background:#0c0c12;transition:border-color .3s;position:relative}
-.stl-viewer-card:hover{border-color:rgba(99,102,241,0.2)}
-.stl-viewer-card canvas{width:100%;display:block;aspect-ratio:16/9}
 .stl-loading{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:2px;background:#0c0c12}
 
 /* ===== ART SERIES SECTION ===== */
@@ -687,7 +685,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
     </video>
   </div>
 
-  <!-- 水晶花 + STL 模型实时查看 -->
+  <!-- 水晶花视频 -->
   <div class="blender-content-grid reveal">
     <div class="blender-video-card" onclick="openVideoModal('assets/blender/crystal-flower.mov', '')">
       <div class="blender-video-thumb">
@@ -695,14 +693,6 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
           <source src="assets/blender/crystal-flower.mov" type="video/quicktime">
         </video>
       </div>
-    </div>
-    <div class="stl-viewer-card">
-      <canvas id="stlCanvasPu"></canvas>
-      <div class="stl-loading" id="stlLoadingPu">加载模型...</div>
-    </div>
-    <div class="stl-viewer-card">
-      <canvas id="stlCanvasYao"></canvas>
-      <div class="stl-loading" id="stlLoadingYao">加载模型...</div>
     </div>
   </div>
 </section>
@@ -1095,6 +1085,20 @@ document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
   draw();
 })();
 
+/* ===== BLACK HOLE VIDEO LAZY PLAY ===== */
+(function(){
+  const bhv = document.getElementById('blackHoleVideo');
+  if(!bhv) return;
+  const obs = new IntersectionObserver(entries => {
+    if(entries[0].isIntersecting){
+      bhv.load();
+      bhv.play().catch(()=>{});
+      obs.unobserve(bhv.parentElement);
+    }
+  }, { rootMargin: '200px' });
+  obs.observe(bhv.parentElement);
+})();
+
 /* ===== PROJECT DATA ===== */
 const projects = [
   { num:'01 / 03', title:'时空回溯', titleEn:'Chronosphere', type:'解谜 / 推箱子变体 · 已上线', link:'https://www.taptap.cn/app/834934' },
@@ -1173,153 +1177,6 @@ function closeVideoModal() {
 }
 
 document.addEventListener('keydown', e => { if(e.key==='Escape') { closeLightbox(); closeVideoModal(); } });
-</script>
-
-<!-- Three.js Import Map for STL Viewer — loaded only when visible -->
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-  }
-}
-</script>
-<script type="module">
-import * as THREE from 'three';
-import { STLLoader } from 'three/addons/loaders/STLLoader.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-
-/* Lazy init: only start loading when Blender section enters viewport */
-const blenderSection = document.getElementById('blender');
-let initialized = false;
-
-/* Track visibility for STL animation pause */
-let blenderVisible = false;
-const blenderVisObs = new IntersectionObserver(entries => {
-  blenderVisible = entries[0].isIntersecting;
-}, { rootMargin: '100px' });
-
-function initAll() {
-  if (initialized) return;
-  initialized = true;
-
-  /* Start black hole video */
-  const bhv = document.getElementById('blackHoleVideo');
-  if (bhv) {
-    bhv.load();
-    bhv.play().catch(() => {});
-  }
-
-  /* Init STL viewers */
-  initSTLViewer('stlCanvasPu', 'stlLoadingPu', 'assets/models/pu.stl');
-  initSTLViewer('stlCanvasYao', 'stlLoadingYao', 'assets/models/yao.stl');
-}
-
-const blenderObs = new IntersectionObserver(entries => {
-  if (entries[0].isIntersecting) {
-    initAll();
-    blenderObs.unobserve(blenderSection);
-    blenderVisObs.observe(blenderSection);
-  }
-}, { rootMargin: '200px' });
-blenderObs.observe(blenderSection);
-
-function initSTLViewer(canvasId, loadingId, stlUrl) {
-  const canvas = document.getElementById(canvasId);
-  const loadingEl = document.getElementById(loadingId);
-  if (!canvas) return;
-
-  /* Wait for layout to settle */
-  function start() {
-    const parent = canvas.parentElement;
-    const rect = parent.getBoundingClientRect();
-    const w = rect.width || 400;
-    const h = rect.height || w * 9 / 16;
-
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false, powerPreference: 'low-power' });
-    renderer.setSize(w, h);
-    renderer.setPixelRatio(1);
-    renderer.setClearColor(0x0c0c12, 1);
-
-    /* Lighting */
-    scene.add(new THREE.AmbientLight(0xffffff, 0.5));
-    const dir1 = new THREE.DirectionalLight(0xffffff, 0.8);
-    dir1.position.set(5, 10, 7);
-    scene.add(dir1);
-    const dir2 = new THREE.DirectionalLight(0x8b5cf6, 0.4);
-    dir2.position.set(-5, -3, -5);
-    scene.add(dir2);
-
-    /* Controls */
-    const controls = new OrbitControls(camera, canvas);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.05;
-    controls.autoRotate = true;
-    controls.autoRotateSpeed = 1.5;
-    controls.enableZoom = true;
-    controls.enablePan = false;
-
-    /* Load STL */
-    const loader = new STLLoader();
-    loader.load(stlUrl, (geometry) => {
-      geometry.computeVertexNormals();
-      const material = new THREE.MeshStandardMaterial({
-        color: 0x8b5cf6,
-        metalness: 0.4,
-        roughness: 0.6
-      });
-      const mesh = new THREE.Mesh(geometry, material);
-
-      /* Center & normalize scale */
-      geometry.computeBoundingBox();
-      const box = geometry.boundingBox;
-      const center = new THREE.Vector3();
-      box.getCenter(center);
-      mesh.position.sub(center);
-      const size = new THREE.Vector3();
-      box.getSize(size);
-      const maxDim = Math.max(size.x, size.y, size.z);
-      const scale = 3 / maxDim;
-      mesh.scale.set(scale, scale, scale);
-
-      scene.add(mesh);
-      if (loadingEl) loadingEl.style.display = 'none';
-
-      camera.position.set(0, 2, 5);
-      controls.target.set(0, 0, 0);
-      controls.update();
-    }, undefined, () => {
-      if (loadingEl) loadingEl.textContent = '加载失败';
-    });
-
-    /* Animation — only render when section visible */
-    let stlAnimId;
-    function animate() {
-      stlAnimId = requestAnimationFrame(animate);
-      if(!blenderVisible) return; /* skip rendering when off-screen */
-      controls.update();
-      renderer.render(scene, camera);
-    }
-    animate();
-
-    /* Resize */
-    const ro = new ResizeObserver(() => {
-      const r = parent.getBoundingClientRect();
-      const nw = r.width || 400;
-      const nh = r.height || nw * 9 / 16;
-      camera.aspect = nw / nh;
-      camera.updateProjectionMatrix();
-      renderer.setSize(nw, nh);
-    });
-    ro.observe(parent);
-  }
-
-  /* Ensure layout is ready before init */
-  if (document.readyState === 'complete') start();
-  else window.addEventListener('load', start);
-}
 </script>
 
 </body>
