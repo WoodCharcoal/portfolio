@@ -113,6 +113,32 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .sprite-item-name{font-size:13px;font-weight:600;color:rgba(255,255,255,0.75)}
 .sprite-item-desc{font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px}
 
+/* ===== BLENDER / 3D SHOWCASE ===== */
+.blender-section{background:#06060a}
+.blender-hero-video{position:relative;width:100%;max-width:1300px;margin:0 auto 64px;border-radius:20px;overflow:hidden;cursor:pointer;border:1px solid rgba(255,255,255,0.06)}
+.blender-hero-video video{width:100%;display:block;border-radius:20px;background:#000}
+.blender-hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(0,0,0,0.3);transition:background .4s ease}
+.blender-hero-video:hover .blender-hero-overlay{background:rgba(0,0,0,0.1)}
+.blender-play-btn{width:80px;height:80px;border-radius:50%;background:rgba(99,102,241,0.8);display:flex;justify-content:center;align-items:center;font-size:32px;color:#fff;backdrop-filter:blur(10px);transition:transform .3s ease,box-shadow .3s ease;box-shadow:0 8px 40px rgba(99,102,241,0.5)}
+.blender-hero-video:hover .blender-play-btn{transform:scale(1.1);background:rgba(99,102,241,0.9)}
+.blender-hero-label{margin-top:16px;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.7);font-weight:600}
+.blender-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.blender-card{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);transition:border-color .3s,transform .3s}
+.blender-card:hover{border-color:rgba(99,102,241,0.2);transform:translateY(-4px)}
+.blender-card-video{position:relative;aspect-ratio:16/9;overflow:hidden}
+.blender-card-video video{width:100%;height:100%;object-fit:cover;background:#000}
+.blender-card-body{padding:20px}
+.blender-card-title{font-size:15px;font-weight:600;color:rgba(255,255,255,0.8);margin-bottom:6px}
+.blender-card-desc{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6}
+.blender-models{max-width:1100px;margin:48px auto 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.blender-model-card{display:flex;flex-direction:column;padding:28px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);transition:border-color .3s,background .3s;text-align:center}
+.blender-model-card:hover{border-color:rgba(99,102,241,0.2);background:rgba(255,255,255,0.03)}
+.blender-model-icon{font-size:36px;margin-bottom:16px}
+.blender-model-name{font-size:17px;font-weight:700;color:rgba(255,255,255,0.85);margin-bottom:8px}
+.blender-model-desc{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6;margin-bottom:16px}
+.blender-model-download{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border-radius:30px;background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(168,85,247,0.15));color:#a5b4fc;font-size:12px;font-weight:600;border:1px solid rgba(99,102,241,0.2);transition:all .3s}
+.blender-model-download:hover{background:linear-gradient(135deg,rgba(99,102,241,0.25),rgba(168,85,247,0.25));color:#c4b5fd;transform:translateY(-2px)}
+
 /* ===== ART SERIES SECTION ===== */
 .art-series-group{max-width:1300px;margin:0 auto 64px}
 .art-series-header{display:flex;align-items:baseline;gap:16px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.05)}
@@ -270,6 +296,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
     <a href="#design">Design</a>
     <a href="#ai-lab">AI Lab</a>
     <a href="#sprites">Sprites</a>
+    <a href="#blender">3D</a>
     <a href="#art">Art</a>
     <a href="#experience">Experience</a>
     <a href="#about">About</a>
@@ -642,12 +669,76 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   </div>
 </section>
 
+<!-- BLENDER / 3D 建模展示 -->
+<section id="blender" class="section blender-section">
+  <div class="section-header reveal">
+    <div class="section-label">3D & Motion Design</div>
+    <div class="section-title">Blender 创作</div>
+    <span class="section-num">05</span>
+  </div>
+
+  <div style="max-width:800px;margin:0 auto 48px;font-size:15px;color:rgba(255,255,255,0.5);line-height:2" class="reveal">
+    <p>除了 2D 美术与游戏开发，我也使用 <strong>Blender</strong> 进行 3D 建模、渲染和动态设计。从抽象几何体到粒子特效，探索三维空间中的视觉表达。</p>
+  </div>
+
+  <!-- 黑洞 — 全宽横条视频 -->
+  <div class="blender-hero-video reveal" onclick="toggleHeroVideo(this)">
+    <video id="blackHoleVideo" loop muted playsinline preload="metadata" poster="">
+      <source src="assets/blender/black-hole.mov" type="video/quicktime">
+    </video>
+    <div class="blender-hero-overlay" id="bhOverlay">
+      <div class="blender-play-btn">▶</div>
+      <div class="blender-hero-label">黑洞终稿 · Black Hole</div>
+    </div>
+  </div>
+
+  <!-- 其他作品 -->
+  <div class="blender-grid reveal">
+    <div class="blender-card" onclick="openVideoModal('assets/blender/crystal-flower.mov', '水晶花 · Crystal Flower')">
+      <div class="blender-card-video">
+        <video muted preload="metadata" poster="" style="pointer-events:none">
+          <source src="assets/blender/crystal-flower.mov" type="video/quicktime">
+        </video>
+      </div>
+      <div class="blender-card-body">
+        <div class="blender-card-title">水晶花</div>
+        <div class="blender-card-desc">Crystal Flower — Blender 动态渲染，晶体生长与光影折射的实验性作品。</div>
+      </div>
+    </div>
+    <div class="blender-card" onclick="openVideoModal('assets/videos/spectrum-workshop-ai.mp4', '光谱工坊 · 实机演示')">
+      <div class="blender-card-video">
+        <img src="assets/games/banners/banner-spectrum-workshop.jpg" alt="光谱工坊" style="width:100%;height:100%;object-fit:cover;pointer-events:none">
+      </div>
+      <div class="blender-card-body">
+        <div class="blender-card-title">光谱工坊</div>
+        <div class="blender-card-desc">Spectrum Workshop — 游戏实机演示，AI 辅助美术素材 + 色彩科学机制。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STL 模型下载 -->
+  <div class="blender-models reveal">
+    <a href="assets/models/pu.stl" download class="blender-model-card">
+      <div class="blender-model-icon">🔷</div>
+      <div class="blender-model-name">卜</div>
+      <div class="blender-model-desc">抽象几何体建模 · STL 格式<br>Blender 建模导出，可用于 3D 打印</div>
+      <span class="blender-model-download">⬇ 下载模型 (3.7MB)</span>
+    </a>
+    <a href="assets/models/yao.stl" download class="blender-model-card">
+      <div class="blender-model-icon">🔶</div>
+      <div class="blender-model-name">爻</div>
+      <div class="blender-model-desc">复合结构体建模 · STL 格式<br>复杂几何组合，参数化设计探索</div>
+      <span class="blender-model-download">⬇ 下载模型 (14MB)</span>
+    </a>
+  </div>
+</section>
+
 <!-- ART - Series Layout -->
 <section id="art" class="section" style="background:#06060a">
   <div class="section-header reveal">
     <div class="section-label">Art Works</div>
     <div class="section-title">艺术作品</div>
-    <span class="section-num">05</span>
+    <span class="section-num">06</span>
   </div>
 
   <!-- Series 1: 墨隐缄语 -->
@@ -678,23 +769,31 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="art-series-group reveal">
     <div class="art-series-header">
       <div class="art-series-title">DVH 系列</div>
-      <div class="art-series-subtitle">DVH Series — Abstract Composition</div>
+      <div class="art-series-subtitle">DVH Series — Abstract Composition · Isometric</div>
     </div>
     <div class="art-scroll-container">
       <div class="art-scroll-row">
         <div class="art-card protected" onclick="openLightbox(this)">
-          <img src="assets/art/01-dvh-cubes.jpg" alt="DVH 系列 I" loading="lazy">
-          <div class="art-card-label">DVH I</div>
+          <img src="assets/art/01-dvh-cubes.jpg" alt="DVH I" loading="lazy">
+          <div class="art-card-label">DVH I · Cubes</div>
+        </div>
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/dvh-series-02.jpg" alt="DVH II" loading="lazy">
+          <div class="art-card-label">DVH II · Color</div>
+        </div>
+        <div class="art-card protected" onclick="openLightbox(this)">
+          <img src="assets/art/dvh-series-03.jpg" alt="DVH III" loading="lazy">
+          <div class="art-card-label">DVH III · Line</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Series 3: 速写 -->
+  <!-- Series 3: 速写 & 其他 -->
   <div class="art-series-group reveal">
     <div class="art-series-header">
-      <div class="art-series-title">速写系列</div>
-      <div class="art-series-subtitle">Sketches — Pen & Ink · Urban & Architecture</div>
+      <div class="art-series-title">速写 & 其他创作</div>
+      <div class="art-series-subtitle">Sketches · Watercolor · Ceramic · Digital</div>
     </div>
     <div class="art-scroll-container">
       <div class="art-scroll-row">
@@ -710,18 +809,6 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
           <img src="assets/art/06-sketch-interior.jpg" alt="展厅速写" loading="lazy">
           <div class="art-card-label">展厅</div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Series 4: 其他创作 -->
-  <div class="art-series-group reveal">
-    <div class="art-series-header">
-      <div class="art-series-title">其他创作</div>
-      <div class="art-series-subtitle">Watercolor · Ceramic · Digital · Abstract</div>
-    </div>
-    <div class="art-scroll-container">
-      <div class="art-scroll-row">
         <div class="art-card protected" onclick="openLightbox(this)">
           <img src="assets/art/03-watercolor-shanghai.jpg" alt="水彩·上海" loading="lazy">
           <div class="art-card-label">水彩 · 上海</div>
@@ -767,7 +854,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">Gaming Experience</div>
     <div class="section-title">游戏经历</div>
-    <span class="section-num">06</span>
+    <span class="section-num">07</span>
   </div>
 
   <div class="game-exp-grid reveal">
@@ -853,7 +940,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">Awards & Honors</div>
     <div class="section-title">获奖经历</div>
-    <span class="section-num">07</span>
+    <span class="section-num">08</span>
   </div>
 
   <div class="awards-list reveal">
@@ -881,7 +968,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">Capabilities</div>
     <div class="section-title">技能领域</div>
-    <span class="section-num">08</span>
+    <span class="section-num">09</span>
   </div>
   <div class="skills-row">
     <div class="skill-item reveal">
@@ -899,6 +986,11 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
       <div class="skill-name">系统设计</div>
       <div class="skill-desc">GDD 撰写<br>架构设计<br>原型验证<br>数据分析</div>
     </div>
+    <div class="skill-item reveal">
+      <div class="skill-icon">🔷</div>
+      <div class="skill-name">3D 建模</div>
+      <div class="skill-desc">Blender<br>动态渲染<br>STL 导出<br>粒子特效<br>材质灯光</div>
+    </div>
   </div>
 </section>
 
@@ -907,7 +999,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">About</div>
     <div class="section-title">关于我</div>
-    <span class="section-num">09</span>
+    <span class="section-num">10</span>
   </div>
   <div class="about-content reveal">
     <div class="about-badges">
@@ -1079,6 +1171,22 @@ function closeVideoModal() {
   player.pause();
   modal.classList.remove('active');
   document.body.style.overflow = '';
+}
+
+/* ===== HERO VIDEO TOGGLE ===== */
+function toggleHeroVideo(container) {
+  const video = container.querySelector('video');
+  const overlay = container.querySelector('.blender-hero-overlay');
+  if (video.paused) {
+    video.play();
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+    video.addEventListener('ended', () => { overlay.style.opacity = '1'; overlay.style.pointerEvents = 'auto'; }, { once: true });
+  } else {
+    video.pause();
+    overlay.style.opacity = '1';
+    overlay.style.pointerEvents = 'auto';
+  }
 }
 
 document.addEventListener('keydown', e => { if(e.key==='Escape') { closeLightbox(); closeVideoModal(); } });
