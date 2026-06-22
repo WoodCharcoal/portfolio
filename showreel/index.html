@@ -86,8 +86,11 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .game-card-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .game-card-tag{font-size:11px;padding:6px 16px;border-radius:20px;background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.07);transition:all .3s}
 .game-card:hover .game-card-tag{background:rgba(99,102,241,0.1);border-color:rgba(99,102,241,0.2)}
-.game-card-link{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:12px 28px;border-radius:40px;background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;font-size:13px;font-weight:600;transition:transform .3s,box-shadow .3s}
+.game-card-link{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:40px;background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;font-size:13px;font-weight:600;transition:transform .3s,box-shadow .3s;cursor:pointer}
 .game-card-link:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(99,102,241,0.4)}
+.game-card-video-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:40px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.1);font-size:13px;font-weight:600;transition:all .3s;cursor:pointer}
+.game-card-video-btn:hover{background:rgba(255,255,255,0.12);color:#fff;border-color:rgba(255,255,255,0.2);transform:translateY(-2px)}
+.game-card-actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
 .game-card-shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .game-card-shots img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,0.05);transition:transform .4s ease,box-shadow .4s ease;pointer-events:auto}
 .game-card-shots img:hover{transform:scale(1.03);box-shadow:0 8px 24px rgba(0,0,0,0.4)}
@@ -169,13 +172,6 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .design-resource-tag:hover{background:rgba(99,102,241,0.15);color:#a5b4fc;border-color:rgba(99,102,241,0.3)}
 .ai-lab-intro{max-width:800px;margin:0 auto 60px;font-size:15px;color:rgba(255,255,255,0.5);line-height:2}
 .ai-lab-intro strong{color:rgba(255,255,255,0.85)}
-.ai-videos-grid{max-width:1100px;margin:0 auto 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
-.ai-video-card{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);transition:transform .3s ease,border-color .3s ease}
-.ai-video-card:hover{transform:translateY(-4px);border-color:rgba(99,102,241,0.2)}
-.ai-video-card video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#0c0c12;cursor:pointer}
-.ai-video-info{padding:20px}
-.ai-video-title{font-size:15px;font-weight:600;color:rgba(255,255,255,0.8);margin-bottom:8px}
-.ai-video-desc{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6}
 .ai-process{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .ai-process-card{padding:28px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);transition:border-color .3s,background .3s}
 .ai-process-card:hover{border-color:rgba(99,102,241,0.15);background:rgba(255,255,255,0.03)}
@@ -188,14 +184,14 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .ai-tool-tag{font-size:12px;padding:8px 16px;border-radius:20px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.08);transition:all .3s}
 .ai-tool-tag:hover{background:rgba(99,102,241,0.15);color:#a5b4fc;border-color:rgba(99,102,241,0.3)}
 
-/* ===== VIDEO PLACEHOLDER ===== */
-.video-placeholder{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px 12px 0 0;cursor:pointer;background:#0c0c12}
-.video-placeholder img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.video-placeholder:hover img{transform:scale(1.05)}
-.play-btn-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(0,0,0,0.4);transition:background .3s ease}
-.video-placeholder:hover .play-btn-overlay{background:rgba(0,0,0,0.5)}
-.play-btn{width:60px;height:60px;border-radius:50%;background:rgba(99,102,241,0.8);display:flex;justify-content:center;align-items:center;font-size:24px;color:#fff;backdrop-filter:blur(10px);transition:transform .3s ease,background .3s ease;box-shadow:0 4px 20px rgba(99,102,241,0.4)}
-.video-placeholder:hover .play-btn{transform:scale(1.1);background:rgba(99,102,241,0.9)}
+/* ===== VIDEO MODAL ===== */
+.video-modal{position:fixed;inset:0;z-index:9800;background:rgba(0,0,0,0.94);backdrop-filter:blur(24px);display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;pointer-events:none;transition:opacity .4s ease}
+.video-modal.active{opacity:1;pointer-events:all}
+.video-modal-content{max-width:900px;width:92vw;position:relative}
+.video-modal-title{font-size:16px;font-weight:600;color:#fff;margin-bottom:16px;text-align:center;letter-spacing:1px}
+.video-modal video{width:100%;border-radius:16px;box-shadow:0 20px 80px rgba(0,0,0,0.6)}
+.video-modal-close{position:fixed;top:28px;right:48px;z-index:9801;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;justify-content:center;align-items:center;cursor:pointer;font-size:20px;color:rgba(255,255,255,0.5);transition:background .3s,transform .3s,color .3s}
+.video-modal-close:hover{background:rgba(255,255,255,0.15);transform:rotate(90deg);color:#fff}
 
 /* ===== SKILLS SECTION ===== */
 .skills-row{max-width:700px;margin:60px auto 0;display:flex;justify-content:space-between;gap:24px}
@@ -331,7 +327,10 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
             <span class="game-card-tag">关卡编辑器</span>
             <span class="game-card-tag" style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(168,85,247,0.15));color:#c4b5fd;border-color:rgba(168,85,247,0.3)">🤖 AI 辅助创作</span>
           </div>
-          <a href="https://www.taptap.cn/app/834934" target="_blank" class="game-card-link">▶ TapTap 试玩</a>
+          <div class="game-card-actions">
+            <a href="https://www.taptap.cn/app/834934" target="_blank" class="game-card-link">▶ TapTap 试玩</a>
+            <button class="game-card-video-btn" onclick="openVideoModal('assets/videos/chronosphere-ai.mp4', '时空回溯 — 实机演示')">🎬 预览视频</button>
+          </div>
         </div>
         <div>
           <div class="game-card-shots">
@@ -376,7 +375,10 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
             <span class="game-card-tag">分层音频</span>
             <span class="game-card-tag" style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(168,85,247,0.15));color:#c4b5fd;border-color:rgba(168,85,247,0.3)">🤖 AI 辅助创作</span>
           </div>
-          <a href="https://maker.taptap.cn/shares/8yqmgx" target="_blank" class="game-card-link">▶ TapTap 测试</a>
+          <div class="game-card-actions">
+            <a href="https://maker.taptap.cn/shares/8yqmgx" target="_blank" class="game-card-link">▶ TapTap 测试</a>
+            <button class="game-card-video-btn" onclick="openVideoModal('assets/videos/infinite-maze-ai.mov', '无尽迷宫 — 实机演示')">🎬 预览视频</button>
+          </div>
         </div>
         <div>
           <div class="game-card-shots">
@@ -421,7 +423,9 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
             <span class="game-card-tag">矢量渲染</span>
             <span class="game-card-tag" style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(168,85,247,0.15));color:#c4b5fd;border-color:rgba(168,85,247,0.3)">🤖 AI 辅助创作</span>
           </div>
-        </div>
+          <div class="game-card-actions">
+            <button class="game-card-video-btn" onclick="openVideoModal('assets/videos/spectrum-workshop-ai.mp4', '光谱工坊 — 实机演示')">🎬 预览视频</button>
+          </div>
         <div>
           <div class="game-card-shots">
             <img src="assets/games/spectrum-workshop/menu-light.png" alt="" loading="lazy">
@@ -532,50 +536,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 
   <div class="ai-lab-intro reveal">
     <p>我深度探索 <strong>AI 与游戏创作的结合</strong>——从概念设计到美术素材生成，AI 已成为我工作流程中不可或缺的协作伙伴。</p>
-    <p>以下展示三个游戏的 <strong>AI 辅助创作过程</strong>，以及 AI 生成的游戏素材对比。</p>
-  </div>
-
-  <!-- AI 辅助创作视频展示 -->
-  <div class="ai-videos-grid reveal">
-    <div class="ai-video-card">
-      <div class="video-placeholder" onclick="loadVideo(this, 'assets/videos/chronosphere-ai.mp4', 'assets/games/banners/banner-chronosphere.jpg')">
-        <img src="assets/games/banners/banner-chronosphere.jpg" alt="时空回溯" style="width:100%;height:100%;object-fit:cover;">
-        <div class="play-btn-overlay">
-          <div class="play-btn">▶</div>
-          <div style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:8px;letter-spacing:1px">点击加载视频</div>
-        </div>
-      </div>
-      <div class="ai-video-info">
-        <div class="ai-video-title">时空回溯 · AI 辅助设计</div>
-        <div class="ai-video-desc">展示 AI 如何辅助关卡设计、机制迭代过程</div>
-      </div>
-    </div>
-    <div class="ai-video-card">
-      <div class="video-placeholder" onclick="loadVideo(this, 'assets/videos/infinite-maze-ai.mov', 'assets/games/banners/banner-infinite-maze.jpg')">
-        <img src="assets/games/banners/banner-infinite-maze.jpg" alt="无尽迷宫" style="width:100%;height:100%;object-fit:cover;">
-        <div class="play-btn-overlay">
-          <div class="play-btn">▶</div>
-          <div style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:8px;letter-spacing:1px">点击加载视频</div>
-        </div>
-      </div>
-      <div class="ai-video-info">
-        <div class="ai-video-title">无尽迷宫 · AI 程序化生成</div>
-        <div class="ai-video-desc">AI 辅助程序化生成算法的设计与优化</div>
-      </div>
-    </div>
-    <div class="ai-video-card">
-      <div class="video-placeholder" onclick="loadVideo(this, 'assets/videos/spectrum-workshop-ai.mp4', 'assets/games/banners/banner-spectrum-workshop.jpg')">
-        <img src="assets/games/banners/banner-spectrum-workshop.jpg" alt="光谱工坊" style="width:100%;height:100%;object-fit:cover;">
-        <div class="play-btn-overlay">
-          <div class="play-btn">▶</div>
-          <div style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:8px;letter-spacing:1px">点击加载视频</div>
-        </div>
-      </div>
-      <div class="ai-video-info">
-        <div class="ai-video-title">光谱工坊 · AI 美术素材</div>
-        <div class="ai-video-desc">AI 生成游戏素材的完整流程展示</div>
-      </div>
-    </div>
+    <p>以下展示我的 <strong>AI 创作流程</strong>，以及 AI 生成的游戏素材和使用的工具链。</p>
   </div>
 
   <!-- AI 创作流程 -->
@@ -790,6 +751,15 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 <div class="art-lightbox" id="artLightbox" onclick="closeLightbox()">
   <button class="art-lightbox-close">✕</button>
   <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+  <button class="video-modal-close" onclick="closeVideoModal()">✕</button>
+  <div class="video-modal-content">
+    <div class="video-modal-title" id="videoModalTitle"></div>
+    <video id="videoModalPlayer" controls></video>
+  </div>
 </div>
 
 <!-- GAME EXPERIENCE -->
@@ -1062,7 +1032,7 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 
-/* ===== LOAD VIDEO ===== */
+/* ===== LOAD VIDEO (AI Lab inline) ===== */
 function loadVideo(placeholder, videoSrc, posterSrc) {
   const video = document.createElement('video');
   video.poster = posterSrc;
@@ -1084,7 +1054,34 @@ function loadVideo(placeholder, videoSrc, posterSrc) {
   video.play();
 }
 
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+/* ===== VIDEO MODAL ===== */
+function openVideoModal(videoSrc, title) {
+  const modal = document.getElementById('videoModal');
+  const player = document.getElementById('videoModalPlayer');
+  const titleEl = document.getElementById('videoModalTitle');
+  titleEl.textContent = title;
+  /* Clear old sources */
+  while(player.firstChild) player.removeChild(player.firstChild);
+  const source = document.createElement('source');
+  source.src = videoSrc;
+  if(videoSrc.endsWith('.mov')) source.type = 'video/quicktime';
+  else source.type = 'video/mp4';
+  player.appendChild(source);
+  player.load();
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  player.play();
+}
+
+function closeVideoModal() {
+  const modal = document.getElementById('videoModal');
+  const player = document.getElementById('videoModalPlayer');
+  player.pause();
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if(e.key==='Escape') { closeLightbox(); closeVideoModal(); } });
 </script>
 
 </body>
