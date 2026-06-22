@@ -151,6 +151,29 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .award-level.silver{background:linear-gradient(135deg,#9ca3af,#6b7280);color:#111827}
 .award-level.bronze{background:linear-gradient(135deg,#d97706,#b45309);color:#1c1410}
 
+/* ===== AI LAB SECTION ===== */
+.ai-lab-section{background:#06060a}
+.ai-lab-intro{max-width:800px;margin:0 auto 60px;font-size:15px;color:rgba(255,255,255,0.5);line-height:2}
+.ai-lab-intro strong{color:rgba(255,255,255,0.85)}
+.ai-videos-grid{max-width:1100px;margin:0 auto 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.ai-video-card{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);transition:transform .3s ease,border-color .3s ease}
+.ai-video-card:hover{transform:translateY(-4px);border-color:rgba(99,102,241,0.2)}
+.ai-video-card video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#0c0c12;cursor:pointer}
+.ai-video-info{padding:20px}
+.ai-video-title{font-size:15px;font-weight:600;color:rgba(255,255,255,0.8);margin-bottom:8px}
+.ai-video-desc{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6}
+.ai-process{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.ai-process-card{padding:28px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);transition:border-color .3s,background .3s}
+.ai-process-card:hover{border-color:rgba(99,102,241,0.15);background:rgba(255,255,255,0.03)}
+.ai-process-icon{font-size:32px;margin-bottom:16px}
+.ai-process-title{font-size:16px;font-weight:600;color:rgba(255,255,255,0.8);margin-bottom:12px}
+.ai-process-desc{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.8}
+.ai-tools{max-width:900px;margin:60px auto 0;padding:32px;border-radius:16px;background:linear-gradient(135deg,rgba(99,102,241,0.08),rgba(168,85,247,0.08));border:1px solid rgba(99,102,241,0.15)}
+.ai-tools-title{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.ai-tools-list{display:flex;flex-wrap:wrap;gap:10px}
+.ai-tool-tag{font-size:12px;padding:8px 16px;border-radius:20px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.08);transition:all .3s}
+.ai-tool-tag:hover{background:rgba(99,102,241,0.15);color:#a5b4fc;border-color:rgba(99,102,241,0.3)}
+
 /* ===== SKILLS SECTION ===== */
 .skills-row{max-width:700px;margin:60px auto 0;display:flex;justify-content:space-between;gap:24px}
 .skill-item{text-align:center;flex:1;padding:40px 20px;border:1px solid rgba(255,255,255,0.04);border-radius:16px;transition:border-color .3s,background .3s}
@@ -225,6 +248,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="nav-logo">WC</div>
   <div class="nav-links">
     <a href="#work">Work</a>
+    <a href="#ai-lab">AI Lab</a>
     <a href="#sprites">Sprites</a>
     <a href="#art">Art</a>
     <a href="#experience">Experience</a>
@@ -280,6 +304,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
             <span class="game-card-tag">Lua</span>
             <span class="game-card-tag">Hub World</span>
             <span class="game-card-tag">关卡编辑器</span>
+            <span class="game-card-tag" style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(168,85,247,0.15));color:#c4b5fd;border-color:rgba(168,85,247,0.3)">🤖 AI 辅助创作</span>
           </div>
           <a href="https://www.taptap.cn/app/834934" target="_blank" class="game-card-link">▶ TapTap 试玩</a>
         </div>
@@ -324,6 +349,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
             <span class="game-card-tag">UrhoX</span>
             <span class="game-card-tag">Lua</span>
             <span class="game-card-tag">分层音频</span>
+            <span class="game-card-tag" style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(168,85,247,0.15));color:#c4b5fd;border-color:rgba(168,85,247,0.3)">🤖 AI 辅助创作</span>
           </div>
           <a href="https://maker.taptap.cn/shares/8yqmgx" target="_blank" class="game-card-link">▶ TapTap 测试</a>
         </div>
@@ -368,6 +394,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
             <span class="game-card-tag">NanoVG</span>
             <span class="game-card-tag">UrhoX</span>
             <span class="game-card-tag">矢量渲染</span>
+            <span class="game-card-tag" style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(168,85,247,0.15));color:#c4b5fd;border-color:rgba(168,85,247,0.3)">🤖 AI 辅助创作</span>
           </div>
         </div>
         <div>
@@ -387,6 +414,90 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- AI LAB / AI 创作实验室 -->
+<section id="ai-lab" class="section ai-lab-section">
+  <div class="section-header reveal">
+    <div class="section-label">AI Creation Lab</div>
+    <div class="section-title">AI 创作实验室</div>
+    <span class="section-num">04</span>
+  </div>
+
+  <div class="ai-lab-intro reveal">
+    <p>我深度探索 <strong>AI 与游戏创作的结合</strong>——从概念设计到美术素材生成，AI 已成为我工作流程中不可或缺的协作伙伴。</p>
+    <p>以下展示三个游戏的 <strong>AI 辅助创作过程</strong>，以及 AI 生成的游戏素材对比。</p>
+  </div>
+
+  <!-- AI 辅助创作视频展示 -->
+  <div class="ai-videos-grid reveal">
+    <div class="ai-video-card">
+      <video controls preload="metadata" poster="assets/games/banners/banner-chronosphere.jpg">
+        <source src="assets/videos/game-ai-demo-1.mp4" type="video/mp4">
+      </video>
+      <div class="ai-video-info">
+        <div class="ai-video-title">时空回溯 · AI 辅助设计</div>
+        <div class="ai-video-desc">展示 AI 如何辅助关卡设计、机制迭代过程</div>
+      </div>
+    </div>
+    <div class="ai-video-card">
+      <video controls preload="metadata" poster="assets/games/banners/banner-infinite-maze.jpg">
+        <source src="assets/videos/game-ai-demo-2.mp4" type="video/mp4">
+      </video>
+      <div class="ai-video-info">
+        <div class="ai-video-title">无尽迷宫 · AI 程序化生成</div>
+        <div class="ai-video-desc">AI 辅助程序化生成算法的设计与优化</div>
+      </div>
+    </div>
+    <div class="ai-video-card">
+      <video controls preload="metadata" poster="assets/games/banners/banner-spectrum-workshop.jpg">
+        <source src="assets/videos/game-ai-demo-3.mp4" type="video/mp4">
+      </video>
+      <div class="ai-video-info">
+        <div class="ai-video-title">光谱工坊 · AI 美术素材</div>
+        <div class="ai-video-desc">AI 生成游戏素材的完整流程展示</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI 创作流程 -->
+  <div class="ai-process reveal">
+    <div class="ai-process-card">
+      <div class="ai-process-icon">🎯</div>
+      <div class="ai-process-title">概念设计</div>
+      <div class="ai-process-desc">使用 AI 快速生成概念图、机制草图，加速创意迭代周期。从模糊想法到可视化概念，AI 帮助我在数分钟内探索数十种方向。</div>
+    </div>
+    <div class="ai-process-card">
+      <div class="ai-process-icon">🎨</div>
+      <div class="ai-process-title">美术素材生成</div>
+      <div class="ai-process-desc">AI 生成基础素材 → 人工精修 → 风格统一。游戏中的宠物、食物、工具等精灵图，均通过 AI 辅助创作完成。</div>
+    </div>
+    <div class="ai-process-card">
+      <div class="ai-process-icon">📐</div>
+      <div class="ai-process-title">关卡设计辅助</div>
+      <div class="ai-process-desc">AI 辅助生成关卡布局建议、难度曲线分析，人工进行最终设计与调整。AI 作为「创意伙伴」而非「替代者」。</div>
+    </div>
+    <div class="ai-process-card">
+      <div class="ai-process-icon">🧪</div>
+      <div class="ai-process-title">快速原型验证</div>
+      <div class="ai-process-desc">利用 AI 快速生成可玩原型，验证核心机制是否成立。缩短「想法→验证」的周期，让更多时间投入精细打磨。</div>
+    </div>
+  </div>
+
+  <!-- AI 工具链 -->
+  <div class="ai-tools reveal">
+    <div class="ai-tools-title">🛠 AI 工具链</div>
+    <div class="ai-tools-list">
+      <span class="ai-tool-tag">Midjourney · 概念设计</span>
+      <span class="ai-tool-tag">Stable Diffusion · 素材生成</span>
+      <span class="ai-tool-tag">GPT-4 · 设计文档</span>
+      <span class="ai-tool-tag">Claude · 代码辅助</span>
+      <span class="ai-tool-tag">ComfyUI · 工作流定制</span>
+      <span class="ai-tool-tag">DALL-E · 快速迭代</span>
+      <span class="ai-tool-tag">Runway · 视频生成</span>
+      <span class="ai-tool-tag">ElevenLabs · 语音合成</span>
+    </div>
   </div>
 </section>
 
