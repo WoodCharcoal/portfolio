@@ -442,7 +442,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <!-- AI 辅助创作视频展示 -->
   <div class="ai-videos-grid reveal">
     <div class="ai-video-card">
-      <div class="video-placeholder" onclick="loadVideo(this, 'assets/videos/game-ai-demo-1.mp4', 'assets/games/banners/banner-chronosphere.jpg')">
+      <div class="video-placeholder" onclick="loadVideo(this, 'assets/videos/chronosphere-ai.mp4', 'assets/games/banners/banner-chronosphere.jpg')">
         <img src="assets/games/banners/banner-chronosphere.jpg" alt="时空回溯" style="width:100%;height:100%;object-fit:cover;">
         <div class="play-btn-overlay">
           <div class="play-btn">▶</div>
@@ -455,7 +455,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
       </div>
     </div>
     <div class="ai-video-card">
-      <div class="video-placeholder" onclick="loadVideo(this, 'assets/videos/game-ai-demo-2.mp4', 'assets/games/banners/banner-infinite-maze.jpg')">
+      <div class="video-placeholder" onclick="loadVideo(this, 'assets/videos/infinite-maze-ai.mov', 'assets/games/banners/banner-infinite-maze.jpg')">
         <img src="assets/games/banners/banner-infinite-maze.jpg" alt="无尽迷宫" style="width:100%;height:100%;object-fit:cover;">
         <div class="play-btn-overlay">
           <div class="play-btn">▶</div>
@@ -468,7 +468,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
       </div>
     </div>
     <div class="ai-video-card">
-      <div class="video-placeholder" onclick="loadVideo(this, 'assets/videos/game-ai-demo-3.mp4', 'assets/games/banners/banner-spectrum-workshop.jpg')">
+      <div class="video-placeholder" onclick="loadVideo(this, 'assets/videos/spectrum-workshop-ai.mp4', 'assets/games/banners/banner-spectrum-workshop.jpg')">
         <img src="assets/games/banners/banner-spectrum-workshop.jpg" alt="光谱工坊" style="width:100%;height:100%;object-fit:cover;">
         <div class="play-btn-overlay">
           <div class="play-btn">▶</div>
@@ -968,7 +968,6 @@ function closeLightbox() {
 /* ===== LOAD VIDEO ===== */
 function loadVideo(placeholder, videoSrc, posterSrc) {
   const video = document.createElement('video');
-  video.src = videoSrc;
   video.poster = posterSrc;
   video.controls = true;
   video.autoplay = true;
@@ -976,6 +975,13 @@ function loadVideo(placeholder, videoSrc, posterSrc) {
   video.style.height = '100%';
   video.style.objectFit = 'cover';
   video.style.borderRadius = '12px 12px 0 0';
+  video.style.aspectRatio = '16/9';
+  /* Use source element for better format compatibility (.mov / .mp4) */
+  const source = document.createElement('source');
+  source.src = videoSrc;
+  if(videoSrc.endsWith('.mov')) source.type = 'video/quicktime';
+  else source.type = 'video/mp4';
+  video.appendChild(source);
   
   placeholder.parentNode.replaceChild(video, placeholder);
   video.play();
