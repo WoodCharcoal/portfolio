@@ -153,6 +153,20 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 
 /* ===== AI LAB SECTION ===== */
 .ai-lab-section{background:#06060a}
+
+/* ===== GAME DESIGN SECTION ===== */
+.design-docs-grid{max-width:1100px;margin:60px auto 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.design-doc-card{display:block;padding:24px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);transition:border-color .3s,transform .3s,background .3s;cursor:pointer}
+.design-doc-card:hover{border-color:rgba(99,102,241,0.2);transform:translateY(-4px);background:rgba(255,255,255,0.03)}
+.design-doc-num{font-size:11px;color:rgba(99,102,241,0.6);font-weight:700;letter-spacing:2px;margin-bottom:12px}
+.design-doc-title{font-size:16px;font-weight:600;color:rgba(255,255,255,0.8);margin-bottom:8px}
+.design-doc-desc{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.6}
+.design-doc-icon{font-size:24px;margin-bottom:16px}
+.design-resources-banner{max-width:1100px;margin:48px auto 0;padding:32px;border-radius:16px;background:linear-gradient(135deg,rgba(99,102,241,0.06),rgba(168,85,247,0.06));border:1px solid rgba(99,102,241,0.1)}
+.design-resources-title{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.design-resources-list{display:flex;flex-wrap:wrap;gap:10px}
+.design-resource-tag{font-size:12px;padding:8px 16px;border-radius:20px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.08);transition:all .3s}
+.design-resource-tag:hover{background:rgba(99,102,241,0.15);color:#a5b4fc;border-color:rgba(99,102,241,0.3)}
 .ai-lab-intro{max-width:800px;margin:0 auto 60px;font-size:15px;color:rgba(255,255,255,0.5);line-height:2}
 .ai-lab-intro strong{color:rgba(255,255,255,0.85)}
 .ai-videos-grid{max-width:1100px;margin:0 auto 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
@@ -257,6 +271,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="nav-logo">WC</div>
   <div class="nav-links">
     <a href="#work">Work</a>
+    <a href="#design">Design</a>
     <a href="#ai-lab">AI Lab</a>
     <a href="#sprites">Sprites</a>
     <a href="#art">Art</a>
@@ -285,6 +300,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">Selected Work</div>
     <div class="section-title">游戏作品</div>
+    <span class="section-num">01</span>
   </div>
 
   <div class="game-showcase">
@@ -426,12 +442,92 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   </div>
 </section>
 
+<!-- GAME DESIGN / 策划设计展示 -->
+<section id="design" class="section" style="background:#0a0a10">
+  <div class="section-header reveal">
+    <div class="section-label">Game Design Docs</div>
+    <div class="section-title">策划设计</div>
+    <span class="section-num">02</span>
+  </div>
+
+  <div style="max-width:800px;margin:0 auto 60px;font-size:15px;color:rgba(255,255,255,0.5);line-height:2" class="reveal">
+    <p>从 <strong>GDD 到规则书、从核心机制分析到竞品拆解</strong>，我坚持每个项目都有完整的策划文档体系。<br>以下展示时空回溯的 8 篇设计文档，以及我的策划资源库。</p>
+  </div>
+
+  <!-- 设计文档卡片 -->
+  <div class="design-docs-grid reveal">
+    <a href="https://github.com/WoodCharcoal/portfolio/blob/main/games/chronosphere/docs/01_%E5%AE%8C%E6%95%B0GDD.md" target="_blank" class="design-doc-card">
+      <div class="design-doc-icon">📋</div>
+      <div class="design-doc-num">DOC 01</div>
+      <div class="design-doc-title">完整 GDD</div>
+      <div class="design-doc-desc">游戏设计文档全貌：从概念定义到机制拆解，涵盖玩法核心、叙事框架与项目规划。</div>
+    </a>
+    <a href="https://github.com/WoodCharcoal/portfolio/blob/main/games/chronosphere/docs/02_%E6%A0%B8%E5%BF%83%E6%9C%BA%E5%88%B6%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90.md" target="_blank" class="design-doc-card">
+      <div class="design-doc-icon">⚙️</div>
+      <div class="design-doc-num">DOC 02</div>
+      <div class="design-doc-title">核心机制深度分析</div>
+      <div class="design-doc-desc">时间属性二元对立、三大回溯系统的递进设计哲学，以及机制组合的玩法深度构建。</div>
+    </a>
+    <a href="https://github.com/WoodCharcoal/portfolio/blob/main/games/chronosphere/docs/03_%E5%85%B3%E5%8D%A1%E8%AE%A1%E8%AE%BE%E5%93%B2%E5%AD%A6.md" target="_blank" class="design-doc-card">
+      <div class="design-doc-icon">🗺️</div>
+      <div class="design-doc-num">DOC 03</div>
+      <div class="design-doc-title">关卡设计哲学</div>
+      <div class="design-doc-desc">「引入→练习→组合→挑战」四步教学曲线，20 关难度递进与玩家心理节奏把控。</div>
+    </a>
+    <a href="https://github.com/WoodCharcoal/portfolio/blob/main/games/chronosphere/docs/04_%E7%B3%BB%E7%BB%9F%E8%AE%A1%E8%AE%A1.md" target="_blank" class="design-doc-card">
+      <div class="design-doc-icon">🔧</div>
+      <div class="design-doc-num">DOC 04</div>
+      <div class="design-doc-title">系统设计</div>
+      <div class="design-doc-desc">回溯系统、关卡编辑器、Hub World 架构、触发器系统等核心系统的设计文档。</div>
+    </a>
+    <a href="https://github.com/WoodCharcoal/portfolio/blob/main/games/chronosphere/docs/05_%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90.md" target="_blank" class="design-doc-card">
+      <div class="design-doc-icon">🔍</div>
+      <div class="design-doc-num">DOC 05</div>
+      <div class="design-doc-title">竞品分析</div>
+      <div class="design-doc-desc">Baba Is You、纪念碑谷、传送门等经典解谜游戏的机制对比与学习笔记。</div>
+    </a>
+    <a href="https://github.com/WoodCharcoal/portfolio/blob/main/games/chronosphere/docs/06_%E8%AE%A1%E8%AE%A1%E5%A4%8D%E7%9B%98.md" target="_blank" class="design-doc-card">
+      <div class="design-doc-icon">📝</div>
+      <div class="design-doc-num">DOC 06</div>
+      <div class="design-doc-title">设计复盘</div>
+      <div class="design-doc-desc">项目完成后的反思与总结：哪些设计成功了、哪些需要改进、后续版本规划。</div>
+    </a>
+    <a href="https://github.com/WoodCharcoal/portfolio/blob/main/games/chronosphere/docs/%E7%AD%96%E8%AE%A1%E6%96%87%E6%A1%A3.md" target="_blank" class="design-doc-card">
+      <div class="design-doc-icon">📊</div>
+      <div class="design-doc-num">综合</div>
+      <div class="design-doc-title">策划文档</div>
+      <div class="design-doc-desc">完整的策划综合文档：包含玩法设计、叙事结构、关卡规划、角色设定等。</div>
+    </a>
+    <a href="https://github.com/WoodCharcoal/portfolio/blob/main/games/chronosphere/docs/%E8%A7%84%E5%88%99%E4%B9%A6_v2.md" target="_blank" class="design-doc-card">
+      <div class="design-doc-icon">📖</div>
+      <div class="design-doc-num">规则</div>
+      <div class="design-doc-title">规则书 v2</div>
+      <div class="design-doc-desc">游戏规则详细定义：操作方式、机制说明、判定标准、术语表等。</div>
+    </a>
+  </div>
+
+  <!-- 策划资源库 -->
+  <div class="design-resources-banner reveal">
+    <div class="design-resources-title">📚 策划资源库 — 8 大分类</div>
+    <div class="design-resources-list">
+      <a href="https://github.com/WoodCharcoal/portfolio/tree/main/resources/design-theory" target="_blank" class="design-resource-tag">设计理论</a>
+      <a href="https://github.com/WoodCharcoal/portfolio/tree/main/resources/game-doc" target="_blank" class="design-resource-tag">游戏文档</a>
+      <a href="https://github.com/WoodCharcoal/portfolio/tree/main/resources/level-design" target="_blank" class="design-resource-tag">关卡设计</a>
+      <a href="https://github.com/WoodCharcoal/portfolio/tree/main/resources/narrative" target="_blank" class="design-resource-tag">叙事设计</a>
+      <a href="https://github.com/WoodCharcoal/portfolio/tree/main/resources/numeric-system" target="_blank" class="design-resource-tag">数值系统</a>
+      <a href="https://github.com/WoodCharcoal/portfolio/tree/main/resources/project-review" target="_blank" class="design-resource-tag">项目复盘</a>
+      <a href="https://github.com/WoodCharcoal/portfolio/tree/main/resources/courses-community" target="_blank" class="design-resource-tag">课程社区</a>
+      <a href="https://github.com/WoodCharcoal/portfolio/tree/main/resources/tools-assets" target="_blank" class="design-resource-tag">工具素材</a>
+    </div>
+  </div>
+</section>
+
 <!-- AI LAB / AI 创作实验室 -->
 <section id="ai-lab" class="section ai-lab-section">
   <div class="section-header reveal">
     <div class="section-label">AI Creation Lab</div>
     <div class="section-title">AI 创作实验室</div>
-    <span class="section-num">04</span>
+    <span class="section-num">03</span>
   </div>
 
   <div class="ai-lab-intro reveal">
@@ -815,6 +911,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">Capabilities</div>
     <div class="section-title">技能领域</div>
+    <span class="section-num">08</span>
   </div>
   <div class="skills-row">
     <div class="skill-item reveal">
@@ -840,7 +937,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="section-header reveal">
     <div class="section-label">About</div>
     <div class="section-title">关于我</div>
-    <span class="section-num">08</span>
+    <span class="section-num">09</span>
   </div>
   <div class="about-content reveal">
     <div class="about-badges">
