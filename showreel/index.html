@@ -233,8 +233,15 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 .footer{padding:64px 56px;border-top:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(255,255,255,0.15);letter-spacing:2px;text-transform:uppercase}
 
 /* ===== SCROLL ANIMATION ===== */
-.reveal{opacity:0;transform:translateY(48px);transition:opacity .8s ease,transform .8s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal{opacity:0;transform:translateY(48px);transition:opacity .8s ease,transform .8s ease;will-change:opacity,transform}
+.reveal.visible{opacity:1;transform:translateY(0);will-change:auto}
+
+/* ===== GPU HINTS ===== */
+.hero-bg canvas{will-change:contents}
+.game-card-hero img{will-change:transform}
+.art-card{will-change:transform}
+.sprite-item{will-change:transform}
+.cursor-dot,.cursor-ring{will-change:left,top}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
@@ -673,9 +680,9 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
     <p>除了 2D 美术与游戏开发，我也使用 <strong>Blender</strong> 进行 3D 建模、渲染和动态设计。从抽象几何体到粒子特效，探索三维空间中的视觉表达。</p>
   </div>
 
-  <!-- 黑洞 — 全宽自动播放 -->
-  <div class="blender-hero-video reveal">
-    <video autoplay muted loop playsinline preload="auto">
+  <!-- 黑洞 — 全宽懒加载 -->
+  <div class="blender-hero-video reveal" id="blenderHeroVideo">
+    <video id="blackHoleVideo" muted loop playsinline preload="none">
       <source src="assets/blender/black-hole.mov" type="video/quicktime">
     </video>
   </div>
@@ -684,7 +691,7 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
   <div class="blender-content-grid reveal">
     <div class="blender-video-card" onclick="openVideoModal('assets/blender/crystal-flower.mov', '')">
       <div class="blender-video-thumb">
-        <video muted preload="metadata" style="pointer-events:none">
+        <video muted preload="none" style="pointer-events:none">
           <source src="assets/blender/crystal-flower.mov" type="video/quicktime">
         </video>
       </div>
@@ -998,35 +1005,44 @@ img{user-select:none;-webkit-user-drag:none;pointer-events:none}
 <script>
 /* ===== PRELOADER ===== */
 window.addEventListener('load', () => {
-  setTimeout(() => document.getElementById('preloader').classList.add('done'), 600);
+  setTimeout(() => document.getElementById('preloader').classList.add('done'), 200);
 });
 
 /* ===== ANTI-THEFT ===== */
 document.addEventListener('contextmenu', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
 document.addEventListener('dragstart', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
 
-/* ===== CUSTOM CURSOR ===== */
+/* ===== CUSTOM CURSOR — only update on movement ===== */
 const dot = document.getElementById('cursorDot');
 const ring = document.getElementById('cursorRing');
-let mx=0, my=0, cx=0, cy=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; });
+let mx=0, my=0, cx=0, cy=0, moved=false;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; moved=true; }, { passive: true });
 (function cursorLoop(){
-  cx+=(mx-cx)*.15; cy+=(my-cy)*.15;
-  dot.style.left=mx-4+'px'; dot.style.top=my-4+'px';
-  ring.style.left=cx+'px'; ring.style.top=cy+'px';
-  ring.style.transform='translate(-50%,-50%)';
+  if(moved){
+    cx+=(mx-cx)*.15; cy+=(my-cy)*.15;
+    dot.style.left=mx-4+'px'; dot.style.top=my-4+'px';
+    ring.style.left=cx+'px'; ring.style.top=cy+'px';
+    ring.style.transform='translate(-50%,-50%)';
+    moved=false;
+  }
   requestAnimationFrame(cursorLoop);
 })();
 
-/* ===== NAV SCROLL ===== */
+/* ===== NAV SCROLL — throttled ===== */
 const nav = document.getElementById('mainNav');
 const counter = document.getElementById('scrollCounter');
+let scrollTick = false;
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 80);
-  const h = document.documentElement.scrollHeight - window.innerHeight;
-  const pct = h > 0 ? Math.round((window.scrollY/h)*100) : 0;
-  counter.textContent = String(pct).padStart(3,'0');
-});
+  if(scrollTick) return;
+  scrollTick = true;
+  requestAnimationFrame(() => {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = h > 0 ? Math.round((window.scrollY/h)*100) : 0;
+    counter.textContent = String(pct).padStart(3,'0');
+    scrollTick = false;
+  });
+}, { passive: true });
 
 /* ===== SCROLL REVEAL ===== */
 const revealObs = new IntersectionObserver(entries => {
@@ -1034,13 +1050,16 @@ const revealObs = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-/* ===== HERO CANVAS ===== */
+/* ===== HERO CANVAS — lightweight particles ===== */
 (function(){
   const c = document.getElementById('heroCanvas');
   const ctx = c.getContext('2d');
-  let w, h;
+  let w, h, ticking=false;
   function resize(){ w=c.width=window.innerWidth; h=c.height=window.innerHeight; }
-  resize(); window.addEventListener('resize', resize);
+  resize();
+  window.addEventListener('resize', () => {
+    if(!ticking){ ticking=true; requestAnimationFrame(() => { resize(); ticking=false; }); }
+  }, { passive: true });
   function draw(){
     ctx.clearRect(0,0,w,h);
     const grd = ctx.createRadialGradient(w*.5, h*.4, 0, w*.5, h*.4, w*.6);
@@ -1050,7 +1069,8 @@ document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
     ctx.fillStyle = grd;
     ctx.fillRect(0,0,w,h);
     const t = Date.now() * 0.001;
-    for(let i=0; i<40; i++){
+    /* Reduced from 40 to 12 particles */
+    for(let i=0; i<12; i++){
       const x = (Math.sin(t*0.3+i*1.7)*0.4+0.5)*w;
       const y = (Math.cos(t*0.2+i*2.3)*0.4+0.5)*h;
       const r = Math.sin(t+i)*1+1.5;
@@ -1144,7 +1164,7 @@ function closeVideoModal() {
 document.addEventListener('keydown', e => { if(e.key==='Escape') { closeLightbox(); closeVideoModal(); } });
 </script>
 
-<!-- Three.js Import Map for STL Viewer -->
+<!-- Three.js Import Map for STL Viewer — loaded only when visible -->
 <script type="importmap">
 {
   "imports": {
@@ -1157,6 +1177,41 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') { closeLightbox
 import * as THREE from 'three';
 import { STLLoader } from 'three/addons/loaders/STLLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+/* Lazy init: only start loading when Blender section enters viewport */
+const blenderSection = document.getElementById('blender');
+let initialized = false;
+
+function initAll() {
+  if (initialized) return;
+  initialized = true;
+
+  /* Start black hole video */
+  const bhv = document.getElementById('blackHoleVideo');
+  if (bhv) {
+    bhv.load();
+    bhv.play().catch(() => {});
+  }
+
+  /* Init STL viewers */
+  initSTLViewer('stlCanvasPu', 'stlLoadingPu', 'assets/models/pu.stl');
+  initSTLViewer('stlCanvasYao', 'stlLoadingYao', 'assets/models/yao.stl');
+}
+
+const blenderObs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    initAll();
+    blenderObs.unobserve(blenderSection);
+  }
+}, { rootMargin: '200px' }); /* start loading 200px before visible */
+blenderObs.observe(blenderSection);
+
+/* Also trigger on scroll near bottom as fallback */
+window.addEventListener('scroll', () => {
+  if (!initialized && blenderSection.getBoundingClientRect().top < window.innerHeight + 300) {
+    initAll();
+  }
+}, { passive: true });
 
 function initSTLViewer(canvasId, loadingId, stlUrl) {
   const canvas = document.getElementById(canvasId);
@@ -1252,9 +1307,6 @@ function initSTLViewer(canvasId, loadingId, stlUrl) {
   if (document.readyState === 'complete') start();
   else window.addEventListener('load', start);
 }
-
-initSTLViewer('stlCanvasPu', 'stlLoadingPu', 'assets/models/pu.stl');
-initSTLViewer('stlCanvasYao', 'stlLoadingYao', 'assets/models/yao.stl');
 </script>
 
 </body>
